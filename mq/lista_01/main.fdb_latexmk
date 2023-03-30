@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1679264382 "main.tex" "main.pdf" "main" 1679264383 0
+["pdflatex"] 1680180305 "main.tex" "main.pdf" "main" 1680180307 0
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1202520719 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1202520719 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -280,11 +280,11 @@
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1672815877 7874782 4210d60e09eafe04d45dd90e589bceb9 ""
   "/usr/local/texlive/2022/texmf.cnf" 1672813834 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
   "assets/logo.png" 1675910496 3256 453a445502e5df6f43b3f3ea5cc87011 ""
-  "contents/questoes.aux" 1679264383 2592 55a3d18f3d49744ea1861340a44b2fbe "pdflatex"
-  "contents/questoes.tex" 1679112994 13607 ba7b4a0f94685897f6fba441cfa58e36 ""
-  "main.aux" 1679264383 2054 77ffecfc060dd65fa5b041fb386c5f1f "pdflatex"
+  "contents/questoes.aux" 1680180307 3049 e6a1fe1e6d611d896ba89795c974796c "pdflatex"
+  "contents/questoes.tex" 1680180304 17470 2395e9c81a8c56edb2ca57d93ccf68da ""
+  "main.aux" 1680180307 2989 52983441415eedce058e610e6274da94 "pdflatex"
   "main.tex" 1678981585 792 4558843519ec8472396275f0f2180ceb ""
-  "main.toc" 1679264383 328 4d58e18246ba2ecaab032b8aaa6ef578 "pdflatex"
+  "main.toc" 1680180307 578 2477552f0c38ca35e385041504dd6539 "pdflatex"
   "src/credentials.tex" 1678073443 936 d2ed4a8f65100db5ecdcd6af6f21797d ""
   "stdtheme.sty" 1675910496 520 6dfb23366b2d0d948fa4dd2bf7a9e30c ""
   "udesc_loe.cls" 1679174405 8347 0d23adc983213439f0b36c9cfdfe3647 ""
