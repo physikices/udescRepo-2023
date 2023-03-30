@@ -113,14 +113,14 @@
 \addcontentsline{toc}{section}{Problema 03}
 \begin{prob}
 	Em aula resolvemos o problema do poço infinito com centro deslocado da origem. Resolva o poço infinito para o caso onde o centro do poço coincide com a origem, isto é:	
-	
+
 	\begin{eqnarray*}
-			V(x)=
-			\begin{cases}
-				\infty, &\text{se $x < -a/2$}\\
-				0, &\text{se $-a/2\leq x\leq a/2$}\\
-				\infty, &\text{se $x > a/2$}\\
-			\end{cases}
+		V(x)=
+		\begin{cases}
+			\infty, &\text{se $x < -a/2$}\\
+			0, &\text{se $-a/2\leq x\leq a/2$}\\
+			\infty, &\text{se $x > a/2$}\\
+		\end{cases}
 	\end{eqnarray*}
 
 	\begin{center}
@@ -167,7 +167,7 @@
 		\end{align}
 		cujo a solução geral é dada por
 		\begin{dmath*}
-				\psi(x)A\sen(kx)+B\cos(kx)\condition{com $\displaystyle k=\sqrt{\frac{2mE}{\hbar^{2}}}$}
+			\psi(x)A\sen(kx)+B\cos(kx)\condition{com $\displaystyle k=\sqrt{\frac{2mE}{\hbar^{2}}}$}
 		\end{dmath*}
 		da condição de contorno sabemos que
 		\begin{subequations}
@@ -202,10 +202,10 @@
 		Há portanto duas soluções possíveis para a $\psi(x)$
 		\begin{align}
 			\psi_{n}(x)=
-				\begin{dcases*}
-					A_{n}\sen \left(k_nx\right) & se, $n=2, 4, 6,...$(par)\\
-					B_{n}\cos \left(k_nx\right) & se, $n=1, 3, 5, ...$(ímpar)\\
-				\end{dcases*}
+			\begin{dcases*}
+				A_{n}\sen \left(k_nx\right) & se, $n=2, 4, 6,...$(par)\\
+				B_{n}\cos \left(k_nx\right) & se, $n=1, 3, 5, ...$(ímpar)\\
+			\end{dcases*}
 		\end{align}
 		e
 		\begin{align}
@@ -225,9 +225,9 @@
 		\end{align}
 		fazendo a mudança de variável $u=n \pi x/2$, $du=n \pi dx/2$, quando $x=-\pi/2$ então $u=-n \pi /2$, e quando $x=\pi/2$, $u=n \pi/2$, dessa forma o resultado da integral acima fica
 		\begin{align}
-				\begin{split}
+			\begin{split}
 				A^{2}_{n}\left[\frac{a}{n \pi}\right]\left[\left(\frac{n \pi}{2}\right)-\frac{1}{2}\cancelto{0}{\left(\frac{\sin(2u)}{2}\right)\Bigg|_{-n \pi/2}^{n \pi/2}}\right] &= 1
-				\end{split}
+			\end{split}
 		\end{align}
 		o que simplificando da
 		\begin{align}
@@ -239,7 +239,7 @@
 		\end{align}
 		procedendo de forma análoga obtemos
 		\begin{align}
-				B^{2}_{n}\left[\frac{a}{n \pi}\right]\left[\left(\frac{n \pi}{2}\right)+\frac{1}{2}\cancelto{0}{\left(\frac{\sin(2u)}{2}\right)\Bigg|_{-n \pi/2}^{n \pi/2}}\right] &= 1
+			B^{2}_{n}\left[\frac{a}{n \pi}\right]\left[\left(\frac{n \pi}{2}\right)+\frac{1}{2}\cancelto{0}{\left(\frac{\sin(2u)}{2}\right)\Bigg|_{-n \pi/2}^{n \pi/2}}\right] &= 1
 		\end{align}
 		ou seja
 		\begin{align}
@@ -247,13 +247,13 @@
 		\end{align}
 		completando a solução para as autofunções $\psi_{n}(x)$
 		\begin{align}
-				\boxed{
-					\psi_{n}(x)=
-					\begin{dcases*}
-						\sqrt{\frac{2}{a}}\sen \left(\frac{n \pi x}{a}\right) & se, $n=2, 4, 6,...$(par)\\
-						\sqrt{\frac{2}{a}}\cos \left(\frac{n \pi x}{a}\right) & se, $n=1, 3, 5, ...$(ímpar)\\
-					\end{dcases*}
-				}
+			\boxed{
+				\psi_{n}(x)=
+				\begin{dcases*}
+					\sqrt{\frac{2}{a}}\sen \left(\frac{n \pi x}{a}\right) & se, $n=2, 4, 6,...$(par)\\
+					\sqrt{\frac{2}{a}}\cos \left(\frac{n \pi x}{a}\right) & se, $n=1, 3, 5, ...$(ímpar)\\
+				\end{dcases*}
+			}
 		\end{align}
 		e
 		\begin{align}
@@ -261,12 +261,12 @@
 				k_{n} = \frac{n \pi}{a}
 			}
 		\end{align}
-		
+
 		É de se esperar que os autovalores de energia associados $E_{n}$, sejam os mesmos encontrados para o poço infinito com centro deslocado da origem, e de fato, em termos dos $k_{n}$, teremos
 		\begin{align}
-				\begin{split}
-					k_{n} &= \frac{n \pi}{a}=\sqrt{\frac{2mE_{n}}{\hbar^{2}}}\\
-				\end{split}
+			\begin{split}
+				k_{n} &= \frac{n \pi}{a}=\sqrt{\frac{2mE_{n}}{\hbar^{2}}}\\
+			\end{split}
 		\end{align}
 		\begin{align}
 			\boxed{
@@ -280,9 +280,41 @@
 \addcontentsline{toc}{section}{Problema 04}
 \begin{prob}
 	Para o problema do poço quadrado infinito calculado em aula (poço assimétrico em torno da origem), calcule $\langle x \rangle$, $\langle x^{2} \rangle$, $\langle p \rangle$ e $\langle p^{2} \rangle$ e use-os para calcular as incertezas $\sigma_{x}$ e $\sigma_{p}$ para o n-ésimo estado estacionário do poço infinito. Mostre que o princípio de incerteza está sendo satisfeito. qual estado $n$ fica mais próximo do limite inferior do princípio de incerteza?
-		\begin{sol}
-				
-		\end{sol}
+	\begin{sol}
+		A solução da parte espacial da função de onda encontrada em aula é a seguinte
+		\begin{dmath*}
+			\psi_{n}(x) = \sqrt{\frac{2}{a}}\sen \left(\frac{n \pi x}{a}\right)\condition{com $n\in \mathbb{N^{*}},\; 0\leq x\leq a$}
+		\end{dmath*}
+		logo, teremos
+		\begin{align}
+			\begin{split}
+				\langle x \rangle &= \int\limits_{0}^{a} \psi^{*}x \psi dx\\
+													&= \int\limits_{0}^{a}x \abs{\psi}^{2}dx\\
+													&= \int\limits_{0}^{a}x \left[\sqrt{\frac{2}{a}}\sen \left(\frac{n \pi x}{a}\right)\right]^{2}dx\\
+													&= \frac{2}{a}\int\limits_{0}^{a}x\sen^{2} \left(\frac{n \pi x}{a}\right)dx\\
+			\end{split}
+		\end{align}
+		fazendo a substituição
+		\begin{subequations}
+			\begin{align}
+				u &= \frac{n \pi x}{a}\\
+				du &= \frac{n \pi}{a} dx
+			\end{align}
+		\end{subequations}
+		e notando que
+		\begin{subequations}
+				\begin{align}
+					x\to 0 &\implies u\to 0\\
+					x\to a &\implies u\to n \pi
+				\end{align}
+		\end{subequations}
+		a integral fica
+		\begin{equation*}
+				\begin{split}
+					\langle x \rangle &= \frac{2}{a}
+				\end{split}
+		\end{equation*}
+	\end{sol}
 \end{prob}
 % --------------------------------------------- %
 % --------------| Q05 |------------------------ %
@@ -290,11 +322,11 @@
 \begin{prob}
 	Uma partícula num poço quadrado infinito tem como função de onda inicial
 	\begin{eqnarray*}
-			\Psi(x,0)=
-			\begin{cases}
-				Ax, &\text{se $0\leq x \leq \frac{a}{2}$}\\
-				A \left(a-x\right), &\text{se $\frac{a}{2}\leq x\leq a$}\\
-			\end{cases}
+		\Psi(x,0)=
+		\begin{cases}
+			Ax, &\text{se $0\leq x \leq \frac{a}{2}$}\\
+			A \left(a-x\right), &\text{se $\frac{a}{2}\leq x\leq a$}\\
+		\end{cases}
 	\end{eqnarray*}
 	\begin{enumerate}[label=\alph *)]
 		\item Esboce o gráfico de $\Psi(x,0)$ e determine a constante de normalização $A$
@@ -302,9 +334,9 @@
 		\item Qual é a probabilidade de que uma medida da energia retorne o valor $E_{1}$
 		\item Encontre o valor médio da energia
 	\end{enumerate}
-		\begin{sol}
-				
-		\end{sol}
+	\begin{sol}
+
+	\end{sol}
 \end{prob}
 % --------------------------------------------- %
 % --------------| Q06 |------------------------ %
@@ -312,20 +344,20 @@
 \begin{prob}
 	Para um oscilador harmônico, pelo método algébrico:
 	\begin{enumerate}[label=\alph *)]
-			\item Mostre que
-				\begin{align}
-					\left[\hat{a}_{-},\hat{a}_{+}\right] &= 1
-				\end{align}
-			\item Utilizando a equação
-				\begin{align}
-					\psi_n(x) &= \frac{1}{\sqrt{n!}}\left(\hat{a}_{+}\right)^{n}\psi_{0}
-				\end{align}
-				e a expressão do operador $\hat{a}^{+}$ em termos da derivada em relação à posição, construa $\psi_{2}(x)$.
-			\item Escreva os operadores posição e momento em termos dos operadores escada $\hat{a}_{\pm}$ e calcule os valores médios de $x$, $p$, $x^{2}$ e $p^{2}$ para o estado fundamental $\psi_{0}(x)$ e verifique se o princípio de incerteza está sendo respeitado.
+		\item Mostre que
+			\begin{align}
+				\left[\hat{a}_{-},\hat{a}_{+}\right] &= 1
+			\end{align}
+		\item Utilizando a equação
+			\begin{align}
+				\psi_n(x) &= \frac{1}{\sqrt{n!}}\left(\hat{a}_{+}\right)^{n}\psi_{0}
+			\end{align}
+			e a expressão do operador $\hat{a}^{+}$ em termos da derivada em relação à posição, construa $\psi_{2}(x)$.
+		\item Escreva os operadores posição e momento em termos dos operadores escada $\hat{a}_{\pm}$ e calcule os valores médios de $x$, $p$, $x^{2}$ e $p^{2}$ para o estado fundamental $\psi_{0}(x)$ e verifique se o princípio de incerteza está sendo respeitado.
 	\end{enumerate}
-		\begin{sol}
-				
-		\end{sol}
+	\begin{sol}
+
+	\end{sol}
 \end{prob}
 % --------------------------------------------- %
 % --------------| Q07 |------------------------ %
@@ -333,28 +365,28 @@
 \begin{prob}
 	Para o oscilador harmônico pelo método analítico:
 	\begin{enumerate}[label=\alph *)]
-			\item Partindo da Equação de Schrödinger para o oscilador harmônico (primeira equação do slide 4) e usando a variável adimensional
-				\begin{align}
-					\xi &= \sqrt{\frac{m \omega}{\hbar}}x,
-				\end{align}
-				Mostre que a equação pode ser escrita como
-				\begin{dmath*}
-					\frac{d^{2} \phi(\xi)}{d \xi^{2}} = \left(\xi^{2}-K\right) \phi(\xi)\condition{com $\displaystyle K=\frac{2E}{\hbar \omega}$}
-				\end{dmath*}
-			\item Substitua na equação acima a proposta de solução
-				\begin{align}
-					\phi(\xi) &= h(\xi)\mathrm{e}^{-\xi^{2}/2}
-				\end{align}
-				e obtenha a equação diferencial para $h(\xi)$ (equação mostrada no exercício seguinte).
-				Utilize o método das séries de potências para a equação diferencial de $h(\xi)$
-				\begin{align}
-						\frac{d^{2}h(\xi)}{d \xi^{2}}-2 \xi \frac{dh(\xi)}{d \xi}+\left(K-1\right)h(\xi)=0
-				\end{align}
-				e obtenha a relação de recorrência entre os coeficientes.
+		\item Partindo da Equação de Schrödinger para o oscilador harmônico (primeira equação do slide 4) e usando a variável adimensional
+			\begin{align}
+				\xi &= \sqrt{\frac{m \omega}{\hbar}}x,
+			\end{align}
+			Mostre que a equação pode ser escrita como
+			\begin{dmath*}
+				\frac{d^{2} \phi(\xi)}{d \xi^{2}} = \left(\xi^{2}-K\right) \phi(\xi)\condition{com $\displaystyle K=\frac{2E}{\hbar \omega}$}
+			\end{dmath*}
+		\item Substitua na equação acima a proposta de solução
+			\begin{align}
+				\phi(\xi) &= h(\xi)\mathrm{e}^{-\xi^{2}/2}
+			\end{align}
+			e obtenha a equação diferencial para $h(\xi)$ (equação mostrada no exercício seguinte).
+			Utilize o método das séries de potências para a equação diferencial de $h(\xi)$
+			\begin{align}
+				\frac{d^{2}h(\xi)}{d \xi^{2}}-2 \xi \frac{dh(\xi)}{d \xi}+\left(K-1\right)h(\xi)=0
+			\end{align}
+			e obtenha a relação de recorrência entre os coeficientes.
 	\end{enumerate}
-		\begin{sol}
-				
-		\end{sol}
+	\begin{sol}
+
+	\end{sol}
 \end{prob}
 % --------------------------------------------- %
 % --------------| Q08 |------------------------ %

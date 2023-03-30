@@ -1,0 +1,136 @@
+%--------------| Q01 |------------------------- %
+\addcontentsline{toc}{section}{1}
+\begin{prob}
+	\textbf{Use integração direta em coordenadas cilíndricas para resolver o prblema abaixo}	
+
+	Uma barra fina, não condutora, de comprimento $L$ tem uma densidade de carga uniforme positiva $\lambda$. Calcule o campo elétrico no ponto $P$, situado a uma distância $a$ perpendicular ao seu comprimento. Apresente seu desenho definindo todos os vetores e grandezas utilizadas.
+	% --------------------------------------------- %		
+	\begin{sol} Considere a figura a seguir:
+		\begin{figure}[htb!]
+			\centering% WIRE MAGNETIC FIELD VERTICAL
+			\begin{tikzpicture}
+				\def\L{5.2}
+				\def\W{0.10}
+				\def\xmin{-0.55*\L}
+				\def\xmax{0.6*\L}
+				\def\ymin{-0.08*\L}
+				\def\ymax{0.45*\L}
+				\def\x{0.342*\L}
+				\def\dx{0.07*\L}
+				\coordinate (O) at (0,0);
+				\coordinate (P) at (0,0.75*\ymax);
+				\coordinate (X) at (\x,\W/2);
+				\coordinate (X2) at (-0.5*\x,1.1*\ymax);
+
+				% AXIS
+				\draw[->,thick] (\xmin,0) -- (\xmax,0) node[below right=-2] {$z$};
+				\draw[->,thick] (0,\ymin) -- (0,\ymax) node[left] {$r$};
+
+				% MEASURES
+				% \draw[<->] (0,0.2*\ymax) --++ (0,\x) node[midway,above] {$x$};
+				\draw[->,Ampcol] (    0,-0.09*\ymax) --++ (\x,0) node[measure, below] {$\vec{r}^{\;\prime}$};
+				\draw[measline] (   \x,-0.09*\ymax) --++ (\dx,0) node[midway,below,scale=0.9] {$dz$};
+				\draw[measline] (   -\L/2,-0.4*\ymax) --++ (\L,0) node[midway,below,scale=0.9] {$L$};
+				\draw[measline] (-\L/2,0.11*\ymin) --++ (0,0.75*\ymax) node[midway,left] {$a$};
+				%\draw[measline] (-\L/2,0.65*\ymin) --++ (\L,0) node[measure,right=10] {$L$};
+
+				% POINT
+				\node[Bcol,left=3] at (P) {$d\vec{E}$};
+				\draw[dashed] (P) -- (X) node[midway,above right,text=veccol] {$\abs{\vec{r}-\vec{r}^{\;\prime}}$};
+				\draw[->,Bcol] (P) -- ($(X2)!0.5!(P)$);
+				% \draw pic[->,"$\theta$",draw=black,angle radius=20,angle eccentricity=1.4] {angle = O--P--X};
+				% \draw pic[<-,"$\phi$",draw=black,angle radius=20,angle eccentricity=1.4] {angle = P--X--O};
+				\draw[vector] (X) -- ($(X)!1!(P)$);% node[right=5,above=-2] {$\vu{r}$};
+
+				% VECTORS
+				\node[Icol, left=3, yshift=25] {$\vec{r}$};
+				\draw[current, rotate=90] (0*\L,0.0*\ymax) --++ (0.33*\L,0) node[above=2,right,text=black] {$P$};
+				\pic at (P) {Bout}; %={fill=white}
+
+			% ROD
+			\draw[metal] (-\L/2,-\W/2) rectangle ++(\L,\W);
+			\draw[darkmetal] (\x,-\W/2) rectangle ++(\dx,\W);
+			%  node[midway,right=10,above=3] {$I\dd{x}$}; %I\dd{\ell}=
+			\draw[force]
+				(X) --++ (\dx,0) node[above=-1] {$\lambda\!\dd{\vb*{\ell}}$};
+
+		\end{tikzpicture}
+
+		\caption{Barra não condutora de comprimento $L$ e densidade linear de carga $\lambda$}
+		\label{fig:fioDeCarga}
+	\end{figure}
+
+	Um elemento de carga $dq=\lambda d\vec{l}$ encontra-se representado na Figura \ref{fig:fioDeCarga}, o vetor $\vec{r}^{\;\prime}$ localiza o elemento de carga $dq$, e o vetor $\vec{r}$ localiza o ponto $P$ situado a uma distância $a$ da barra. O elemento de carga, produz no ponto $P$ um elemento de campo $d \vec{E}$ tal que
+	\begin{align}
+		\vec{E}(\vec{r}) &= \frac{1}{4 \pi \varepsilon_{0}} \int\limits_{-L/2}^{L/2}\frac{dq \left(\vec{r}-\vec{r}^{\;\prime}\right)}{\abs{\vec{r}-\vec{r}^{\;\prime}}^{3}}
+	\end{align}
+	O problema pede pra calcular em coordenadas cilíndricas, segue então que:
+	\begin{subequations}
+		\begin{align}
+			\vec{r} &= a \hat{r}\\
+			\vec{r}^{\;\prime} &= z \hat{k}\\
+			\vec{r}-\vec{r}^{\;\prime} &= a \hat{r}-z \hat{k}\\
+			\abs{\vec{r}-\vec{r}^{\;\prime}} &= \sqrt{a^{2}+z^{2}}\\
+			\abs{\vec{r}-\vec{r}^{\;\prime}}^{3} &= \left(a^{2}+z^{2}\right)^{3/2}\\
+			dl &= dz
+		\end{align}
+	\end{subequations}
+	Reescrevendo a integral ficamos com
+	\begin{align}
+		\vec{E}(\vec{r}) &= \frac{1}{4 \pi \varepsilon_{0}}\int\limits_{-L/2}^{L/2}\frac{\lambda \left(a \hat{r}-z \hat{k}\right)}{\left(a^{2}+z^{2}\right)^{3/2}}dz
+	\end{align}
+	Resolvendo a integral acima
+	\begin{align}
+		\begin{split}
+			\vec{E}(\vec{r}) &= \frac{\lambda}{4 \pi \varepsilon_{0}}\int\limits_{-L/2}^{L/2}\frac{a \hat{r}-z \hat{k}}{\left(a^{2}+z^{2}\right)^{3/2}}dz\\
+			\frac{4 \pi \varepsilon_{0}\vec{E}(\vec{r})}{\lambda} &= \left[\int\limits_{-L/2}^{L/2}\frac{a}{\left(a^{2}+z^{2}\right)^{3/2}}dz \right]\hat{r} - \left[\int\limits_{-L/2}^{L/2}\frac{z}{\left(a^{2}+z^{2}\right)^{3/2}}dz\right]\hat{k}
+		\end{split}
+	\end{align}
+	A primeira integral sai por substituição trigonométrica de modo que
+	\begin{subequations}
+		\begin{align}
+			z &= a\tg u\\
+			dz &= a \sec^{2}udu\\
+			z^{2} &= a^{2}\sec^{2}u\\
+			\sen u &= \frac{z}{\sqrt{a^{2}+z^{2}}}
+		\end{align}
+	\end{subequations}
+	ou seja
+	\begin{align}
+			\begin{split}
+				\int \frac{a}{\left(a^{2}+z^{2}\right)^{3/2}}dz &= \int \left[\frac{a}{\left(a^{2}+a^{2}\tg^{2}u\right)^{3/2}}a\sec^{2}u\right]du\\
+																												&= \frac{1}{a}\int \frac{\sec^{2}u}{\left(1+\tg^{2}u\right)^{3/2}}du\\
+																												&= \frac{1}{a}\int \frac{1}{\sec{u}}du\\
+																												&= \frac{1}{a}\int \cos{u}du\\
+																												&= \frac{1}{a}\sen{u}+C\\
+			\end{split}
+	\end{align}
+	Já a segunda integral sai por substituição direta, segue que
+	\begin{subequations}
+		\begin{align}
+			u &= a^{2}+z^{2}\\
+			du &= 2zdz
+		\end{align}
+	\end{subequations}
+	logo,
+	\begin{align}
+		\begin{split}
+			\int \frac{z}{\left(a^{2}+z^{2}\right)^{3/2}}dz &= \frac{1}{2}\int \frac{du}{u^{3/2}}\\
+																											&= -\frac{1}{u^{1/2}}+C
+		\end{split}
+	\end{align}
+	Voltando ao problema
+	\begin{align}
+		\begin{split}
+			\frac{4 \pi \varepsilon_{0}\vec{E}(\vec{r})}{\lambda}	&= \frac{1}{a}\left[\frac{z}{\sqrt{a^{2}+z^{2}}}\Bigg|_{-L/2}^{L/2}\right]\hat{r}-\left[\frac{-1}{\sqrt{a^{2}+z^{2}}}\Bigg|_{-L/2}^{L/2}\right]\hat{k}\\
+																														&= \frac{1}{a}\left[\frac{L}{2}\frac{1}{\sqrt{a^{2}+L^{2}/4}}-\frac{-L}{2}\frac{1}{\sqrt{a^{2}+L^{2}/4}}\right]\hat{r}+\cancelto{0}{\left[\frac{1}{\sqrt{a^{2}+L^{2}/4}}-\frac{1}{\sqrt{a^{2}+L^{2}/4}}\right]}\hat{k}
+		\end{split}
+	\end{align}
+	O campo resultante apenas tem coordenada na direção $\hat{r}$ por conta da simetria do problema (ponto $P$ exatamente no meio da linha de cargas a altura $a$). Por fim ficamos com
+	\begin{align}
+		\boxed{
+			\vec{E}(\vec{r}) = \frac{\lambda}{4 \pi a\varepsilon_{0}}\frac{2L}{\sqrt{a^{2}+L^{2}}}\hat{r}
+		}
+	\end{align}
+\end{sol}
+\end{prob}
