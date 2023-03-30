@@ -1,4 +1,4 @@
-
+program
 
 
 	implicit double precision (a-z) 
@@ -54,7 +54,7 @@
 
 
 
-	end 
+	end program 
 
 
 

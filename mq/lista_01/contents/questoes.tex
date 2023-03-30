@@ -1,0 +1,278 @@
+%--------------| Q01 |--------------------
+\addcontentsline{toc}{section}{Problema 01}
+\begin{prob}
+	Considere a função de onda
+	\begin{align}
+		\Psi(x,t)&=A \mathrm{e}^{-\lambda |x|} \mathrm{e}^{-i\omega t}
+	\end{align}
+	onde $A$, $\lambda$ e $\omega$ são constantes reais positivas
+	\begin{enumerate}[label=\alph *)]
+		\item Normalize $\Psi$
+		\item Determine os valores médios $\langle x \rangle$ e $\langle x^{2} \rangle$
+		\item Encontre o desvio padrão de $x$. Esboce o gráfico de $|\Psi|^2$ como uma função de $x$, e marque os pontos $\left(\langle x \rangle + \delta \right)$ e $\left(\langle x \rangle - \delta\right)$ para representar em que sentido de $\sigma$ representa o ``espalhamento'' da distribuição em $x$. Qual a probabilidade de que a partícula seja encontrada fora deste range?
+	\end{enumerate}
+
+	\begin{sol}
+		\begin{enumerate}[label=\alph *)]
+			\item Dado que a normalização da função de onda $\Psi (x,t)$ é obtida por  
+				\begin{align}
+					\int\limits_{-\infty}^{\infty}|\Psi (x,t)\Psi^{*} (x,t)|dx &= \int\limits_{-\infty}^{+\infty}|\psi (x)|^{2}dx = 1
+				\end{align}
+				de modo que
+				\begin{align}
+					\int\limits_{-\infty}^{+\infty}|A \mathrm{e}^{-\lambda |x|} \mathrm{e}^{-i \omega t}A \mathrm{e}^{-\lambda |x|} \mathrm{e}^{+i \omega t}|dx &=1 \nonumber\\
+					\int\limits_{-\infty}^{+\infty}A^{2} \mathrm{e}^{-2 \lambda |x|}dx &= 1
+				\end{align}
+				como a $\psi(x)$ é uma função par, podemos fazer
+				\begin{align}
+					2A^{2}	\int\limits_{0}^{+\infty} \mathrm{e}^{-2 \lambda |x|}dx &= 1\nonumber \\
+					2A^{2}\left(-\frac{1}{2 \lambda} \mathrm{e}^{-2 \lambda x}\bigg|_{0}^{+\infty}\right) &= 1\nonumber \\
+					A^{2} &= \lambda \nonumber \\
+					A &= \sqrt{\lambda}
+				\end{align}
+				ou seja
+				\begin{dmath*}
+					\boxed{
+						\Psi(x,t)=\psi(x)\mathrm{e}^{-i \omega t}\condition{com $\displaystyle \psi(x)=\sqrt{\lambda}\mathrm{e}^{-\lambda |x|}$}
+					}
+				\end{dmath*}
+			\item  
+		\end{enumerate} 	
+	\end{sol}
+\end{prob}
+
+%--------------| Q02 |--------------------
+\addcontentsline{toc}{section}{Problema 02}
+\begin{prob}
+	O Teorema de Ehrenfest
+	\begin{enumerate}[label=\alph *)]
+		\item Mostre que, para uma função de $x$ qualquer, vale a seguinte relação de comutação:
+			\begin{align}
+				\left[\hat{p},f(x)\right] &= -i\hbar \frac{\partial f(x)}{\partial x}
+			\end{align}
+		\item Utilize o resultado do item (a), o fato que o operador momento comuta com funções apenas do momento e a evolução temporal do valor médio dos operadores
+			\begin{align}
+				\frac{d \langle Q \rangle}{dt} &= \frac{1}{i \hbar} \Bigl\langle \left[\hat{Q}, \hat{H}\right] \Bigr\rangle
+			\end{align}
+			e obtenha o Teorema de Ehrenfest
+	\end{enumerate}
+
+	\begin{sol}
+		\begin{enumerate}[label=\alph *)]
+			\item	Façamos o comutador atuar em uma função $\psi (x)$, de modo que
+				\begin{align}
+					\left[\hat{p},f(x)\right] \psi(x) &= \hat{p}f(x) \psi(x)-f(x)\hat{p} \psi(x)\nonumber\\
+																						&= -i \hbar \frac{\partial }{\partial x}\left[f(x) \psi(x)\right]+i \hbar f(x) \frac{\partial \psi(x)}{\partial x}\nonumber \\
+																						&= \left(-i \hbar\right)\left[\frac{\partial f(x)}{\partial x} \psi(x)+f(x)\frac{\partial \psi(x)}{\partial x}-f(x)\frac{\partial \psi(x)}{\partial x}\right]\nonumber\\
+																						&= -i \hbar \frac{\partial f(x)}{\partial x} \psi(x)
+				\end{align}
+				o que resulta em
+				\begin{align}
+					\boxed{
+						\left[\hat{p},f(x)\right] = -i \hbar \frac{\partial f(x)}{\partial x}
+					}
+				\end{align}\qed
+
+			\item Dado que
+				\begin{align}
+					\frac{d \langle Q \rangle}{dt} &= \frac{1}{i \hbar} \Bigl \langle \left[\hat{Q},\hat{H}\right] \Bigr \rangle\nonumber\\
+																				 &= \frac{1}{i \hbar} \int\limits_{-\infty}^{\infty} \psi^{*}\left[\hat{Q},\hat{H}\right] \psi dx
+				\end{align}
+				ou seja
+				\begin{align}
+					\frac{d \langle Q \rangle}{dt} &= \frac{1}{i \hbar} \int\limits_{-\infty}^{\infty} \psi^{*}\left(\hat{Q}\hat{H}-\hat{H}\hat{Q}\right) \psi dx\nonumber\\
+																				 &= \frac{1}{i \hbar} \int\limits_{-\infty}^{\infty} \psi^{*}\hat{Q}\hat{H} \psi dx-\frac{1}{i \hbar}\int\limits_{-\infty}^{\infty} \psi^{*}\hat{H}\hat{Q} \psi dx\nonumber\\
+																				 &= \frac{1}{i \hbar} \int\limits_{-\infty}^{\infty} \psi^{*}\hat{Q}\left(\frac{\hat{p}^{2}}{2m}+V\right) \psi dx-\frac{1}{i \hbar}\int\limits_{-\infty}^{\infty} \psi^{*}\left(\frac{\hat{p}^{2}}{2m}+V\right)\hat{Q} \psi dx\nonumber\\
+																				 &= \frac{1}{i \hbar}\left[\frac{1}{2m}\left(\int\limits_{-\infty}^{\infty} \psi^{*}\hat{Q}\hat{p}^{2} \psi dx-\int\limits_{-\infty}^{\infty} \psi^{*}\hat{p}^{2}\hat{Q} \psi dx\right)+\right.\nonumber\\&\left.\qquad +\int\limits_{-\infty}^{\infty} \psi^{*}\hat{Q}V \psi dx-\int\limits_{-\infty}^{\infty} \psi^{*}V \hat{Q} \psi dx\right]\nonumber\\
+																				 &= \frac{1}{2i \hbar m}\int\limits_{-\infty}^{\infty}\left(\psi^{*}\hat{Q}\hat{p}^{2} \psi-\psi^{*}\hat{p}^{2}\hat{Q} \psi\right)dx+\nonumber\\&\qquad +\frac{1}{i \hbar}\int\limits_{-\infty}^{\infty}\left(\psi^{*}\hat{Q}V \psi-\psi^{*}V \hat{Q} \psi\right)dx\nonumber\\
+																				 &= \frac{1}{2i \hbar m}\Bigl \langle \left[\hat{Q},\hat{p}^{2}\right] \Bigr \rangle+\frac{1}{i \hbar}\Bigl \langle \left[\hat{Q},V\right] \Bigr \rangle
+				\end{align}
+				Agora, desde que $\hat{Q}$ possa ser escrito como $\hat{Q}=\hat{p}$, devemos ter
+				\begin{align}
+					\frac{d \langle p \rangle}{dt}&= \frac{1}{2i \hbar m}\Bigl \langle \left[\hat{p},\hat{p}^{2}\right] \Bigr \rangle+\frac{1}{i \hbar}\Bigl \langle \left[\hat{p},V\right] \Bigr \rangle
+				\end{align}
+				se o operador $\hat{p}$ comuta com funções do momento então $\left[\hat{p},\hat{p}^{2}\right]=0$, além do mais se $V=V(x)$, já vimos que
+				\begin{align}
+					\left[\hat{p},V(x)\right] &= -i \hbar \frac{\partial V(x)}{\partial x}
+				\end{align}
+				e portanto,
+				\begin{align}
+					\frac{d \langle p \rangle}{dt} &= \frac{1}{i \hbar} \Bigl \langle [\hat{p}, V] \Bigr \rangle\nonumber\\
+					\frac{d \langle p \rangle}{dt} &= \Bigl \langle -\frac{\partial V}{\partial x} \Bigr \rangle \nonumber\\
+				\end{align}
+				\begin{align}
+					\boxed{
+						\frac{d \langle p \rangle}{dt} = -\Bigl \langle \nabla V \Bigr \rangle
+					}
+				\end{align}\qed
+		\end{enumerate}
+	\end{sol}
+\end{prob}
+
+%--------------| Q03 |--------------------
+\addcontentsline{toc}{section}{Problema 03}
+\begin{prob}
+	Em aula resolvemos o problema do poço infinito com centro deslocado da origem. Resolva o poço infinito para o caso onde o centro do poço coincide com a origem, isto é:	
+	
+	\begin{eqnarray*}
+			V(x)=
+			\begin{cases}
+				\infty, &\text{se $x < -a/2$}\\
+				0, &\text{se $-a/2\leq x\leq a/2$}\\
+				\infty, &\text{se $x > a/2$}\\
+			\end{cases}
+	\end{eqnarray*}
+
+	\begin{center}
+		\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+		\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+			%uncomment if require: \path (0,619); %set diagram left start at 0, and has height of 619
+			%Straight Lines [id:da6357675944815533] 
+			\draw    (160,507) -- (354,507) ;
+			\draw [shift={(356,507)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+			%Straight Lines [id:da7577447653081695] 
+			\draw    (248,507.5) -- (248,376.5) ;
+			\draw [shift={(248,374.5)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+			%Straight Lines [id:da6135058394659405] 
+			\draw  [dash pattern={on 0.84pt off 2.51pt}]  (287,507) -- (287,484.5) -- (287,418.5) ;
+			%Straight Lines [id:da3554258374645527] 
+			\draw  [dash pattern={on 0.84pt off 2.51pt}]  (208,507) -- (208,444.61) -- (208,418.5) ;
+
+
+			% Text Node
+			\draw (242,510.49) node [anchor=north west][inner sep=0.75pt]    {$0$};
+			% Text Node
+			\draw (187,507.18) node [anchor=north west][inner sep=0.75pt]    {$-a/2$};
+			% Text Node
+			\draw (271,507.18) node [anchor=north west][inner sep=0.75pt]    {$a/2$};
+			% Text Node
+			\draw (363,500.18) node [anchor=north west][inner sep=0.75pt]    {$x$};
+			% Text Node
+			\draw (233,343.18) node [anchor=north west][inner sep=0.75pt]    {$V( x)$};
+		\end{tikzpicture}
+	\end{center}
+	Para este problema encontre as autofunções $\psi_{n}(x)$ e os autovalores de energia $E_{n}$.
+	\begin{sol}
+		A equação de Schrödinger para pontos no interior do poço é dada por
+		\begin{align}
+			\frac{-\hbar^{2}}{2m}\frac{\partial^{2} \psi(x)}{\partial x^{2}} &= E \psi(x)
+			\label{eq:sch-symPotential}
+		\end{align}
+		manipulando a equação \eqref{eq:sch-symPotential} obtemos
+		\begin{align}
+			\begin{split}
+				\frac{\partial^{2} \psi(x)}{\partial x^{2}} &= -\frac{2mE}{\hbar^{2}} \psi(x)\\
+				\frac{\partial^{2} \psi(x)}{\partial x^{2}} &= -k^{2} \psi(x)\\
+			\end{split}
+		\end{align}
+		cujo a solução geral é dada por
+		\begin{dmath*}
+				\psi(x)A\sen(kx)+B\cos(kx)\condition{com $\displaystyle k=\sqrt{\frac{2mE}{\hbar^{2}}}$}
+		\end{dmath*}
+		da condição de contorno sabemos que
+		\begin{subequations}
+			\begin{align}
+				\psi(a/2)=A\sen(ka/2)+B\cos(ka/2) &=0 \label{eq:sch-symPotential-CCa}\\
+				\psi(-a/2)=A\sen(-ka/2)+B\cos(-ka/2) &= 0\label{eq:sch-symPotential-CCb}
+			\end{align}
+		\end{subequations}
+		O par de equações descrito pelas \eqref{eq:sch-symPotential-CCa} e \eqref{eq:sch-symPotential-CCb}, formam um sistema de equações. A função \textit{seno} é uma função \textit{ímpar} o que equivale a dizer que $\sen(-x)=-\sen(x)$, já a função \textit{cosseno} é uma função \textit{par} isto é $\cos(-x)=\cos(x)$, logo
+		\begin{align}
+			\begin{split}
+				A\sen(ka/2)+B\cos(ka/2) &= 0\\
+				-A\sen(ka/2)+B\cos(ka/2) &= 0
+			\end{split}				
+		\end{align}
+		resolvendo o sistema para o \textit{cosseno}, obtemos
+		\begin{align}
+			2B\cos(ka/2) &= 0
+		\end{align}
+		$B$ não pode ser nulo, do contrário não há função de onda no intervalo de interesse, portanto
+		\begin{align}
+			\cos \left(\frac{ka}{2}\right) &= 0 \iff \frac{ka}{2}=\frac{\pi}{2},\frac{3 \pi}{2},\frac{5 \pi}{2},\ldots 
+		\end{align}
+		por outro lado, se resolvermos o sistema para o \textit{seno}, teremos
+		\begin{align}
+			2A\sen(ka/2) &= 0
+		\end{align}
+		tal como anteriormente $A$ é não nulo de modo que
+		\begin{align}
+			\sen \left(\frac{ka}{2}\right) &= 0 \iff \frac{ka}{2}=\pi,2 \pi,3 \pi,\ldots
+		\end{align}
+		Há portanto duas soluções possíveis para a $\psi(x)$
+		\begin{align}
+			\psi_{n}(x)=
+				\begin{dcases*}
+					A_{n}\sen \left(k_nx\right) & se, $n=2, 4, 6,...$(par)\\
+					B_{n}\cos \left(k_nx\right) & se, $n=1, 3, 5, ...$(ímpar)\\
+				\end{dcases*}
+		\end{align}
+		e
+		\begin{align}
+			k_{n} &= \frac{n \pi}{a}
+		\end{align}
+		As constantes $A_{n}$ e $B_{n}$ são obtidas impondo a condição de normalização das funções $\psi(x)$
+		\begin{align}
+			\int\limits_{-\infty}^{\infty} |\psi^{*}_{n}(x) \psi_{n}(x)|^{2}dx &= \int\limits_{-\infty}^{\infty}|\psi_{n}(x)|^{2}dx=1\\
+		\end{align}
+		para $n=2, 4, 6,...$
+		\begin{align}
+			\begin{split}
+				\int\limits_{-\infty}^{-\frac{a}{2}}|\cancelto{0}{\psi_{n}(x)}|^{2}dx+\int\limits_{-\frac{a}{2}}^{\frac{a}{2}}|\psi_{n}(x)|^{2}dx+\int\limits_{\frac{a}{2}}^{\infty}|\cancelto{0}{\psi_{n}(x)}|^{2}dx &= 1\\
+				\int\limits_{-\frac{a}{2}}^{\frac{a}{2}}A^{2}_{n}\sen^{2} \left(\frac{n \pi x}{a}\right)dx &= 1\\
+				A^{2}_{n}\int\limits_{-\frac{a}{2}}^{\frac{a}{2}}\sen^{2}\left(\frac{n \pi x}{a}\right)dx &= 1\\
+			\end{split}
+		\end{align}
+		fazendo a mudança de variável $u=n \pi x/2$, $du=n \pi dx/2$, quando $x=-\pi/2$ então $u=-n \pi /2$, e quando $x=\pi/2$, $u=n \pi/2$, dessa forma o resultado da integral acima fica
+		\begin{align}
+				\begin{split}
+				A^{2}_{n}\left[\frac{a}{n \pi}\right]\left[\left(\frac{n \pi}{2}\right)-\frac{1}{2}\cancelto{0}{\left(\frac{\sin(2u)}{2}\right)\Bigg|_{-n \pi/2}^{n \pi/2}}\right] &= 1
+				\end{split}
+		\end{align}
+		o que simplificando da
+		\begin{align}
+			A_{n} &= \sqrt{\frac{2}{a}}
+		\end{align}
+		A solução para $n=1,3,5,...$ é similar, mas agora a função que devemos integrar é
+		\begin{align}
+			B_{n}^{2}\int\limits_{-\frac{a}{2}}^{\frac{a}{2}}\cos^{2} \left(\frac{n \pi x}{a}\right)dx &= 1
+		\end{align}
+		procedendo de forma análoga obtemos
+		\begin{align}
+				B^{2}_{n}\left[\frac{a}{n \pi}\right]\left[\left(\frac{n \pi}{2}\right)+\frac{1}{2}\cancelto{0}{\left(\frac{\sin(2u)}{2}\right)\Bigg|_{-n \pi/2}^{n \pi/2}}\right] &= 1
+		\end{align}
+		ou seja
+		\begin{align}
+			B_{n} &= \sqrt{\frac{2}{a}}
+		\end{align}
+		completando a solução para as autofunções $\psi_{n}(x)$
+		\begin{align}
+				\boxed{
+					\psi_{n}(x)=
+					\begin{dcases*}
+						\sqrt{\frac{2}{a}}\sen \left(\frac{n \pi x}{a}\right) & se, $n=2, 4, 6,...$(par)\\
+						\sqrt{\frac{2}{a}}\cos \left(\frac{n \pi x}{a}\right) & se, $n=1, 3, 5, ...$(ímpar)\\
+					\end{dcases*}
+				}
+		\end{align}
+		e
+		\begin{align}
+			\boxed{
+				k_{n} = \frac{n \pi}{a}
+			}
+		\end{align}
+		
+		É de se esperar que os autovalores de energia associados $E_{n}$, sejam os mesmos encontrados para o poço infinito com centro deslocado da origem, e de fato, em termos dos $k_{n}$, teremos
+		\begin{align}
+				\begin{split}
+					k_{n} &= \frac{n \pi}{a}=\sqrt{\frac{2mE_{n}}{\hbar^{2}}}\\
+				\end{split}
+		\end{align}
+		\begin{align}
+			\boxed{
+				E_{n} = \frac{\pi^{2}\hbar^{2}}{2ma^{2}}n^{2}
+			}
+		\end{align}
+
+	\end{sol}
+\end{prob}

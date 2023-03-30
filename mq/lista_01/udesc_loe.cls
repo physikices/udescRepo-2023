@@ -1,0 +1,1 @@
+/home/rodrigo/.dotfiles/latex/udesc_loe.cls
