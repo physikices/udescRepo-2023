@@ -303,17 +303,58 @@
 		\end{subequations}
 		e notando que
 		\begin{subequations}
-				\begin{align}
-					x\to 0 &\implies u\to 0\\
-					x\to a &\implies u\to n \pi
-				\end{align}
+			\begin{align}
+				x\to 0 &\implies u\to 0\\
+				x\to a &\implies u\to n \pi
+			\end{align}
 		\end{subequations}
-		a integral fica
+		ajustamos o argumento do \emph{seno} para poder aplicar integração por partes e ficamos com
 		\begin{equation*}
-				\begin{split}
-					\langle x \rangle &= \frac{2}{a}
-				\end{split}
+			\begin{split}
+				\langle x \rangle &= \frac{2}{a}\int\limits_{0}^{n \pi}\left(\frac{a}{n \pi}\right)u\sen^{2}u\left(\frac{a}{n \pi}\right)\,du\\
+													&=\frac{2}{a}\left(\frac{a}{n \pi}\right)^{2}\int\limits_{0}^{n \pi}u\sin^{2}{u}\,du
+			\end{split}
 		\end{equation*}
+		no exercício anterior já mostramos que o resultado da integral de $\sin^{2}(x)$, a menos de uma constante, é igual a
+		\begin{align}
+			\int \sin^{2}x\,dx &= \frac{1}{2}\left[x-\frac{1}{2}\sin(2x)\right] 
+		\end{align}
+		de modo que, aplicando a integração por partes na integral de interesse, obtemos
+		\begin{align}
+			\begin{split}
+				\frac{2a}{n^{2} \pi^{2}}\int\limits_{0}^{n \pi}u\sin^{2}u\,d{u} &= \frac{2a}{n^{2} \pi^{2}}\left\{\frac{u}{2}\left[u-\frac{1}{2}\sin(2u)\right]\Bigg|_{0}^{n \pi}\right\}-\frac{2a}{n^{2} \pi^{2}}\frac{1}{2}\int\limits_{0}^{n \pi}\left[u-\frac{1}{2}\sin(2u)\right]\,d{u}\\
+																																				&= \frac{2a}{n^{2} \pi^{2}}\left[\frac{u^{2}}{2}-\frac{u}{4}\sin(2u)\right]\Bigg|_{0}^{n \pi}-\frac{2a}{n^{2} \pi^{2}}\frac{1}{2}\left[\frac{u^{2}}{2}+\frac{1}{4}\cos(2u)\right]\Bigg|_{0}^{n \pi}\\
+																																				&= \frac{2a}{n^{2} \pi^{2}}\left[\frac{n^{2}{\pi^{2}}}{2}-\frac{n \pi}{4}\sin(2n \pi)-\frac{n^{2} \pi^{2}}{4}-\frac{1}{8}\cos(2n \pi)+\frac{1}{8}\right]=\langle x \rangle
+			\end{split}
+		\end{align}
+		Desde que $n\in \mathbb{N^{*}}\implies \sin(2n \pi)=0$ e $\cos(2n \pi)=1$ ou seja
+		\begin{align}
+			\begin{split}
+			\langle x \rangle &= \frac{2a}{n^{2} \pi^{2}}\left[\frac{n^{2} \pi^{2}}{2}-\frac{n^{2} \pi^{2}}{4}\right]=\frac{2a}{n^{2} \pi^{2}}\left(\frac{n^{2} \pi^{2}}{4}\right)\therefore
+			\end{split}
+		\end{align}
+		\begin{align}
+			\boxed{
+				\langle x \rangle = \frac{a}{2}
+			}
+		\end{align}
+		procedendo de forma análoga para $\langle x^{2} \rangle$
+		\begin{align}
+				\begin{split}
+					\langle x^{2} \rangle	&= \int\limits_{0}^{a}\frac{2}{a}x^{2}\sin^{2}\left(\frac{n \pi x}{a}\right)\,d{x}\\
+																&= \frac{2}{a}\int\limits_{0}^{n \pi}\left(\frac{a}{n \pi}\right)^{2}u^{2}\sin^{2}u \left(\frac{a}{n \pi}\right)\,d{u}\\
+																&= \frac{2}{a}\left(\frac{a}{n \pi}\right)^{3}\int\limits_{0}^{n \pi}u^{2}\sin^{2}u\,d{u}\\
+																&= \frac{2a^{2}}{n^{3} \pi^{3}}\left[\frac{u^{3}}{6}-\frac{u^{2}}{4}\sin{(2u)}-\frac{x}{4}\cos{(2u)}+\frac{1}{8}\sin{(2u)}\right]\Bigg|_{0}^{n \pi}\\
+																&= \frac{2a^{2}}{n^{3} \pi^{3}}\left[\frac{n^{3} \pi^{3}}{6}-\frac{n^{2} \pi^{2}}{4}\underbrace{\sin(2n \pi)}_{\displaystyle 0}-\frac{n \pi}{4}\underbrace{\cos{(2n \pi)}}_{\displaystyle 1}+\frac{1}{8}\underbrace{\sin{(2n \pi)}}_{\displaystyle 0}\right]\\
+																&= \frac{2a^{2}}{n^{3} \pi^{3}}\left[\frac{n^{3} \pi^{3}}{6}-\frac{n \pi}{4}\right]
+				\end{split}
+		\end{align}
+		portanto,
+		\begin{align}
+				\boxed{
+					\langle x^{2} \rangle = \frac{a^{2}}{3}-\frac{1}{2}\left(\frac{a}{n \pi}\right)^{2}
+				}
+		\end{align}
 	\end{sol}
 \end{prob}
 % --------------------------------------------- %
