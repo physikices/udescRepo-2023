@@ -355,6 +355,52 @@
 					\langle x^{2} \rangle = \frac{a^{2}}{3}-\frac{1}{2}\left(\frac{a}{n \pi}\right)^{2}
 				}
 		\end{align}
+
+		Para determinar $\langle p \rangle$, uma vez que conhecemos $\langle x \rangle$, basta fazermos 
+		\begin{align}
+			\langle p \rangle &= \frac{d \langle x \rangle}{dt}
+		\end{align}
+		logo
+		\begin{align}
+			\langle p \rangle =\frac{d}{dt}\left(\frac{a}{2}\right)
+		\end{align}
+		ou simplesmente
+		\begin{align}
+				\boxed{\langle p \rangle=0}
+		\end{align}
+		Porém para determinar $\langle p^{2} \rangle$, precisaremos da equação de Schröedinger escrita para o problema, notando que a partícula somente pode exisitir no interior do poço infinito onde a função de onda $\psi(x)$ é diferente de zero, e que nesta região a partícula é livre ($V=0$)
+		\begin{align}
+			\begin{split}
+				\hat{H} \psi &= E\psi\\
+				-\frac{\hbar^{2}}{2m}\frac{d^{2}\psi_{n}(x)}{dx^{2}} &= E_{n} \psi_{n}(x)\\
+				\frac{d^{2} \psi_{n}(x)}{dx^{2}} &= -\frac{2mE_{n}}{\hbar^{2}} \psi_{n}(x)
+			\end{split}
+		\end{align}
+		atento a isto, segue que
+		\begin{align}
+				\begin{split}
+					\langle p^{2} \rangle &= \int\limits_{0}^{a} \psi_{n}^{*}(x)\left(-i \hbar \frac{d}{dx}\right)^{2} \psi_{n}(x)\,d{x}\\
+																&= -\hbar^{2}\int\limits_{a}^{b} \psi^{*}(x)\frac{d^{2} \psi_{n}(x)}{dx^{2}}\,d{x}\\
+																&= \hbar^{2}\frac{2mE_{n}}{\hbar^{2}}\int\limits_{0}^{a} \psi_{n}^{*}(x) \psi_{n}(x)\,d{x}
+				\end{split}
+		\end{align}
+		usando a condição de normalização das funções $\psi_{n}(x)$
+		\begin{align}
+			\langle p^{2} \rangle	&= 2mE_{n}
+		\end{align}
+		em sala de aula, encontramos para o valor de energia
+		\begin{align}
+			E_{n} &= \frac{n^{2} \pi^{2} \hbar^{2}}{2ma^{2}}
+		\end{align}
+		então
+		\begin{align}
+				\boxed{
+					\langle p^{2} \rangle = \left(\frac{n \pi \hbar}{a}\right)^{2}
+				}
+		\end{align}
+		
+		Dado que $\sigma^{2_{x}}$
+
 	\end{sol}
 \end{prob}
 % --------------------------------------------- %
