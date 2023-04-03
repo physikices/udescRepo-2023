@@ -291,16 +291,15 @@
 \framesubtitle{Análise}
 \tikzset{
 	basic/.style = {
-		sibling distance=5cm,
+		sibling distance=4.5cm,
 		draw,
-		text width=5em,
 		rectangle
 	},
 	root/.style = {
 		basic,
 		align=center,
 		fill=blue!75,
-		text width=6em,
+		text width=15em,
 		blur shadow={
 			shadow blur steps=10,
 			shadow blur extra rounding=2pt,
@@ -314,7 +313,7 @@
 		align=center,
 		fill=red!60,
 		text=white,
-		text width=15em
+		text width=11em
 	},
 	level 2/.style = {
 		basic,
@@ -330,24 +329,23 @@
 		thin,
 		align=center,
 		fill=cyan!20,
-		node distance=5pt,
-		text width=10em
+		text width=9.5em
 	}
 }
 \centering
 	\begin{tikzpicture}
    \only<4>{} % Force beamer to show the correct amount of slides
-	 \node[root, text=white] {SEI\\Meteorologia}
+	 \node[root, text=white] {Sequência de Ensino Investigativo\\Tema: Meteorologia}
     [edge from parent fork down]
-		child [hide on=-1]{node[level 1, visible on=<2->] {Análise por Engajamento}
-			child [hide on=-2]{node[level 2, visible on=<3->] {Engajamento}
-				child [hide on=-2]{node[level 3, visible on=<3->]{Demonstra interesse}}
+		child [hide on=-1]{node[level 1, visible on=<2->] {Análise por Níveis de Engajamento}
+			child [hide on=-2]{node[level 2, visible on=<3->] {\textbf{Nível-1:} Engajamento}
+				child [hide on=-2]{node[level 3, visible on=<3->]{\textit{Indicador:} Discurso\\ Interesse/participação}}
 			}
-			child [hide on=-3]{node[level 2, visible on=<4->] {Engajamento Disciplinar}
-				child [hide on=-3]{node[level 3, visible on=<4->]{Busca organizar-se}}
+			child [hide on=-3]{node[level 2, visible on=<4->] {\textbf{Nível-2:} Engaj. Disciplinar}
+				child [hide on=-3]{node[level 3, visible on=<4->]{\textit{Indicador:}\\ $E\xrightleftharpoons[transitividade]{}C$}}
 			}
-			child [hide on=-4]{node[level 2, visible on=<5->] {Eng. Disciplinar Prod.}
-				child [hide on=-4]{node[level 3, visible on=<5->]{Envolv. Emocional}}
+			child [hide on=-4]{node[level 2, visible on=<5->] {\textbf{Nível-3:} Engaj. Disciplinar Prod.}
+				child [hide on=-4]{node[level 3, visible on=<5->]{\textit{Indicador:} Sofisticação da linguagem/Envolv. Emocional}}
 			}
 	};
 		% child {node[level 2, visible on=<1->]  {Metakognition}
