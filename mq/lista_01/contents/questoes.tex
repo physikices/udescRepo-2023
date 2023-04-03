@@ -1,4 +1,4 @@
-%--------------| Q01 |--------------------
+% --------------| Q01 |--------------------
 \addcontentsline{toc}{section}{Problema 01}
 \begin{prob}
 	Considere a função de onda
@@ -23,7 +23,7 @@
 					\int\limits_{-\infty}^{+\infty}|A \mathrm{e}^{-\lambda |x|} \mathrm{e}^{-i \omega t}A \mathrm{e}^{-\lambda |x|} \mathrm{e}^{+i \omega t}|dx &=1 \nonumber\\
 					\int\limits_{-\infty}^{+\infty}A^{2} \mathrm{e}^{-2 \lambda |x|}dx &= 1
 				\end{align}
-				como a $\psi(x)$ é uma função par, podemos fazer
+				a $\psi(x)$ é uma função par $\psi(x) = \psi(-x)$ e o intervalo de integração é simétrico em $x$, o que nos permite fazer
 				\begin{align}
 					2A^{2}	\int\limits_{0}^{+\infty} \mathrm{e}^{-2 \lambda |x|}dx &= 1\nonumber \\
 					2A^{2}\left(-\frac{1}{2 \lambda} \mathrm{e}^{-2 \lambda x}\bigg|_{0}^{+\infty}\right) &= 1\nonumber \\
@@ -36,7 +36,71 @@
 						\Psi(x,t)=\psi(x)\mathrm{e}^{-i \omega t}\condition{com $\displaystyle \psi(x)=\sqrt{\lambda}\mathrm{e}^{-\lambda |x|}$}
 					}
 				\end{dmath*}
-			\item  
+			\item Calculando $\langle x \rangle$ e $\langle x^{2} \rangle$
+				\begin{align}
+					\begin{split}
+						\langle x \rangle &= \int\limits_{- \infty}^{\infty}\abs{\Psi^{*}(x,t)x \Psi(x,t)}\,d{x} = \int\limits_{- \infty}^{\infty}x \abs{\psi(x)}^{2}\,d{x}\\
+															&= \int\limits_{- \infty}^{\infty}x \lambda \mathrm{e}^{-2 \lambda x}\,d{x}
+					\end{split}
+				\end{align}
+				neste caso a função $\psi(x)$ é ímpar $\psi(-x)=-\psi(x)$, o que num intervalo de integração simétrico com relação a origem, retorna zero, ou seja
+				\begin{align}
+					\boxed{
+						\langle x \rangle = 0
+					}						
+				\end{align}
+				Para $\langle x^{2} \rangle$, tem-se que
+				\begin{align}
+					\begin{split}
+						\langle x^{2} \rangle &= \int\limits_{- \infty}^{\infty}x^{2}\abs{\psi(x)}^{2}\,d{x}\\
+																	&=\lambda \int\limits_{- \infty}^{\infty}x^{2}\mathrm{e}^{-2 \lambda x}\,d{x}
+					\end{split}
+				\end{align}
+				$\psi(x)$ é novamente par, então
+				\begin{align}
+					\langle x^{2} \rangle &= 2 \lambda \int\limits_{0}^{\infty}x^{2}\mathrm{e}^{-2 \lambda x}\,d{x}\\
+				\end{align}
+				usando integração por partes duas vezes, chegamos ao seguinte resultado
+				\begin{align}
+						\begin{split}
+							\langle x^{2} \rangle &= -\left[\frac{x^{2}}{\mathrm{e}^{2 \lambda x}}\Bigg|_{0}^{\infty}+\frac{x}{\lambda \mathrm{e}^{2 \lambda x}}\Bigg|_{0}^{\infty}+\frac{2}{2 \lambda \mathrm{e}^{2 \lambda x}}\Bigg|_{0}^{\infty}\right]\implies \left[-\frac{\infty}{\infty}\right]\\
+																		&= -\lim_{x\to \infty}\frac{x^{2}}{\mathrm{e}^{2 \lambda x}} \implies \left[-\frac{\infty}{\infty}\right]\\
+							\overset{\mathrm{H}}&{=} -\lim_{x\to \infty}\frac{2x}{2 \lambda \mathrm{e}^{2 \lambda x}}\implies \left[-\frac{\infty}{\infty}\right]\\
+							\overset{\mathrm{H}}&{=} -\lim_{x\to \infty}\frac{2}{4 \lambda^{2}\mathrm{e}^{2 \lambda x}}\implies \left[0\right]\therefore\\
+																	&= -\left[\lim_{b\to \infty}\frac{2}{4 \lambda^{2} \mathrm{e}^{2 \lambda x}}\Bigg|_{0}^{b} \right]\\
+																	&= -\left(0-\frac{1}{2 \lambda^{2}}\right)
+						\end{split}
+				\end{align}
+				\begin{align}
+						\boxed{
+							\langle x^{2} \rangle = \frac{1}{2 \lambda^{2}}
+						}
+				\end{align}
+			\item Calculando $\sigma$
+				\begin{align}
+					\begin{split}
+						\sigma &= \sqrt{\langle x^{2} \rangle-\langle x \rangle^{2}}\\
+									 &= \sqrt{\frac{1}{2 \lambda^{2}}-0}\\
+									 &= \frac{1}{\lambda\sqrt{2}}
+					\end{split}						
+				\end{align}
+				\begin{align}
+					\boxed{\sigma = \frac{\sqrt{2}}{2\lambda}}
+				\end{align}
+				\begin{figure}[ht!]
+					\centering
+					\input{assets/pltQ01c.tikz}
+					\caption{Região de probabilidade de encontrar a partícula entre os valores do desvio padrão $\pm\sigma$}
+					\label{fig:pltQ01c}
+				\end{figure}
+				Para valores de $x\in (-\infty, -\sigma]$ e $x\in [+\sigma,+\infty)$, tem-se que
+				\begin{align}
+						\begin{split}
+							2 \lambda \int\limits_{\sigma}^{\infty}\mathrm{e}^{-2 \lambda\abs{x}}\,d{x} &= 2 \lambda \left[-\frac{1}{2 \lambda}\mathrm{e}^{-2 \lambda x}\Bigg|_{\sigma}^{\infty} \right]\\
+																																													&= 0+\frac{1}{\mathrm{e}^{2 \lambda \sigma}}\\
+																																													&= \frac{1}{\mathrm{e}^{\sqrt{2}}}
+						\end{split}
+				\end{align}
 		\end{enumerate} 	
 	\end{sol}
 \end{prob}
@@ -330,7 +394,7 @@
 		Desde que $n\in \mathbb{N^{*}}\implies \sin(2n \pi)=0$ e $\cos(2n \pi)=1$ ou seja
 		\begin{align}
 			\begin{split}
-			\langle x \rangle &= \frac{2a}{n^{2} \pi^{2}}\left[\frac{n^{2} \pi^{2}}{2}-\frac{n^{2} \pi^{2}}{4}\right]=\frac{2a}{n^{2} \pi^{2}}\left(\frac{n^{2} \pi^{2}}{4}\right)\therefore
+				\langle x \rangle &= \frac{2a}{n^{2} \pi^{2}}\left[\frac{n^{2} \pi^{2}}{2}-\frac{n^{2} \pi^{2}}{4}\right]=\frac{2a}{n^{2} \pi^{2}}\left(\frac{n^{2} \pi^{2}}{4}\right)\therefore
 			\end{split}
 		\end{align}
 		\begin{align}
@@ -340,20 +404,20 @@
 		\end{align}
 		procedendo de forma análoga para $\langle x^{2} \rangle$
 		\begin{align}
-				\begin{split}
-					\langle x^{2} \rangle	&= \int\limits_{0}^{a}\frac{2}{a}x^{2}\sin^{2}\left(\frac{n \pi x}{a}\right)\,d{x}\\
-																&= \frac{2}{a}\int\limits_{0}^{n \pi}\left(\frac{a}{n \pi}\right)^{2}u^{2}\sin^{2}u \left(\frac{a}{n \pi}\right)\,d{u}\\
-																&= \frac{2}{a}\left(\frac{a}{n \pi}\right)^{3}\int\limits_{0}^{n \pi}u^{2}\sin^{2}u\,d{u}\\
-																&= \frac{2a^{2}}{n^{3} \pi^{3}}\left[\frac{u^{3}}{6}-\frac{u^{2}}{4}\sin{(2u)}-\frac{x}{4}\cos{(2u)}+\frac{1}{8}\sin{(2u)}\right]\Bigg|_{0}^{n \pi}\\
-																&= \frac{2a^{2}}{n^{3} \pi^{3}}\left[\frac{n^{3} \pi^{3}}{6}-\frac{n^{2} \pi^{2}}{4}\underbrace{\sin(2n \pi)}_{\displaystyle 0}-\frac{n \pi}{4}\underbrace{\cos{(2n \pi)}}_{\displaystyle 1}+\frac{1}{8}\underbrace{\sin{(2n \pi)}}_{\displaystyle 0}\right]\\
-																&= \frac{2a^{2}}{n^{3} \pi^{3}}\left[\frac{n^{3} \pi^{3}}{6}-\frac{n \pi}{4}\right]
-				\end{split}
+			\begin{split}
+				\langle x^{2} \rangle	&= \int\limits_{0}^{a}\frac{2}{a}x^{2}\sin^{2}\left(\frac{n \pi x}{a}\right)\,d{x}\\
+															&= \frac{2}{a}\int\limits_{0}^{n \pi}\left(\frac{a}{n \pi}\right)^{2}u^{2}\sin^{2}u \left(\frac{a}{n \pi}\right)\,d{u}\\
+															&= \frac{2}{a}\left(\frac{a}{n \pi}\right)^{3}\int\limits_{0}^{n \pi}u^{2}\sin^{2}u\,d{u}\\
+															&= \frac{2a^{2}}{n^{3} \pi^{3}}\left[\frac{u^{3}}{6}-\frac{u^{2}}{4}\sin{(2u)}-\frac{x}{4}\cos{(2u)}+\frac{1}{8}\sin{(2u)}\right]\Bigg|_{0}^{n \pi}\\
+															&= \frac{2a^{2}}{n^{3} \pi^{3}}\left[\frac{n^{3} \pi^{3}}{6}-\frac{n^{2} \pi^{2}}{4}\underbrace{\sin(2n \pi)}_{\displaystyle 0}-\frac{n \pi}{4}\underbrace{\cos{(2n \pi)}}_{\displaystyle 1}+\frac{1}{8}\underbrace{\sin{(2n \pi)}}_{\displaystyle 0}\right]\\
+															&= \frac{2a^{2}}{n^{3} \pi^{3}}\left[\frac{n^{3} \pi^{3}}{6}-\frac{n \pi}{4}\right]
+			\end{split}
 		\end{align}
 		portanto,
 		\begin{align}
-				\boxed{
-					\langle x^{2} \rangle = \frac{a^{2}}{3}-\frac{1}{2}\left(\frac{a}{n \pi}\right)^{2}
-				}
+			\boxed{
+				\langle x^{2} \rangle = \frac{a^{2}}{3}-\frac{1}{2}\left(\frac{a}{n \pi}\right)^{2}
+			}
 		\end{align}
 
 		Para determinar $\langle p \rangle$, uma vez que conhecemos $\langle x \rangle$, basta fazermos 
@@ -366,9 +430,9 @@
 		\end{align}
 		ou simplesmente
 		\begin{align}
-				\boxed{\langle p \rangle=0}
+			\boxed{\langle p \rangle=0}
 		\end{align}
-		Porém para determinar $\langle p^{2} \rangle$, precisaremos da equação de Schröedinger escrita para o problema, notando que a partícula somente pode exisitir no interior do poço infinito onde a função de onda $\psi(x)$ é diferente de zero, e que nesta região a partícula é livre ($V=0$)
+		Porém para determinar $\langle p^{2} \rangle$, precisaremos da equação de Schröedinger escrita para o problema. Notando que a partícula somente pode exisitir no interior do poço infinito onde a função de onda $\psi(x)$ é diferente de zero, e que nesta região a partícula é livre ($V=0$)
 		\begin{align}
 			\begin{split}
 				\hat{H} \psi &= E\psi\\
@@ -378,11 +442,11 @@
 		\end{align}
 		atento a isto, segue que
 		\begin{align}
-				\begin{split}
-					\langle p^{2} \rangle &= \int\limits_{0}^{a} \psi_{n}^{*}(x)\left(-i \hbar \frac{d}{dx}\right)^{2} \psi_{n}(x)\,d{x}\\
-																&= -\hbar^{2}\int\limits_{a}^{b} \psi^{*}(x)\frac{d^{2} \psi_{n}(x)}{dx^{2}}\,d{x}\\
-																&= \hbar^{2}\frac{2mE_{n}}{\hbar^{2}}\int\limits_{0}^{a} \psi_{n}^{*}(x) \psi_{n}(x)\,d{x}
-				\end{split}
+			\begin{split}
+				\langle p^{2} \rangle &= \int\limits_{0}^{a} \psi_{n}^{*}(x)\left(-i \hbar \frac{d}{dx}\right)^{2} \psi_{n}(x)\,d{x}\\
+															&= -\hbar^{2}\int\limits_{a}^{b} \psi^{*}(x)\frac{d^{2} \psi_{n}(x)}{dx^{2}}\,d{x}\\
+															&= \hbar^{2}\frac{2mE_{n}}{\hbar^{2}}\int\limits_{0}^{a} \psi_{n}^{*}(x) \psi_{n}(x)\,d{x}
+			\end{split}
 		\end{align}
 		usando a condição de normalização das funções $\psi_{n}(x)$
 		\begin{align}
@@ -394,12 +458,64 @@
 		\end{align}
 		então
 		\begin{align}
-				\boxed{
-					\langle p^{2} \rangle = \left(\frac{n \pi \hbar}{a}\right)^{2}
-				}
+			\boxed{
+				\langle p^{2} \rangle = \left(\frac{n \pi \hbar}{a}\right)^{2}
+			}
 		\end{align}
-		
-		Dado que $\sigma^{2_{x}}$
+
+		Para o n-ésimo estado estacionário a incerteza na posição é dada por	
+		\begin{align}
+			\sigma_{x}=\sqrt{\langle x^{2} \rangle -\langle x \rangle^{2}}
+		\end{align}
+		portanto	
+		\begin{align}
+			\begin{split}
+				\sigma_{x} &= \sqrt{\left[\frac{a^{2}}{3}-\frac{1}{2}\left(\frac{a}{n \pi}\right)^{2}\right]-\frac{a^{2}}{4}}\\
+									 &= \sqrt{\frac{a^{2}}{12}-\frac{a^{2}}{2n^{2} \pi^{2}}}\\
+			\end{split}
+		\end{align}
+		\begin{align}
+			\boxed{
+				\sigma_{x} = \frac{a}{2}\sqrt{\frac{1}{3}-\frac{2}{n^{2} \pi^{2}}}
+			}
+		\end{align}
+		e para o momento teremos
+		\begin{align}
+			\begin{split}
+				\sigma_{p} &= \sqrt{\langle p^{2} \rangle-\langle p \rangle^{2}}\\
+									 &= \sqrt{\left(\frac{n \pi \hbar}{a}\right)^{2}}
+			\end{split}
+		\end{align}
+		\begin{align}
+			\begin{split}
+				\boxed{
+					\sigma_{p} = \frac{n \pi \hbar}{a}
+				}
+			\end{split}				
+		\end{align}
+		Segundo o princípio de incerteza, não é possível obter simultâneamente com precisão o valor de duas variáveis conjugadas, matemáticamente isso é expresso por
+		\begin{align}
+			\sigma_{x} \sigma_{p}\geq \frac{\hbar}{2}
+		\end{align}
+		se isso for verdade, então, para o caso em questão teremos
+		\begin{align}
+			\begin{split}
+				\sigma_{x} \sigma_{p} = \left(\frac{n \pi \hbar}{a}\right)\frac{a}{2}\sqrt{\frac{1}{3}-\frac{2}{n^{2} \pi^{2}}}\\
+				= \frac{n \pi \hbar}{2}\sqrt{\frac{1}{3}-\frac{2}{n^{2} \pi^{2}}}\\
+			\end{split}
+		\end{align}
+		usando o princípio de incerteza
+		\begin{align}
+			\begin{split}
+				\sigma_{x} \sigma_{x} = \frac{n \pi \hbar}{2}\sqrt{\frac{1}{3}-\frac{2}{n^{2} \pi^{2}}}\geq \frac{\hbar}{2}\\
+				=n^{2} \pi^{2}\left(\frac{1}{3}-\frac{2}{n^{2} \pi^{2}}\right)\geq 1\\
+				=\frac{n^{2} \pi^{2}}{3}-2\geq 1\\
+				=\frac{n^{2} \pi^{2}}{3}\geq 3\\
+				=n\geq \frac{3}{\pi}
+			\end{split}
+		\end{align}
+		como $n\in\mathbb{N^{*}}$ a desigualdade acima é sempre verdade, o que de fato satisfaz o princípio de incerteza. O produto $\sigma_{x} \sigma_{p}$ é proporcional a constante reduzida de planck $\hbar$, no intervalo avaliado o menor valor possível de $n$ é $n=1$ o que consequentemente é também o valor mais próximo do limite inferior de incerteza.
+
 
 	\end{sol}
 \end{prob}
