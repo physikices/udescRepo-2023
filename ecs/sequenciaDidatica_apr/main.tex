@@ -81,7 +81,8 @@
 \section{Sequência Didática}
 \subsection{Referenciais}
 \subsection{Conteúdos Relacionados}
-\subsection{Análise \& Resultados}
+\subsection{Metodologia}
+\subsection{Resultados}
 % \subsection{Estrutura}
 % \subsection{Cronograma de Aplicação}
 
@@ -275,85 +276,152 @@
 \end{frame}
 
 \begin{frame}{Sequência Didática}
-\framesubtitle{Referenciais}
+	\framesubtitle{Referenciais}
 	\begin{columns}
 		\column{0.5\textwidth}
 		\imagem{seq_mario}{SEI}
 
 		\column{0.5\textwidth}
-		\imagem{seq_tulio}{Projeto Temático}
+		\begin{itemize}
+			\item \textbf{Autor:} Mario H. Calegari
+			\item \textbf{Ano:} 2017
+			\item \textbf{Turma:} 2° Ano EM (matutino)
+			\item \textbf{Local:} EEB. Giovani Pasqualini Faraco
+			\item \textbf{Orientadora:} Dra. Ivani T. Lawall
+			\item \textbf{Coorientador:} Dr. Alex Bellucco do Carmo
+			\item \textbf{Banca:} Dra. Lúcia H. Sasseron \& Dr. Carlos R. Rocha 
+		\end{itemize}
 	\end{columns}
-	
-	
 \end{frame}
 
 \begin{frame}{Sequência Didática}
-\framesubtitle{Análise}
-\tikzset{
-	basic/.style = {
-		sibling distance=4.5cm,
-		draw,
-		rectangle
-	},
-	root/.style = {
-		basic,
-		align=center,
-		fill=blue!75,
-		text width=15em,
-		blur shadow={
-			shadow blur steps=10,
-			shadow blur extra rounding=2pt,
-			shadow xshift=1pt
+	\framesubtitle{Conteúdos Relacionados}
+	% Please add the following required packages to your document preamble:
+	% \usepackage{graphicx}
+	\begin{table}[ht!]
+		\resizebox{.9\textwidth}{!}{%
+			\begin{tabular}{|r|l|l|}
+				\hline
+				\multicolumn{1}{|c|}{\textbf{Aula}} & \multicolumn{1}{c|}{\textbf{Etapa (SEI)}} & \multicolumn{1}{c|}{\textbf{Atividade de Ensino}} \\ \hline
+				01 & Contextualização & \begin{tabular}[c]{@{}l@{}}Vídeo: Mudanças Climáticas;\\ Pesquisa: O que influência a previsão\end{tabular} \\ \hline
+				02 & Problematização & \begin{tabular}[c]{@{}l@{}}Apresentação da Pesquisa (Alunos)\\ Apresentação da SEI: Problemática (Previsão do tempo para a festa)\\ Apresentação da Estação Meteorológica\\ Montagem das Equipes\end{tabular} \\ \hline
+				03 & Resolução dos Problemas & \begin{tabular}[c]{@{}l@{}}Organização da Coleta de Dados\\ Apresentação de Estratégias (Equipes)\end{tabular} \\ \hline
+				04 & Atividade Investigativa & Condensação da Água \\ \hline
+				05 & Atividade Investigativa & Pressão Atmosférica \\ \hline
+				06 & Atividade Investigativa & Balão de Ar Quente \\ \hline
+				07 & Resolução dos Problemas & \begin{tabular}[c]{@{}l@{}}Utilização dos Dado Coletados\\ Previsão do Tempo para os Próximos Dias\end{tabular} \\ \hline
+				08 & Sistematização & Debate Sobre os Resultados \\ \hline
+			\end{tabular}%
+		}
+		\caption{Fnte: \cite{MARIO:2017}}
+	\end{table}
+
+\end{frame}
+
+\begin{frame}{Sequência Didática}
+	\framesubtitle{Metodologia}
+	\tikzset{
+		basic/.style = {
+			sibling distance=4.5cm,
+			draw,
+			rectangle
 		},
-		thin,
-	},
-	level 1/.style = {
-		basic,
-		thin,
-		align=center,
-		fill=red!60,
-		text=white,
-		text width=11em
-	},
-	level 2/.style = {
-		basic,
-		thin,
-		align=center,
-		fill=green!30,
-		text width=7em,
-		text=black
-	},
-	level 3/.style = {
-		basic,
-		rounded corners,
-		thin,
-		align=center,
-		fill=cyan!20,
-		text width=9.5em
+		root/.style = {
+			basic,
+			align=center,
+			fill=blue!75,
+			text width=15em,
+			blur shadow={
+				shadow blur steps=10,
+				shadow blur extra rounding=2pt,
+				shadow xshift=1pt
+			},
+			thin,
+		},
+		level 1/.style = {
+			basic,
+			thin,
+			align=center,
+			fill=red!60,
+			text=white,
+			text width=11em
+		},
+		level 2/.style = {
+			basic,
+			thin,
+			align=center,
+			fill=green!30,
+			text width=7em,
+			text=black
+		},
+		level 3/.style = {
+			basic,
+			rounded corners,
+			thin,
+			align=center,
+			fill=cyan!20,
+			text width=9.5em
+		}
 	}
-}
-\centering
+	\centering
 	\begin{tikzpicture}
-   \only<4>{} % Force beamer to show the correct amount of slides
-	 \node[root, text=white] {Sequência de Ensino Investigativo\\Tema: Meteorologia}
-    [edge from parent fork down]
-		child [hide on=-1]{node[level 1, visible on=<2->] {Análise por Níveis de Engajamento}
-			child [hide on=-2]{node[level 2, visible on=<3->] {\textbf{Nível-1:} Engajamento}
-				child [hide on=-2]{node[level 3, visible on=<3->]{\textit{Indicador:} Discurso\\ Interesse/participação}}
-			}
-			child [hide on=-3]{node[level 2, visible on=<4->] {\textbf{Nível-2:} Engaj. Disciplinar}
-				child [hide on=-3]{node[level 3, visible on=<4->]{\textit{Indicador:}\\ $E\xrightleftharpoons[transitividade]{}C$}}
-			}
-			child [hide on=-4]{node[level 2, visible on=<5->] {\textbf{Nível-3:} Engaj. Disciplinar Prod.}
-				child [hide on=-4]{node[level 3, visible on=<5->]{\textit{Indicador:} Sofisticação da linguagem/Envolv. Emocional}}
-			}
-	};
+		\node[root, text=white] {Sequência de Ensino Investigativo\\Tema: Meteorologia}
+			[edge from parent fork down]
+			child [hide on=-1]{node[level 1, visible on=<2->] {Análise por Níveis de Engajamento}
+				child [hide on=-2]{node[level 2, visible on=<3->] {\textbf{Nível-1:} Engajamento}
+					child [hide on=-2]{node[level 3, visible on=<3->]{\textit{Indicador:} Discurso\\ Interesse/participação}}
+				}
+				child [hide on=-3]{node[level 2, visible on=<4->] {\textbf{Nível-2:} Engaj. Disciplinar}
+					child [hide on=-3]{node[level 3, visible on=<4->]{\textit{Indicador:}\\ $E\xrightleftharpoons[transitividade]{}C$}}
+				}
+				child [hide on=-4]{node[level 2, visible on=<5->] {\textbf{Nível-3:} Engaj. Disciplinar Prod.}
+					child [hide on=-4]{node[level 3, visible on=<5->]{\textit{Indicador:} Sofisticação da linguagem/Envolv. Emocional}}
+				}
+			};
 		% child {node[level 2, visible on=<1->]  {Metakognition}
-  %     child [hide on=-2]  {node {Planung}}
-  %     child [hide on=-3] {node {Monotoring}}
+		%     child [hide on=-2]  {node {Planung}}
+		%     child [hide on=-3] {node {Monotoring}}
 		%     child [hide on=1] {node {Regulation}}}
-    
-\end{tikzpicture}
+
+	\end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Sequência Didática}
+	\framesubtitle{Metodologia}
+	\begin{columns}
+		\column{0.5\textwidth}
+		\begin{figure}[htb!]
+			\centering
+			\includegraphics[width=.5\linewidth]{img/placa_arduino.png}
+			\caption{\cite{MARIO:2017}}
+		\end{figure}
+
+		\column{0.5\textwidth}
+		\begin{figure}[htb!]
+			\centering
+			\includegraphics[width=.7\textwidth]{img/placa_arduino_cmpnts.png}
+		\end{figure}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{Sequência Didática}
+	\framesubtitle{Resultados}
+	% Please add the following required packages to your document preamble:
+	% \usepackage{graphicx}
+	\begin{table}[]
+		\resizebox{.8\textwidth}{!}{%
+			\begin{tabular}{|r|l|l|l|l|l|}
+				\hline
+				\multicolumn{1}{|c|}{\textbf{Data}} & \multicolumn{1}{c|}{\textbf{Hora}} & \multicolumn{1}{c|}{$T(\unit{\degreeCelsius})$} & $U(\%)$ & $P(\unit{\hecto\pascal})$ & \textbf{Condic.} \\ \hline
+				03/08 & 9h00 & 14,7 & 96 & 1024,7 &  \\ \hline
+				04/08 & 9h00 & 16,4 & 96 & 1023,1 & Chuva \\ \hline
+				05/08 & 9h00 & 17,9 & 95 & 1019,6 &  \\ \hline
+				06/08 & 9h00 & 15,4 & 97 & 1014,6 & Chuva \\ \hline
+				07/08 & 9h00 & 16,2 & 87 & 1018,7 & Chuva \\ \hline
+			\end{tabular}%
+		}
+		\caption{Fonte: \cite{MARIO:2017}}
+	\end{table}
 \end{frame}
 
 
