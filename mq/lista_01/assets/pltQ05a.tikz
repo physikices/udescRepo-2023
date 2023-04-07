@@ -1,0 +1,8 @@
+\begin{tikzpicture}[scale=1]
+	\begin{axis}[
+		axis lines = center,
+		xmin = -.2, xmax=1,
+		ymin = -.2, ymax=1,
+		]
+	\end{axis}
+\end{tikzpicture}
