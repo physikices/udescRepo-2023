@@ -62,19 +62,19 @@
 				\end{align}
 				usando integração por partes duas vezes, chegamos ao seguinte resultado
 				\begin{align}
-						\begin{split}
-							\langle x^{2} \rangle &= -\left[\frac{x^{2}}{\mathrm{e}^{2 \lambda x}}\Bigg|_{0}^{\infty}+\frac{x}{\lambda \mathrm{e}^{2 \lambda x}}\Bigg|_{0}^{\infty}+\frac{2}{2 \lambda \mathrm{e}^{2 \lambda x}}\Bigg|_{0}^{\infty}\right]\implies \left[-\frac{\infty}{\infty}\right]\\
-																		&= -\lim_{x\to \infty}\frac{x^{2}}{\mathrm{e}^{2 \lambda x}} \implies \left[-\frac{\infty}{\infty}\right]\\
-							\overset{\mathrm{H}}&{=} -\lim_{x\to \infty}\frac{2x}{2 \lambda \mathrm{e}^{2 \lambda x}}\implies \left[-\frac{\infty}{\infty}\right]\\
-							\overset{\mathrm{H}}&{=} -\lim_{x\to \infty}\frac{2}{4 \lambda^{2}\mathrm{e}^{2 \lambda x}}\implies \left[0\right]\therefore\\
-																	&= -\left[\lim_{b\to \infty}\frac{2}{4 \lambda^{2} \mathrm{e}^{2 \lambda x}}\Bigg|_{0}^{b} \right]\\
-																	&= -\left(0-\frac{1}{2 \lambda^{2}}\right)
-						\end{split}
+					\begin{split}
+						\langle x^{2} \rangle &= -\left[\frac{x^{2}}{\mathrm{e}^{2 \lambda x}}\Bigg|_{0}^{\infty}+\frac{x}{\lambda \mathrm{e}^{2 \lambda x}}\Bigg|_{0}^{\infty}+\frac{2}{2 \lambda \mathrm{e}^{2 \lambda x}}\Bigg|_{0}^{\infty}\right]\implies \left[-\frac{\infty}{\infty}\right]\\
+																	&= -\lim_{x\to \infty}\frac{x^{2}}{\mathrm{e}^{2 \lambda x}} \implies \left[-\frac{\infty}{\infty}\right]\\
+						\overset{\mathrm{H}}&{=} -\lim_{x\to \infty}\frac{2x}{2 \lambda \mathrm{e}^{2 \lambda x}}\implies \left[-\frac{\infty}{\infty}\right]\\
+						\overset{\mathrm{H}}&{=} -\lim_{x\to \infty}\frac{2}{4 \lambda^{2}\mathrm{e}^{2 \lambda x}}\implies \left[0\right]\therefore\\
+																&= -\left[\lim_{b\to \infty}\frac{2}{4 \lambda^{2} \mathrm{e}^{2 \lambda x}}\Bigg|_{0}^{b} \right]\\
+																&= -\left(0-\frac{1}{2 \lambda^{2}}\right)
+					\end{split}
 				\end{align}
 				\begin{align}
-						\boxed{
-							\langle x^{2} \rangle = \frac{1}{2 \lambda^{2}}
-						}
+					\boxed{
+						\langle x^{2} \rangle = \frac{1}{2 \lambda^{2}}
+					}
 				\end{align}
 			\item Calculando $\sigma$
 				\begin{align}
@@ -95,11 +95,11 @@
 				\end{figure}
 				Para valores de $x\in (-\infty, -\sigma]$ e $x\in [+\sigma,+\infty)$, tem-se que
 				\begin{align}
-						\begin{split}
-							2 \lambda \int\limits_{\sigma}^{\infty}\mathrm{e}^{-2 \lambda\abs{x}}\,d{x} &= 2 \lambda \left[-\frac{1}{2 \lambda}\mathrm{e}^{-2 \lambda x}\Bigg|_{\sigma}^{\infty} \right]\\
-																																													&= 0+\frac{1}{\mathrm{e}^{2 \lambda \sigma}}\\
-																																													&= \frac{1}{\mathrm{e}^{\sqrt{2}}}
-						\end{split}
+					\begin{split}
+						2 \lambda \int\limits_{\sigma}^{\infty}\mathrm{e}^{-2 \lambda\abs{x}}\,d{x} &= 2 \lambda \left[-\frac{1}{2 \lambda}\mathrm{e}^{-2 \lambda x}\Bigg|_{\sigma}^{\infty} \right]\\
+																																												&= 0+\frac{1}{\mathrm{e}^{2 \lambda \sigma}}\\
+																																												&= \frac{1}{\mathrm{e}^{\sqrt{2}}}
+					\end{split}
 				\end{align}
 		\end{enumerate} 	
 	\end{sol}
@@ -550,7 +550,7 @@
 				\end{figure}
 
 				Normalizando a $\Psi(x,0)$ no intervalo indicado: 
-			\begin{align}
+				\begin{align}
 					\begin{split}
 						\int\limits_{-\infty}^{\infty} \Psi^{*} \Psi\,d{x} &= \int\limits_{0}^{a/2}\abs{Ax}^{2}\,d{x}+\int\limits_{a/2}^{a}\abs{A(a-x)}^{2}\,d{x}=1\\
 																															 &= A^{2}\left[\frac{x^{3}}{3}\Bigg|_{0}^{a/2}+\left(a^{2}x-2a \frac{x^{2}}{2}+\frac{x^{3}}{3}\right)\Bigg|_{a/2}^{a} \right]=1\\
@@ -558,18 +558,18 @@
 																															 &= A^{2}\left[\frac{8a^{3}+12a^{3}-18a^{3}}{24}\right]=1\\
 																															 &= A^{2}\left[\frac{a^{3}}{12}\right]=1\implies \boxed{ A=2\sqrt{\frac{3}{a^{3}}}}
 					\end{split}
-			\end{align}
-		\item Uma vez que
-			\begin{dmath*}
-				\Psi(x,t) = \sum_{n=1}^{\infty}c_{n} \psi_{n}(x)\mathrm{e}^{-Et/\hbar}
+				\end{align}
+			\item Uma vez que
+				\begin{dmath*}
+					\Psi(x,t) = \sum_{n=1}^{\infty}c_{n} \psi_{n}(x)\mathrm{e}^{-Et/\hbar}
 					\condition{com $\displaystyle{c_{n}= \int\limits_{-\infty}^{\infty} \psi^{*}_{n}(x)\Psi(x,0)\,d{x}}$}
-			\end{dmath*}
-			e
-			\begin{dmath*}
-				\psi_{n}(x) = \sqrt{\frac{2}{a}}\sen \left(\frac{n \pi x}{a}\right)\condition{com $\displaystyle{n=1,2,3,4,5,...}$}
-			\end{dmath*}
-			Determinando $c_{n}$ no intervalo $x\in[0,a]$:
-			\begin{align}
+				\end{dmath*}
+				e
+				\begin{dmath*}
+					\psi_{n}(x) = \sqrt{\frac{2}{a}}\sen \left(\frac{n \pi x}{a}\right)\condition{com $\displaystyle{n=1,2,3,4,5,...}$}
+				\end{dmath*}
+				Determinando $c_{n}$ no intervalo $x\in[0,a]$:
+				\begin{align}
 					\begin{split}
 						c_{n} &= \sqrt{\frac{2}{a}}\left[\int\limits_{0}^{a/2}Ax\sen \left(\frac{n \pi x}{a}\right)\,d{x}+\int\limits_{a/2}^{a}A \left(a-x\right)\sen \left(\frac{n \pi x}{a}\right)\,d{x}\right]\\
 									&= A\sqrt{\frac{2}{a}}\left[\left(\frac{a}{n \pi}\right)^{2}\int\limits_{0}^{n \pi/2}u\sen(u)\,d{u}+a \left(\frac{a}{n \pi}\right) \int\limits_{n \pi/2}^{n \pi}\sen(u)\,d{u}+\right. \\ 
@@ -583,32 +583,45 @@
 									&= 2\sqrt{\frac{3}{a^{3}}}\sqrt{\frac{2}{a}}\left[\frac{2a^{2}}{n^{2} \pi^{2}}\sen \left(\frac{n \pi}{2}\right)\right]\\
 									&= \frac{4\sqrt{6}}{n^{2} \pi^{2}}\sen \left(\frac{n \pi}{2}\right)
 					\end{split}
-			\end{align}
-			Se $n=1,2,3,4,5,...$, então
-			\begin{alignat*}{4}
-				c_{1} &= \frac{4\sqrt{6}}{(1)^{2} \pi^{2}}(1) &\quad c_{2} &= \frac{4\sqrt{6}}{(2)^{2} \pi^{2}}(0)\\
-				c_{3} &= \frac{4\sqrt{6}}{(3)^{2} \pi^{2}}(-1) &\quad c_{4} &= \frac{4\sqrt{6}}{(4)^{2} \pi^{2}}(0)\\
-				c_{5} &= \frac{4\sqrt{6}}{(5)^{2} \pi^{2}}(1) &\quad c_{6} &= \frac{4\sqrt{6}}{(6)^{2} \pi^{2}}(0)\\
-				c_{7} &= \frac{4\sqrt{6}}{(7)^{2} \pi^{2}}(-1) &\quad c_{8} &= \frac{4\sqrt{6}}{(8)^{2} \pi^{2}}(0)
-			\end{alignat*}
-			ou seja,
-			\begin{align}
-				c_{n} = 
-				\begin{cases}
-					\displaystyle{0}, &\text{se $n=2,4,6,8,...$}\\
-					\displaystyle\frac{4\sqrt{6}}{\pi^{2}}\frac{(-1)^{(n-1)/2}}{n^{2}}, &\text{se $n=1,3,5,7,...$}
-				\end{cases}
-			\end{align}
-			e por fim
-			\begin{align}
+				\end{align}
+				Se $n=1,2,3,4,5,...$, então
+				\begin{alignat*}{4}
+					c_{1} &= \frac{4\sqrt{6}}{(1)^{2} \pi^{2}}(1) &\quad c_{2} &= \frac{4\sqrt{6}}{(2)^{2} \pi^{2}}(0)\\
+					c_{3} &= \frac{4\sqrt{6}}{(3)^{2} \pi^{2}}(-1) &\quad c_{4} &= \frac{4\sqrt{6}}{(4)^{2} \pi^{2}}(0)\\
+					c_{5} &= \frac{4\sqrt{6}}{(5)^{2} \pi^{2}}(1) &\quad c_{6} &= \frac{4\sqrt{6}}{(6)^{2} \pi^{2}}(0)\\
+					c_{7} &= \frac{4\sqrt{6}}{(7)^{2} \pi^{2}}(-1) &\quad c_{8} &= \frac{4\sqrt{6}}{(8)^{2} \pi^{2}}(0)
+				\end{alignat*}
+				ou seja,
+				\begin{align}
+					c_{n} = 
+					\begin{cases}
+						\displaystyle{0}, &\text{se $n=2,4,6,8,...$}\\
+						\displaystyle\frac{4\sqrt{6}}{\pi^{2}}\frac{(-1)^{(n-1)/2}}{n^{2}}, &\text{se $n=1,3,5,7,...$}
+					\end{cases}
+				\end{align}
+				e por fim
+				\begin{align}
 					\boxed{
 						\Psi(x,t) =\frac{4\sqrt{6}}{\pi^{2}}\sqrt{\frac{2}{a}} \sum_{n=1,3,5,...}\left[\frac{(-1)^{(n-1)/2}}{n^{2}}\sen \left(\frac{n \pi x}{a}\right)\mathrm{e}^{-E_{n}t/\hbar}\right]
 					}
-			\end{align}
-		\item A probabilidade de que uma medida retorne o valor de energia $E_{1}$ é dada por
-			\begin{align}
-				\abs{c_{1}}^{2} &= 	
-			\end{align}
+				\end{align}
+			\item A probabilidade de que uma medida retorne o valor de energia $E_{1}$ é dada por
+				\begin{align}
+					\abs{c_{1}}^{2} &= \abs{\frac{4\sqrt{6}}{\pi^{2}}}^{2} = \boxed{0,985} 
+				\end{align}
+			\item Para o valor médio de energia $\langle H \rangle$ tem-se que:
+				\begin{dmath*}
+					\langle H \rangle = \sum_{n=1,3,5,...}\abs{c_{n}}^{2}E_{n}\condition{com $\displaystyle{E_{n}=\frac{n^{2} \pi^{2} \hbar^{2}}{2ma^{2}}}$}
+				\end{dmath*}
+				ou seja,
+				\begin{align}
+					\begin{split}
+						\langle H \rangle &= \frac{16(6)}{\pi^{4}}\sum_{n=1,3,5,...}\left[\frac{(-1)^{(n-1)/2}}{n^{2}}\right]^{2}\frac{n^{2} \pi^{2} \hbar^{2}}{2ma^{2}}\\
+															&=\frac{96}{\pi^{4}}\sum_{n=1,3,5,...}\frac{(-1)^{(n-1)}}{n^{4}}\frac{n^{2} \pi^{2} \hbar^{2}}{2ma^{2}}\\
+															&= \frac{48\hbar^{2}}{ma^{2}\pi^{2}}\sum_{n=1,3,5,...}\frac{(-1)^{(n-1)}}{n^{2}}\\
+															&= \frac{48\hbar^{2}}{ma^{2} \pi^{2}}\frac{\pi^{2}}{8}=\boxed{\frac{6\hbar^{2}}{ma^{2}}}
+					\end{split}
+				\end{align}
 
 		\end{enumerate}
 
@@ -632,6 +645,72 @@
 		\item Escreva os operadores posição e momento em termos dos operadores escada $\hat{a}_{\pm}$ e calcule os valores médios de $x$, $p$, $x^{2}$ e $p^{2}$ para o estado fundamental $\psi_{0}(x)$ e verifique se o princípio de incerteza está sendo respeitado.
 	\end{enumerate}
 	\begin{sol}
+		\begin{enumerate}[label=\alph *)]
+			\item 
+				\begin{proof}
+					Partindo das equações dos operadores
+					\begin{subequations}
+						\begin{align}
+							\hat{a}_{-} &= \left(\frac{i \hat{p}+m \omega \hat{x}}{\sqrt{2m \hbar \omega}}\right)\\
+							\hat{a}_{+} &= \left(\frac{-i \hat{p}+m \omega \hat{x}}{\sqrt{2m \hbar \omega}}\right)
+						\end{align}
+					\end{subequations}
+					construindo uma expressão para o comutador dos operadores
+					\begin{align}
+						[\hat{a}_{-},\hat{a}_{+}] &=	\hat{a}_{-}\hat{a}_{+}-\hat{a}_{+}\hat{a}_{-}
+					\end{align} 
+					mas
+					\begin{align}
+						\hat{a}_{-}\hat{a}_{+}&=\frac{1}{2m\hbar\omega}[\hat{p}^{2}+(m \omega \hat{x})^{2}]-\frac{i}{2\hbar}(\hat{x}\hat{p}-\hat{p}\hat{x})
+					\end{align}
+					e
+					\begin{align}
+						\hat{a}_{+}\hat{a}_{-}&=\frac{1}{2m\hbar\omega}[\hat{p}^{2}+(m \omega \hat{x})^{2}]+\frac{i}{2\hbar}(\hat{x}\hat{p}-\hat{p}\hat{x})
+					\end{align}
+					equivalentemente
+					\begin{subequations}
+						\begin{align}
+							\hat{a}_{-}\hat{a}_{+} &= \frac{1}{2m \hbar \omega}[\hat{p}^{2}+(m \omega \hat{x})^{2}]-\frac{i}{2\hbar}[\hat{x},\hat{p}]\\
+							\hat{a}_{+}\hat{a}_{-} &= \frac{1}{2m \hbar \omega}[\hat{p}^{2}+(m \omega \hat{x})^{2}]+\frac{i}{2\hbar}[\hat{x},\hat{p}]
+						\end{align}
+						uma vez que
+						\begin{align}
+							\begin{split}
+								[\hat{x},\hat{p}]f(x) &= -x i \hbar\frac{\partial f(x)}{\partial x}+i \hbar \frac{\partial x}{\partial x}f(x)+i \hbar x \frac{\partial f(x)}{\partial x}\\
+																			&=i \hbar f(x)
+							\end{split}
+						\end{align}
+					\end{subequations}
+					tem-se portanto
+					\begin{align}
+						\begin{split}
+							[\hat{a}_{-},\hat{a}_{+}] &= \frac{1}{2m \omega \hbar}\left[\hat{p}^{2}+(m \omega \hat{x})^{2}\right]-\frac{i}{2\hbar}ih+\\
+																				&\qquad -\frac{1}{2m \omega \hbar}[\hat{p}^{2}+(m \omega \hat{x})^{2}]-\frac{i}{2\hbar}ih\\
+																				&\qquad \therefore
+						\end{split}
+					\end{align}
+					\begin{align}
+						\boxed{
+							[\hat{a}_{-},\hat{a}_{+}]=1
+						}
+					\end{align}
+				\end{proof}
+			\item Se a $\psi_{0}(x)$ é dada por 
+				\begin{align}
+					\psi_{0}(x) &= \left(\frac{m \omega}{\pi \hbar}\right)^{1/4}\mathrm{e}^{-\frac{m \omega}{\pi \hbar}x^{2}}
+				\end{align}
+				então, para encontrar a $\psi_{2}(x)$ basta computarmos
+				\begin{dmath*}
+					\psi_{2}(x) = \frac{1}{\sqrt{2!}}(\hat{a}_{+})^{2} \psi_{0}\condition{com $\displaystyle{\hat{a}_{+}}=\frac{1}{\sqrt{2m \omega \hbar}}\left(-\hbar \frac{d}{dx}+m \omega \hat{x}\right)$}
+				\end{dmath*}
+				logo
+				\begin{align}
+						\begin{split}
+							\hat{a}_{+} \psi_{0}(x) &= \frac{1}{\sqrt{2m \omega \hbar}}\left(-\hbar \frac{d}{dx}+m \omega x\right)\left(\frac{m \omega}{\pi \hbar}\right)^{1/4}\mathrm{e}^{-\frac{m \omega}{\pi \hbar}x^{2}}\\
+																			&= \frac{1}{\sqrt{2m \omega \hbar}}\left(\frac{m \omega}{\pi \hbar}\right)^{1/4}\left[-\hbar \left(\frac{-2m \omega}{\pi \hbar}\right)x \mathrm{e}^{-\frac{m \omega}{\pi \hbar}}+m \omega x \mathrm{e}^{-\frac{m \omega}{\pi \hbar}}\right]
+						\end{split}
+				\end{align}
+		\end{enumerate}
 
 	\end{sol}
 \end{prob}
@@ -679,10 +758,10 @@
 \begin{prob}
 	Para o problema do potencial delta no caso de estados ligados $(E<0)$:
 	\begin{enumerate}[label=\alph *)]
-			\item Mostre que
-				\begin{dmath*}
-					\psi^{\prime\prime}(x) = -2 \gamma^{3} \delta(x)+\gamma^{4} \psi(x)\condition{$\displaystyle \gamma=\frac{\sqrt{m \alpha}}{\hbar^{2}}$} 
-				\end{dmath*}
+		\item Mostre que
+			\begin{dmath*}
+				\psi^{\prime\prime}(x) = -2 \gamma^{3} \delta(x)+\gamma^{4} \psi(x)\condition{$\displaystyle \gamma=\frac{\sqrt{m \alpha}}{\hbar^{2}}$} 
+			\end{dmath*}
 	\end{enumerate}
 \end{prob}
 % --------------------------------------------- %
