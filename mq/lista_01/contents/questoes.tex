@@ -507,11 +507,12 @@
 		usando o princípio de incerteza
 		\begin{align}
 			\begin{split}
-				\sigma_{x} \sigma_{x} = \frac{n \pi \hbar}{2}\sqrt{\frac{1}{3}-\frac{2}{n^{2} \pi^{2}}}\geq \frac{\hbar}{2}\\
-				=n^{2} \pi^{2}\left(\frac{1}{3}-\frac{2}{n^{2} \pi^{2}}\right)\geq 1\\
-				=\frac{n^{2} \pi^{2}}{3}-2\geq 1\\
-				=\frac{n^{2} \pi^{2}}{3}\geq 3\\
-				=n\geq \frac{3}{\pi}
+				\sigma_{x} \sigma_{x} &\geq \frac{\hbar}{2}\\
+				\frac{n \pi \hbar}{2}\sqrt{\frac{1}{3}-\frac{2}{n^{2} \pi^{2}}}&\geq \frac{\hbar}{2}\\
+				n^{2} \pi^{2}\left(\frac{1}{3}-\frac{2}{n^{2} \pi^{2}}\right)&\geq 1\\
+				\frac{n^{2} \pi^{2}}{3}-2&\geq 1\\
+				\frac{n^{2} \pi^{2}}{3}&\geq 3\\
+				n&\geq \frac{3}{\pi}
 			\end{split}
 		\end{align}
 		como $n\in\mathbb{N^{*}}$ a desigualdade acima é sempre verdade, o que de fato satisfaz o princípio de incerteza. O produto $\sigma_{x} \sigma_{p}$ é proporcional a constante reduzida de planck $\hbar$, no intervalo avaliado o menor valor possível de $n$ é $n=1$ o que consequentemente é também o valor mais próximo do limite inferior de incerteza.
@@ -539,13 +540,76 @@
 	\end{enumerate}
 	\begin{sol}
 		\begin{enumerate}[label=\alph *)]
-			\item $\Psi(x,0)\times x$ 
+			\item A função $\Psi(x,0)\times x$ encontra-se plotada na Figura \ref{fig:pltQ05a}
+
 				\begin{figure}[ht!]
 					\centering
 					\input{assets/pltQ05a.tikz}
 					\caption{Gráfico da $\Psi(x,0)$}
 					\label{fig:pltQ05a}
 				\end{figure}
+
+				Normalizando a $\Psi(x,0)$ no intervalo indicado: 
+			\begin{align}
+					\begin{split}
+						\int\limits_{-\infty}^{\infty} \Psi^{*} \Psi\,d{x} &= \int\limits_{0}^{a/2}\abs{Ax}^{2}\,d{x}+\int\limits_{a/2}^{a}\abs{A(a-x)}^{2}\,d{x}=1\\
+																															 &= A^{2}\left[\frac{x^{3}}{3}\Bigg|_{0}^{a/2}+\left(a^{2}x-2a \frac{x^{2}}{2}+\frac{x^{3}}{3}\right)\Bigg|_{a/2}^{a} \right]=1\\
+																															 &= A^{2}\left[\frac{a^{3}}{24}+\frac{a^{3}}{2}-\frac{3a^{3}}{4}+\frac{7a^{3}}{24}\right]=1\\
+																															 &= A^{2}\left[\frac{8a^{3}+12a^{3}-18a^{3}}{24}\right]=1\\
+																															 &= A^{2}\left[\frac{a^{3}}{12}\right]=1\implies \boxed{ A=2\sqrt{\frac{3}{a^{3}}}}
+					\end{split}
+			\end{align}
+		\item Uma vez que
+			\begin{dmath*}
+				\Psi(x,t) = \sum_{n=1}^{\infty}c_{n} \psi_{n}(x)\mathrm{e}^{-Et/\hbar}
+					\condition{com $\displaystyle{c_{n}= \int\limits_{-\infty}^{\infty} \psi^{*}_{n}(x)\Psi(x,0)\,d{x}}$}
+			\end{dmath*}
+			e
+			\begin{dmath*}
+				\psi_{n}(x) = \sqrt{\frac{2}{a}}\sen \left(\frac{n \pi x}{a}\right)\condition{com $\displaystyle{n=1,2,3,4,5,...}$}
+			\end{dmath*}
+			Determinando $c_{n}$ no intervalo $x\in[0,a]$:
+			\begin{align}
+					\begin{split}
+						c_{n} &= \sqrt{\frac{2}{a}}\left[\int\limits_{0}^{a/2}Ax\sen \left(\frac{n \pi x}{a}\right)\,d{x}+\int\limits_{a/2}^{a}A \left(a-x\right)\sen \left(\frac{n \pi x}{a}\right)\,d{x}\right]\\
+									&= A\sqrt{\frac{2}{a}}\left[\left(\frac{a}{n \pi}\right)^{2}\int\limits_{0}^{n \pi/2}u\sen(u)\,d{u}+a \left(\frac{a}{n \pi}\right) \int\limits_{n \pi/2}^{n \pi}\sen(u)\,d{u}+\right. \\ 
+									& \left. \qquad- \left(\frac{a}{n \pi}\right)^{2}\int\limits_{n \pi/2}^{n \pi}u\sen(u)\,d{u}\right]\\
+									&= A\sqrt{\frac{2}{a}}\left[\frac{a^{2}}{n^{2} \pi^{2}}\left(\int\limits_{0}^{n \pi/2}u\sen(u)\,d{u}-\int\limits_{n \pi/2}^{n \pi}u\sen(u)\,d{u}\right)+\right.\\
+									& \left. \qquad +\frac{a^{2}}{n \pi}\int\limits_{n \pi/2}^{n \pi}\sen(u)\,d{u}\right]\\
+									&= A\sqrt{\frac{2}{a}}\left[\frac{a^{2}}{n^{2} \pi^{2}}\left(\underbrace{-u\cos(u)\Bigg|_{0}^{n \pi/2}}_{0}+\underbrace{\sen(u)\Bigg|_{0}^{n \pi/2}}_{\sen \left(\frac{n \pi}{2}\right)}+\underbrace{u\cos(u)\Bigg|_{n \pi/2}^{n \pi}}_{n \pi\cos(n \pi)}+\right.\right.\\
+									&\left.\left.\qquad -\underbrace{\sen(u)\Bigg|_{n \pi/2}^{n \pi}}_{-\sen \left(\frac{n \pi}{2}\right)}\right)-\frac{a^{2}}{n \pi}\underbrace{\cos(u)\Bigg|_{n \pi/2}^{n \pi} }_{\cos(n \pi)} \right]\\
+									&= A\sqrt{\frac{2}{a}} \left[\frac{a^{2}}{n^{2} \pi^{2}}\sin \left(\frac{n \pi}{2}\right)+\frac{a^{2}}{n \pi}\cos(n \pi)+\frac{a^{2}}{n^{2} \pi^{2}}\sen \left(\frac{n \pi}{2}\right)-\frac{a^{2}}{n \pi}\cos(n \pi)\right]\\
+									&= A\sqrt{\frac{2}{a}} \left[\frac{2a^{2}}{n^{2} \pi^{2}}\sen \left(\frac{n \pi}{2}\right)\right]\\
+									&= 2\sqrt{\frac{3}{a^{3}}}\sqrt{\frac{2}{a}}\left[\frac{2a^{2}}{n^{2} \pi^{2}}\sen \left(\frac{n \pi}{2}\right)\right]\\
+									&= \frac{4\sqrt{6}}{n^{2} \pi^{2}}\sen \left(\frac{n \pi}{2}\right)
+					\end{split}
+			\end{align}
+			Se $n=1,2,3,4,5,...$, então
+			\begin{alignat*}{4}
+				c_{1} &= \frac{4\sqrt{6}}{(1)^{2} \pi^{2}}(1) &\quad c_{2} &= \frac{4\sqrt{6}}{(2)^{2} \pi^{2}}(0)\\
+				c_{3} &= \frac{4\sqrt{6}}{(3)^{2} \pi^{2}}(-1) &\quad c_{4} &= \frac{4\sqrt{6}}{(4)^{2} \pi^{2}}(0)\\
+				c_{5} &= \frac{4\sqrt{6}}{(5)^{2} \pi^{2}}(1) &\quad c_{6} &= \frac{4\sqrt{6}}{(6)^{2} \pi^{2}}(0)\\
+				c_{7} &= \frac{4\sqrt{6}}{(7)^{2} \pi^{2}}(-1) &\quad c_{8} &= \frac{4\sqrt{6}}{(8)^{2} \pi^{2}}(0)
+			\end{alignat*}
+			ou seja,
+			\begin{align}
+				c_{n} = 
+				\begin{cases}
+					\displaystyle{0}, &\text{se $n=2,4,6,8,...$}\\
+					\displaystyle\frac{4\sqrt{6}}{\pi^{2}}\frac{(-1)^{(n-1)/2}}{n^{2}}, &\text{se $n=1,3,5,7,...$}
+				\end{cases}
+			\end{align}
+			e por fim
+			\begin{align}
+					\boxed{
+						\Psi(x,t) =\frac{4\sqrt{6}}{\pi^{2}}\sqrt{\frac{2}{a}} \sum_{n=1,3,5,...}\left[\frac{(-1)^{(n-1)/2}}{n^{2}}\sen \left(\frac{n \pi x}{a}\right)\mathrm{e}^{-E_{n}t/\hbar}\right]
+					}
+			\end{align}
+		\item A probabilidade de que uma medida retorne o valor de energia $E_{1}$ é dada por
+			\begin{align}
+				\abs{c_{1}}^{2} &= 	
+			\end{align}
+
 		\end{enumerate}
 
 	\end{sol}
@@ -603,5 +667,39 @@
 % --------------------------------------------- %
 % --------------| Q08 |------------------------ %
 \addcontentsline{toc}{section}{Problema 08}
+\begin{prob}
+	Faça um estudo do final  da seção  2.4 do Griffiths, sobre partícula livre, e argumente  que
+	\begin{align}
+		v_{grupo}	&= 2v_{fase}
+	\end{align}
+\end{prob}
 % --------------------------------------------- %
 % --------------| Q09 |------------------------ %
+\addcontentsline{toc}{section}{Problema 09}
+\begin{prob}
+	Para o problema do potencial delta no caso de estados ligados $(E<0)$:
+	\begin{enumerate}[label=\alph *)]
+			\item Mostre que
+				\begin{dmath*}
+					\psi^{\prime\prime}(x) = -2 \gamma^{3} \delta(x)+\gamma^{4} \psi(x)\condition{$\displaystyle \gamma=\frac{\sqrt{m \alpha}}{\hbar^{2}}$} 
+				\end{dmath*}
+	\end{enumerate}
+\end{prob}
+% --------------------------------------------- %
+% --------------| Q10 |------------------------ %
+\addcontentsline{toc}{section}{Problema 10}
+\begin{prob}
+	Mostre que a equação de Schröedinger respeita a equação da continuidade (1D em nossos estudos, por enquanto)	
+	\begin{align}
+		\frac{\partial j}{\partial x}+\frac{\partial \rho}{\partial t} &= 0
+	\end{align}
+	com a densidade de probabilidade e  densidade de corrente dadas, respectivamente por
+	\begin{align}
+		\rho &= \abs{\Psi(x,t)}^{2}
+	\end{align}
+	e
+	\begin{align}
+		j &= \frac{i \hbar}{2m}\left[\Psi(x,t)\frac{\partial \Psi^{*}(x,t)}{\partial x}-\Psi^{*}(x,t)\frac{\partial \Psi(x,t)}{\partial x}\right]
+	\end{align}
+\end{prob}
+% --------------------------------------------- %
