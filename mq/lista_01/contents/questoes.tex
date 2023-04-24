@@ -648,7 +648,7 @@
 		\begin{enumerate}[label=\alph *)]
 			\item 
 				\begin{proof}
-					Partindo das equações dos operadores
+					Partindo-se dos operadores
 					\begin{subequations}
 						\begin{align}
 							\hat{a}_{-} &= \left(\frac{i \hat{p}+m \omega \hat{x}}{\sqrt{2m \hbar \omega}}\right)\\
@@ -661,13 +661,17 @@
 					\end{align} 
 					mas
 					\begin{align}
-						\hat{a}_{-}\hat{a}_{+}&=\frac{1}{2m\hbar\omega}[\hat{p}^{2}+(m \omega \hat{x})^{2}]-\frac{i}{2\hbar}(\hat{x}\hat{p}-\hat{p}\hat{x})
+						\begin{split}
+							\hat{a}_{-}\hat{a}_{+} &= \frac{1}{2m \omega \hbar}\left[(i \hat{p}+m \omega \hat{x})(-i \hat{p}+m \omega \hat{x})\right]\\
+																		 &= \frac{1}{2m \omega \hbar}\left[\hat{p}^{2}+im \omega \hat{p}\hat{x}-im \omega \hat{x}\hat{p}+(m \omega \hat{x})^{2}\right]\\
+							                       &= \frac{1}{2m\hbar\omega}[\hat{p}^{2}+(m \omega \hat{x})^{2}]-\frac{i}{2\hbar}(\hat{x}\hat{p}-\hat{p}\hat{x})
+						\end{split}
 					\end{align}
-					e
+					e analogamente,
 					\begin{align}
 						\hat{a}_{+}\hat{a}_{-}&=\frac{1}{2m\hbar\omega}[\hat{p}^{2}+(m \omega \hat{x})^{2}]+\frac{i}{2\hbar}(\hat{x}\hat{p}-\hat{p}\hat{x})
 					\end{align}
-					equivalentemente
+					reescrevendo em termos do comutador $[\hat{x},\hat{p}]=\hat{x}\hat{p}-\hat{p}\hat{x}$	
 					\begin{subequations}
 						\begin{align}
 							\hat{a}_{-}\hat{a}_{+} &= \frac{1}{2m \hbar \omega}[\hat{p}^{2}+(m \omega \hat{x})^{2}]-\frac{i}{2\hbar}[\hat{x},\hat{p}]\\
@@ -686,18 +690,14 @@
 						\begin{split}
 							[\hat{a}_{-},\hat{a}_{+}] &= \frac{1}{2m \omega \hbar}\left[\hat{p}^{2}+(m \omega \hat{x})^{2}\right]-\frac{i}{2\hbar}ih+\\
 																				&\qquad -\frac{1}{2m \omega \hbar}[\hat{p}^{2}+(m \omega \hat{x})^{2}]-\frac{i}{2\hbar}ih\\
-																				&\qquad \therefore
+																				&= \frac{1}{2}+\frac{1}{2}\\
+																				&\qquad \therefore\\ &\boxed{[\hat{a}_{-},\hat{a}_{+}]=1}
 						\end{split}
-					\end{align}
-					\begin{align}
-						\boxed{
-							[\hat{a}_{-},\hat{a}_{+}]=1
-						}
 					\end{align}
 				\end{proof}
 			\item Se a $\psi_{0}(x)$ é dada por 
 				\begin{align}
-					\psi_{0}(x) &= \left(\frac{m \omega}{\pi \hbar}\right)^{1/4}\mathrm{e}^{-\frac{m \omega}{\pi \hbar}x^{2}}
+					\psi_{0}(x) &= \left(\frac{m \omega}{\pi \hbar}\right)^{1/4}\mathrm{e}^{-\frac{m \omega}{2 \hbar}x^{2}}
 				\end{align}
 				então, para encontrar a $\psi_{2}(x)$ basta computarmos
 				\begin{dmath*}
@@ -706,9 +706,91 @@
 				logo
 				\begin{align}
 						\begin{split}
-							\hat{a}_{+} \psi_{0}(x) &= \frac{1}{\sqrt{2m \omega \hbar}}\left(-\hbar \frac{d}{dx}+m \omega x\right)\left(\frac{m \omega}{\pi \hbar}\right)^{1/4}\mathrm{e}^{-\frac{m \omega}{\pi \hbar}x^{2}}\\
-																			&= \frac{1}{\sqrt{2m \omega \hbar}}\left(\frac{m \omega}{\pi \hbar}\right)^{1/4}\left[-\hbar \left(\frac{-2m \omega}{\pi \hbar}\right)x \mathrm{e}^{-\frac{m \omega}{\pi \hbar}}+m \omega x \mathrm{e}^{-\frac{m \omega}{\pi \hbar}}\right]
+							\hat{a}_{+} \psi_{0}(x) &= \frac{1}{\sqrt{2m \omega \hbar}}\left(-\hbar \frac{d}{dx}+m \omega x\right)\left(\frac{m \omega}{\pi \hbar}\right)^{1/4}\mathrm{e}^{-\frac{m \omega}{2 \hbar}x^{2}}\\
+																			&= \frac{1}{\sqrt{2m \omega \hbar}}\left(\frac{m \omega}{\pi \hbar}\right)^{1/4}\left[-\hbar \left(\frac{-2m \omega}{2\hbar}\right)x \mathrm{e}^{-\frac{m \omega}{2\hbar}x^{2}}+m \omega x \mathrm{e}^{-\frac{m \omega}{2\hbar}x^{2}}\right]\\
+																			&= \frac{1}{\sqrt{2m \omega \hbar}}\left(\frac{m \omega}{\pi \hbar}\right)^{1/4}\left[2m \omega x \mathrm{e}^{-\frac{m \omega}{2 \hbar}x^{2}}\right]\\
+							\hat{a}_{+}\hat{a}_{+} \psi_{0}(x) &= \frac{1}{2m \omega \hbar}\left(\frac{m \omega}{\pi \hbar}\right)^{1/4}\left[-\hbar \frac{d}{dx}+m \omega x\right] 2m \omega x \mathrm{e}^{-\frac{m \omega}{2 \hbar}x^{2}}\\
+																								 &= \frac{1}{2m \omega \hbar}\left(\frac{m \omega}{\pi \hbar}\right)^{1/4}\left[-\hbar \left(2m \omega \mathrm{e}^{-\frac{m \omega}{2 \hbar}x^{2}}-\frac{2m^{2} \omega^{2} x^{2}}{\hbar}\mathrm{e}^{-\frac{m \omega}{2 \hbar}x^{2}}\right)+\right.\\
+																								 &\left.\qquad +2m^{2} \omega^{2} x^{2}\mathrm{e}^{-\frac{m \omega}{2\hbar}x^{2}} \right]\\
+																								 &= \left(\frac{m \omega}{\pi \hbar}\right)^{1/4}\left[-\mathrm{e}^{-\frac{m\omega}{2\hbar}}+\frac{2m \omega x^{2}}{\hbar}\mathrm{e}^{-\frac{m\omega}{2\hbar}}\right]\\
+																								 &= \left(\frac{m \omega}{\pi \hbar}\right)^{1/4}\left[\frac{2m \omega x^{2}}{\hbar}-1\right]\mathrm{e}^{-\frac{m \omega}{2\hbar}}
 						\end{split}
+				\end{align}
+				\begin{align}
+						\boxed{
+							\psi_{2}(x)= \frac{1}{\sqrt{2}}\left(\frac{m \omega}{\pi \hbar}\right)^{1/4}\left[\frac{2m \omega x^{2}}{\hbar}-1\right]\mathrm{e}^{-\frac{m \omega}{2\hbar}}
+						}
+				\end{align}
+			\item Os operadores $\hat{x}$ e $\hat{p}$ em termos dos operadores escadas $\hat{a}_{\pm}$ ficam
+				\begin{align}
+					\hat{p} &= i\sqrt{\frac{\hbar m \omega }{2}}\left(\hat{a}_{+}-\hat{a}_{-}\right), & \hat{x} &= \sqrt{\frac{\hbar}{2m \omega}}\left(\hat{a}_{+}+\hat{a}_{-}\right)
+				\end{align}
+				 
+				de modo que para o estado fundamental $\psi_{0}(x)$ devemos ter
+				 
+				\begin{align}
+						\begin{split}
+							\langle x \rangle &= \int\limits_{-\infty}^{\infty} \psi^{*}_{0}x \psi_{0}\,d{x}\\
+																&= \sqrt{\frac{\hbar}{2m}}\int\limits_{-\infty}^{\infty} \psi_{0}^{*}\left(a_{+}+a_{-}\right) \psi_{0}\,d{x}\\
+																&= \sqrt{\frac{\hbar}{2m}}\int\limits_{-\infty}^{\infty} \psi_{0}^{*}\left(a_{+} \psi_{0}+a_{-} \psi_{0}\right)\,d{x}
+						\end{split}
+				\end{align}
+				sabendo que $a_{-} \psi_{0}=0$ e $a_{+} \psi_{0}=\sqrt{1} \psi_{1}$ além de $\delta_{mn}=0$ se $m\neq n$ obtêm-se que
+				\begin{align}
+						\begin{split}
+							\langle x \rangle &= \sqrt{\frac{\hbar}{2m}}\int\limits_{-\infty}^{\infty} \psi_{0}^{*} \psi_{1}\,d{x}=\sqrt{\frac{\hbar}{2m}}\delta_{01}\implies\boxed{\langle x \rangle = 0}
+						\end{split}
+				\end{align}
+				de maneira análoga, para o operador momento $\hat{p}$ teremos
+				\begin{align}
+						\begin{split}
+							\langle p \rangle &= \int\limits_{-\infty}^{\infty} \psi_{0}^{*}p \psi_{0}\,d{x}\\
+																&= i\sqrt{\frac{\hbar m \omega}{2}}\int\limits_{-\infty}^{\infty} \psi_{0}^{*}\left(a_{+}-a_{-}\right) \psi_{0}\,d{x}\\
+																&= i\sqrt{\frac{\hbar}{2m}} \delta_{01}\implies \boxed{\langle p \rangle=0}
+						\end{split}
+				\end{align}
+				Calculando o valor médio de $\langle x^{2} \rangle$
+				\begin{align}
+						\begin{split}
+						\langle x^{2} \rangle &= \int\limits_{-\infty}^{\infty} \psi_{0}^{*}\left[\sqrt{\frac{\hbar}{2m \omega}}\left(a_{+}+a_{-}\right)\right]^{2} \psi_{0}\,d{x}\\
+																	&= \frac{\hbar}{2m \omega}\int\limits_{-\infty}^{\infty} \psi_{0}^{*}\left[(a_{+})^{2}+(a_{+}a_{-})+(a_{-}a_{+})+(a_{-})^{2}\right] \psi_{0}\,d{x}\\
+																	&= \frac{\hbar}{2m \omega}\int\limits_{-\infty}^{\infty} \psi_{0}^{*}\left[(a_{+}) \psi_{1}+(a_{+})0+(a_{-}) \psi_{1}+(a_{-})0\right]\,d{x}\\
+																	&= \frac{\hbar}{2m \omega}\int\limits_{-\infty}^{\infty} \psi_{0}^{*}\left[\sqrt{2} \psi_{2}+\psi_{0}\right]\,d{x}\implies \boxed{\langle x^{2} \rangle=\frac{\hbar}{2m \omega}}
+						\end{split}
+				\end{align}
+				Por fim, calculando $\langle p^{2} \rangle$
+				\begin{align}
+						\begin{split}
+							\langle p^{2} \rangle &= \int\limits_{-\infty}^{\infty} \psi_{0}^{*}\left[i\sqrt{\frac{\hbar m \omega}{2}}\left(a_{+}-a_{-}\right)\right] \psi_{0}\,d{x}\\
+																		&= -\frac{\hbar m \omega}{2}\int\limits_{-\infty}^{\infty} \psi_{0}^{*}\left[(a_{+})^{2}-(a_{+}a_{-})-(a_{-}a_{+})+(a_{-})^{2}\right] \psi_{0}\,d{x}\\
+																		&= -\frac{\hbar m \omega}{2}\int\limits_{-\infty}^{\infty} \psi_{0}^{*} \left[\sqrt{2} \psi_{2}-\psi_{0}\right]\,d{x}\implies \boxed{\langle p^{2} \rangle=\frac{\hbar m \omega}{2}}
+						\end{split}
+				\end{align}
+				Verificando o princípio de incerteza
+				\begin{align}
+						\begin{split}
+							\sigma_{x} &= \sqrt{\langle x^{2} \rangle-\langle x \rangle^{2}}\\
+												 &= \sqrt{\frac{\hbar}{2m \omega}}
+						\end{split}
+				\end{align}
+				e
+				\begin{align}
+						\begin{split}
+							\sigma_{p} &= \sqrt{\langle p^{2} \rangle-\langle p \rangle^{2}}\\
+												 &= \sqrt{\frac{\hbar m \omega}{2}}
+						\end{split}
+				\end{align}
+				\begin{align}
+						\begin{split}
+							\sigma_{x} \sigma_{p} &= \sqrt{\frac{\hbar}{2m \omega}}\sqrt{\frac{\hbar m \omega}{2}}\\
+																		&= \sqrt{\frac{\hbar^{2}}{4}}=\frac{\hbar}{2}
+						\end{split}
+				\end{align}
+				ou seja, sim o princípio de incerteza continua sendo respeitado!
+				\begin{align}
+						\boxed{
+							\sigma_{x} \sigma_{p}\geq \frac{\hbar}{2}
+						}
 				\end{align}
 		\end{enumerate}
 
@@ -740,6 +822,102 @@
 			e obtenha a relação de recorrência entre os coeficientes.
 	\end{enumerate}
 	\begin{sol}
+		\begin{enumerate}[label=\alph *)]
+			\item Considere a equação de Schrödinger para o oscilador harmônico
+				\begin{align}
+					\begin{split}
+						-\frac{\hbar^{2}}{2m}\frac{d^{2} \psi_{n}(x)}{dx^{2}}+\frac{1}{2}m \omega^{2}x^{2} \psi_{n}(x) &= E \psi_{n}(x)\\
+						\frac{d^{2} \psi_{n}(x)}{dx^{2}}-\frac{m^{2} \omega^{2} x^{2}}{\hbar^{2}} \psi_{n}(x)+\frac{2mE}{\hbar^{2}} \psi_{n}(x) &= 0\\
+						\frac{d^{2} \psi_{n}(x)}{dx^{2}}+\left[\frac{2mE}{\hbar^{2}}-\frac{m^{2} \omega^{2} x^{2}}{\hbar^{2}}\right] \psi_{n}(x) &= 0
+					\end{split}
+				\end{align}
+				assumindo a mundaça de variável $x\to \xi$ em que $\xi(x)=\alpha x$, $\alpha=\sqrt{m \omega \hbar^{-1}}$ e $\psi(x)\to \phi(\xi)$. Deseja-se reescrever a eq. de Sch. em termos da $\xi$ portanto
+				\begin{align}
+					\begin{split}
+						\frac{d \psi}{dx} &= \frac{d \phi}{d \xi}\frac{d \xi}{dx}\\
+						\frac{d^{2} \psi}{dx^{2}} &= \frac{d^{2} \phi}{dxd \xi}\frac{d \xi}{dx}+\frac{d \phi}{d \xi}\frac{d^{2} \xi}{dx^{2}}
+					\end{split}
+				\end{align}
+				supondo que $\phi(\xi)$ é contínua e definida em todo o seu domínio, podemos usar o teorema de Clairaut para avaliar as derivadas cruzadas
+				\begin{align}
+						\begin{split}
+							\frac{d}{d \xi}\left[\frac{d \psi}{dx}\right] &= \frac{d^{2} \phi}{d \xi^{2}}\frac{d \xi}{dx}= \frac{d^{2} \phi}{dxd \xi}
+						\end{split}
+				\end{align}
+				então
+				\begin{align}
+						\begin{split}
+							\frac{d^{2} \psi}{dx^{2}} &= \frac{d^{2} \phi}{d \xi^{2}}\left(\frac{d \xi}{dx}\right)^{2}+\frac{d \phi}{d \xi}\frac{d^{2} \xi}{d \xi^{2}}=\alpha^{2}\frac{d^{2} \phi}{d \xi^{2}}
+						\end{split}
+				\end{align}
+				na eq. de Sch. fica
+				\begin{align}
+					\begin{split}
+						a^{2}\frac{d^{2} \phi(\xi)}{d \xi^{2}}+\left[\frac{2mE}{\hbar^{2}}-\frac{m^{2} \omega^{2} }{\hbar^{2}}\left(\frac{\xi^{2}\hbar}{m \omega}\right)\right] \phi(\xi) &= 0\\
+						\frac{d^{2} \phi(\xi)}{d \xi^{2}}+\frac{\hbar}{\omega m}\left[\frac{2mE}{\hbar^{2}}-\frac{m \omega}{\hbar} \xi^{2}\right] \phi(\xi) &= 0\\
+						\frac{d^{2} \phi(\xi)}{d \xi^{2}}+\left[\frac{2E}{\omega \hbar}-\xi^{2}\right] \phi(\xi) &=0
+					\end{split}						
+				\end{align}
+				por fim, usando o valor designado para $K$
+				\begin{align}
+						\boxed{
+							\frac{d^{2} \phi(\xi)}{d \xi^{2}} = \left[\xi^{2}-K\right] \phi(\xi) \label{eq:p7-eq1}
+						}
+				\end{align}
+			\item Se $\phi(\xi)=h(\xi)\mathrm{e}^{-\xi^{2}/2}$ tem-se
+				\begin{align}
+						\begin{split}
+							\frac{d \phi}{d \xi} &= \frac{dh}{d \xi}\mathrm{e}^{-\xi^{2}/2}-h \xi \mathrm{e}^{-\xi^{2}/2}\\
+							\frac{d^{2} \phi}{d \xi^{2}} &= \frac{d^{2}h}{d \xi^{2}}\mathrm{e}^{-\xi^{2}/2}-\xi \frac{dh}{d \xi}\mathrm{e}^{-\xi^{2}/2}-\frac{dh}{d \xi} \xi \mathrm{e}^{-\xi^{2}/2}-h \mathrm{e}^{-\xi^{2}/2}+h \xi^{2}\mathrm{e}^{-\xi^{2}/2}\\
+							\frac{d^{2} \phi}{d \xi^{2}} &= \frac{d^{2}h}{d \xi^{2}}\mathrm{e}^{-\xi^{2}/2}-2 \xi \frac{dh}{d \xi}-h \mathrm{e}^{-\xi^{2}/2}+h \xi^{2}\mathrm{e}^{-\xi^{2}/2}\\
+						\end{split}
+				\end{align}
+				substituindo em \eqref{eq:p7-eq1}
+				\begin{align}
+						\begin{split}
+							\frac{d^{2} \phi}{d \xi^{2}} &= \left[\xi^{2}-K\right] \phi\\
+							\frac{d^{2}h}{d \xi^{2}}\mathrm{e}^{-\xi^{2}/2}-2 \xi \frac{dh}{d \xi}-h \mathrm{e}^{-\xi^{2}/2}+h \xi^{2}\mathrm{e}^{-\xi^{2}/2} &= \left[\xi^{2}-K\right]h \mathrm{e}^{-\xi^{2}/2}\\
+							\frac{d^{2}h}{d \xi^{2}}-2 \xi \frac{dh}{d \xi}-h+h \xi^{2} &= h \xi^{2}-Kh
+						\end{split}
+				\end{align}
+				e por fim
+				\begin{align}
+					\label{eq:p07-02}
+						\boxed{
+							\frac{d^{2}h(\xi)}{d \xi^{2}}-2 \xi \frac{dh(\xi)}{d \xi}+\left[K-1\right]h(\xi)=0
+						}
+				\end{align}
+			\item Propondo como solução da \eqref{eq:p07-02} a série de potência
+				\begin{align}
+					h(\xi) &= \sum_{n}a_{j} \xi^{j}
+				\end{align}
+				calculando todas as derivadas necessárias de $h(\xi)$
+				\begin{align}
+					\frac{dh(\xi)}{d \xi} &= \sum_{j}ja_{j} \xi^{j-1}, & \frac{d^{2}h(\xi)}{d \xi^{2}} &= \sum_{j}(j-1)ja_{j} \xi^{j-1}
+				\end{align}
+				para manter todos os termos na mesma potência de $\xi$, fazemos a mudança de variável $j\to j+2$ no termo da derivada segunda de $\xi$ ficando assim:
+				\begin{align}
+					\frac{d^{2}h(\xi)}{d \xi^{2}} &= \sum_{j}(j+1)(j+2)a_{j+2} \xi^{j}
+				\end{align}
+				substituindo tudo na \eqref{eq:p07-02} ficamos com
+				\begin{align}
+					\sum_{j}(j+1)(j+2)a_{j+2} \xi^{j}-2\sum_{j}ja_{j} \xi^{j-1} \xi+(k-1)\sum_{j}a_{j}\xi^{j}=0
+				\end{align}
+				logo, a relação de recorrência para os coeficientes é dada por
+				\begin{align}
+						\begin{split}
+							\sum_{j}\left[(j+1)(j+2)a_{j+2}-2ja_{j}+Ka_{j}-a_{j}\right] \xi^{j} &= 0\\
+							(j+1)(j+2)a_{j+2} &= \left(2j+1-K\right)a_{j} 
+						\end{split}
+				\end{align}
+				\begin{align}
+						\boxed{
+							a_{j+2} = \frac{2j+1-K}{(j+1)(j+2)}a_{j}
+						}
+				\end{align}
+
+
+		\end{enumerate}
 
 	\end{sol}
 \end{prob}
@@ -762,7 +940,16 @@
 			\begin{dmath*}
 				\psi^{\prime\prime}(x) = -2 \gamma^{3} \delta(x)+\gamma^{4} \psi(x)\condition{$\displaystyle \gamma=\frac{\sqrt{m \alpha}}{\hbar^{2}}$} 
 			\end{dmath*}
+		\item Calcule os valores médios de $x$, $x^{2}$, $p$ e $p^{2}$ e teste o princípio da incerteza para este problema.
 	\end{enumerate}
+
+	\begin{sol}
+		\begin{enumerate}[label=\alph *)]
+				\item 
+		\end{enumerate}
+
+
+	\end{sol}
 \end{prob}
 % --------------------------------------------- %
 % --------------| Q10 |------------------------ %
