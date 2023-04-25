@@ -945,7 +945,152 @@
 
 	\begin{sol}
 		\begin{enumerate}[label=\alph *)]
-				\item 
+				\item Primeiramente precisamos construir a solução da eq. de Sch para o estado ligado $(E<0)$
+					\begin{align}
+							\begin{split}
+								-\frac{\hbar^{2}}{2m}\frac{d^{2}\psi(x)}{dx^{2}} -\alpha \delta(x)=E \psi(x) \label{eq:p09-eq01}
+							\end{split}
+					\end{align}
+					Para casos em que $\abs{x}\neq 0$, o potencial é nulo, do contrário o potencial é dado pela delta $V(x)=-\alpha \delta(x)$. Nas regiões em que o potencial não atua a eq. de Sch. fica
+					\begin{align}
+							\begin{split}
+								-\frac{\hbar^{2}}{2m}\frac{d^{2} \psi(x)}{dx^{2}} &= E \psi(x)\\
+								\frac{d^{2} \psi(x)}{dx^{2}}-\frac{2m \abs{E}}{\hbar^{2}} \psi(x) &= 0
+							\end{split}
+					\end{align}
+					portanto, a solução geral é do tipo
+					\begin{dmath*}
+						\psi(x)=A \mathrm{e}^{kx}+B \mathrm{e}^{-kx}\condition{com $\displaystyle{k=\frac{\sqrt{2m \abs{E}}}{\hbar}}$}
+					\end{dmath*}
+					Da análise da solução geral e da condição de normalização das funções de onda, nota-se que
+					\begin{align}
+						\psi(x) &=
+						\begin{cases}
+							A \mathrm{e}^{kx}, &\text{ se }x<0\\
+							B \mathrm{e}^{-kx}, &\text{ se }x>0
+						\end{cases}
+					\end{align}
+					e da condição de continuidade da função densidade de probabilidade $\abs{\psi(x)}^{2}$, é necessário que $\psi_{x<0}(0)=\psi_{x>0}(0)$ o que resulta diretamente em $A=B$. Reescrevendo a solução geral tem-se:
+					\begin{align}
+						\psi(x) &=
+							\begin{cases}
+								A \mathrm{e}^{kx}, &\text{ se }x<0\\
+								A \mathrm{e}^{-kx}, &\text{ se }x>0\\
+							\end{cases}
+					\end{align}
+					Passando a normalização da $\psi(x)$ de modo a determinar $A$
+					\begin{align}
+							\begin{split}
+								\int\limits_{-\infty}^{\infty}\abs{\psi(x)}^{2}\,d{x} &= 1\\
+								\int\limits_{-\infty}^{0}\abs{A}^{2}\mathrm{e}^{2kx}\,d{x}+\int\limits_{0}^{\infty}\abs{A}^{2}\mathrm{e}^{-2kx}\,d{x} &= 1\\
+								\abs{A}^{2}\left[\frac{1}{2k}-0\right]+\abs{A}^{2}\left[0-\frac{1}{-2k}\right] &= 1\\
+								A &= \sqrt{k}
+							\end{split}
+					\end{align}
+					A $\psi(x)$ normalizada fica então
+					\begin{align}
+						\psi(x) &=
+						\begin{cases}
+							\sqrt{k}\mathrm{e}^{kx}, &\text{ se }x<0\\
+							\sqrt{k}\mathrm{e}^{-kx}, &\text{ se }x>0
+						\end{cases}
+					\end{align}
+					Ainda é preciso obter a influência do potencial delta na função $\psi(x)$. Uma estratégia para isto, é investigar a descontinuidade das derivadas da $\psi(x)$ em $x=0$. A princípio tem-se que
+					\begin{align}
+						\psi^{\prime}(x) &=
+						\begin{cases}
+							k\sqrt{k}\mathrm{e}^{kx}, &\text{ se }x<0\\
+							-k\sqrt{k}\mathrm{e}^{-kx}, &\text{ se }x>0
+						\end{cases}
+					\end{align}
+					de modo que
+					\begin{align}
+							\begin{split}
+								\frac{d \psi_{x>0}(x)}{dx}\Bigg|_{x=0}-\frac{d \psi_{x<0}(x)}{dx}\Bigg|_{x=0} &= -k\sqrt{k}-k\sqrt{k}\\
+								\Delta \left[\frac{d \psi(x)}{dx}\right] &= -2k\sqrt{k} \label{eq:p09-02}
+							\end{split}
+					\end{align}
+					A integração da eq. de Sch. \eqref{eq:p09-eq01}, num intervalo entre $\varepsilon$ e $-\varepsilon$, irá nos fornecer mais informação sobre o que ocorre no ponto de singularidade $x=0$ via análise por limites, isto é
+					\begin{align}
+						\begin{split}
+							\int\limits_{-\varepsilon}^{\varepsilon}\left[\frac{d^{2} \psi(x)}{dx^{2}}\right]\,d{x} &= \int\limits_{-\varepsilon}^{\varepsilon}\left[\frac{-\alpha \delta(x)-E}{\hbar^{2}}\right]2m \psi(x)\,d{x}\\
+							\frac{d \psi(x)}{dx}\Bigg|_{x=\varepsilon}-\frac{d \psi(x)}{dx}\Bigg|_{x=-\varepsilon} &= -\frac{2m \alpha}{\hbar^{2}}\int\limits_{-\varepsilon}^{\varepsilon} \delta(x) \psi(x)\,d{x}-\frac{2mE}{\hbar^{2}}\int\limits_{-\varepsilon}^{\varepsilon} \psi(x)\,d{x}\\
+							\frac{d \psi(x)}{dx}\Bigg|_{x=\varepsilon}-\frac{d \psi(x)}{dx}\Bigg|_{x=-\varepsilon} &= -\frac{2m \alpha}{\hbar^{2}} \psi(0)-\frac{2mE}{\hbar^{2}}\int\limits_{-\varepsilon}^{\varepsilon} \psi(x)\,d{x}
+						\end{split}
+					\end{align}
+					agora, tomando o intervalo suficientemente pequeno de modo que no limite tenhamos $\varepsilon\to 0$ tem-se
+					\begin{align}
+							\begin{split}
+								\Delta \left[\frac{d \psi(x)}{dx}\right] &= \lim_{\varepsilon\to 0}{\left[\frac{d \psi_{x>0}(x)}{dx}\Bigg|_{x=\varepsilon}-\frac{d \psi_{x<0}(x)}{dx}\Bigg|_{x=-\varepsilon}\right]}\\
+																												 &= -\frac{2m \alpha}{\hbar^{2}} \psi(0)-\underbrace{\lim_{\varepsilon\to 0}\left[\int\limits_{-\varepsilon}^{\varepsilon} \psi(x)\,d{x}\right]}_{0}
+							\end{split}
+					\end{align}
+					é fácil de ver que $\psi(0)=\sqrt{k}$, assim podemos atualizar a nossa solução da $\psi(x)$ considerando a atuação do potencial delta no ponto em que se tem a descontinuidade, uma vez que em $x=0$ devemos ter
+					\begin{align}
+						\begin{split}
+							-2k\sqrt{k} &= -\frac{2m \alpha}{\hbar^{2}}\sqrt{k}\\
+							k &= \frac{m \alpha}{\hbar^{2}}
+						\end{split}
+					\end{align}
+					logo
+					\begin{align}
+							\boxed{
+								\psi(x) = 
+								\begin{cases}
+									\sqrt{\frac{m \alpha}{\hbar^{2}}}\mathrm{e}^{m\alpha  x/\hbar^{2}}, &\text{ se }x\leq 0\\
+									\sqrt{\frac{m \alpha}{\hbar^{2}}}\mathrm{e}^{-m \alpha x/\hbar^{2}}, &\text{ se }x\geq 0
+								\end{cases}
+								\condition{ e $\displaystyle{E=-\frac{m \alpha^{2}}{2\hbar^{2}}}$}
+							}
+					\end{align}
+					De posse desta solução, e do conhecimento de como ela se comporta em $x=0$ podemos agora definir um $\gamma$ tal que
+					\begin{align}
+						\gamma &= \sqrt{k} = \frac{\sqrt{m \alpha}}{\hbar}
+					\end{align}
+					Deseja-se mostrar que
+					\begin{align}
+						\psi^{\prime \prime}(x) &= -2 \gamma^{3} \delta(x)+\gamma^{4} \psi(x)
+					\end{align}
+					\begin{proof}
+						Reescrevendo a solução para a $\psi(x)$ em termos do $\gamma$ tem-se que
+						\begin{align}
+							\psi(x) &=
+							\begin{cases}
+								\gamma \mathrm{e}^{\gamma^{2}x}, &\text{ se }x\leq 0\\
+								\gamma \mathrm{e}^{-\gamma^{2}x}, &\text{ se }x\geq 0
+							\end{cases}
+						\end{align}
+						Já sabemos como se comporta a derivada primeira da $\psi(x)$ em $x=0$, o que em termos do fator $\gamma$ fica simplesmente
+						\begin{align}
+							\psi^{\prime}(x) &=
+							\begin{cases}
+								\gamma^{3}\mathrm{e}^{\gamma^{2}x}, &\text{ se }x\leq 0\\
+								-\gamma^{3}\mathrm{e}^{-\gamma^{2}x}, &\text{ se }x\geq 0
+							\end{cases}
+						\end{align}
+						pra fazer a análise da derivada segunda da $\psi(x)$ no ponto em que há a descontinuidade $x=0$, usamos a função degrau unitário de Heaviside $\theta(x)$ e reescrevemos a $\psi^{\prime}(x)$ ficando com
+						\begin{align}
+							\psi^{\prime}(x) &= \gamma^{3}\left[\theta(-x)\mathrm{e}^{\gamma^{2}x}-\theta(x)\mathrm{e}^{-\gamma^{2}x}\right]
+						\end{align}
+						seguindo com a derivação e usando as propriedades da função $\theta(x)$
+						\begin{align}
+							\begin{split}
+								\psi^{\prime\prime}(x) &= \gamma^{3}\left[\frac{d\theta(-x)}{dx}\mathrm{e}^{\gamma^{2}x}+\theta(-x) \gamma^{2}\mathrm{e}^{\gamma^{2}x}-\frac{d\theta(x)}{dx}\mathrm{e}^{-\gamma^{2}x}+\theta(x) \gamma^{2}\mathrm{e}^{-\gamma^{2}x}\right]\\
+																			 &= \gamma^{3}\left[\delta(-x)\mathrm{e}^{\gamma^{2}x}+\theta(-x) \gamma^{2}\mathrm{e}^{\gamma^{2}x}-\delta(x)\mathrm{e}^{-\gamma^{2}x}+\theta(x) \gamma^{2}\mathrm{e}^{-\gamma^{2}x}\right]\\
+																			 &= -\gamma^{3} \delta(x)-\gamma^{3} \delta(x)+\gamma^{5}\theta(-x)\mathrm{e}^{\gamma^{2}x}+\gamma^{5}\theta(x)\mathrm{e}^{-\gamma^{2}x}\\
+																			 &= -2 \gamma^{3} \delta(x)+\gamma^{4}\underbrace{\left[\gamma\theta(-x)\mathrm{e}^{\gamma^{2}x}+\gamma\theta(x)\mathrm{e}^{-\gamma^{2}x}\right]}_{\displaystyle\psi(x)}\therefore\\
+							\end{split}
+						\end{align}
+						\begin{align}
+							\boxed{
+								\psi^{\prime\prime}(x) = -2 \gamma^{3} \delta(x)+\gamma^{4} \psi(x)
+							}
+						\end{align}
+													
+					\end{proof}
+					
+					
+
 		\end{enumerate}
 
 
