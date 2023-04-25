@@ -929,6 +929,81 @@
 	\begin{align}
 		v_{grupo}	&= 2v_{fase}
 	\end{align}
+	\begin{sol}
+		Na literatura indicada, a solução encontrada para a função $\Psi(x,t)$ de partícula livre é da forma
+		\begin{align}
+			\label{eq:p08-principal}
+			\Psi(x,t) &= A \mathrm{e}^{i(kx-\frac{\hbar k^{2}}{2m}t)}\condition{com $\displaystyle{E=\frac{\hbar^{2} k^{2}}{2m}}$}
+		\end{align}
+		esta solução obedece uma equação de onda plana como no exemplo abaixo
+		\begin{align}
+			F(x,t) &= f(x\pm vt)
+		\end{align}
+		o sinal da nos fornece sentido de propagação desta onda e $v$ a sua velocidade.
+
+		Do ponto de vista clássico, a velocidade $v_{c}$ de uma partícula livre, pode ser obtida em termos do momento $p=mv$ e da energia cinética $E$, que a rigor é puramente cinética
+		\begin{align}
+			v_c &= \sqrt{\frac{2E}{m}}
+		\end{align}
+		Já do ponto de vista quântico, é fácil de ver que a partir da solução encontrada, tem-se
+		\begin{align}
+				\begin{split}
+					\Psi(x,t) &= A \mathrm{e}^{ik(x-\frac{\hbar k}{2m}t)} \label{qe:onda-quantica}
+				\end{split}
+		\end{align}
+	 se o momento é dado pela relação de de Broglie
+	 \begin{align}
+		 p &= \hbar k
+	 \end{align}
+	 a \eqref{qe:onda-quantica} sugere uma relação para a velocidade da onda $v_{q}$ no contexto da mecânica quântica, como sendo
+	 \begin{align}
+		 \label{eq:velocidade-quantica}
+		 v_{q} &= \frac{p}{2m}
+	 \end{align}
+	 sendo a energia da partícula livre já é conhecida pela eq. \eqref{eq:p08-principal} escrita em termos do momento fica
+	 \begin{align}
+		 \begin{split}
+			 \label{eq:energia-momento-quantico}
+			 E &= \frac{p^{2}}{2m} 
+		 \end{split}	 		
+	 \end{align}
+	 substituindo \eqref{eq:energia-momento-quantico} em \eqref{eq:velocidade-quantica} encontramos
+	 \begin{align}
+	 		\begin{split}
+				v_{q} &= \frac{\sqrt{2mE}}{2m}\\
+							&= \sqrt{\frac{E}{2m}}
+	 		\end{split}
+	 \end{align}
+	 comparado as duas velocidades obtêm-se um resultado curioso
+	 \begin{align}
+	 		\begin{split}
+				\frac{v_{c}}{v_{q}} &= \sqrt{\frac{2E}{m}}\sqrt{\frac{2m}{E}}\\
+				v_{c} &= 2v_{q}
+	 		\end{split}
+	 \end{align}
+	 essa discrepância ocorre devido à interpretação da função de onda $\Psi(x,t)$. Na mecânica quântica uma partícula propagando-se não pode ser representada por uma única função de onda plana, a partícula não é localizável em um único ponto, tem-se uma densidade de probabilidade para a sua representação $\rho(x,t)$, a densidade de probabilidade é uma combinação linear de várias ondas planas, formando um "pacote" de ondas para representar a partícula, neste caso, tem-se a integral
+	 \begin{align}
+		 \Psi(x,t) &= \frac{1}{2 \pi}\int\limits_{-\infty}^{\infty} \phi(k)\mathrm{e}^{ik(x-v_{0}t)}\,d{k}
+	 \end{align}
+
+Para compreender a propagação da distribuição $\Psi(x,t)$ dada pela integral acima, introduz-se o conceito de \textit{velocidade de fase} e \textit{velocidade de grupo}
+\begin{definition}
+	A velocidade de fase $v_{ph}$, é a velocidade das ondas planas individuais
+	\begin{align}
+		v_{ph} &= \frac{\omega(k)}{k}
+	\end{align}
+	não representa a velocidade de uma partícula real e equivale a velocidade quântica $v_{ph}\equiv v_{q}$
+\end{definition}
+\begin{definition}
+	A velocidade de grupo $v_{g}$ é  velocidade de propagação do pacote de onda
+	\begin{align}
+		v_{g} &= \frac{d \omega(k)}{dk}
+	\end{align}
+	é equivalente à velocidade clássica $v_{g}\equiv v_{c}$ e pode ser interpretada como a velocidade da partícula clássica
+\end{definition}
+Quando ocorre a superposição de várias ondas de diferentes amplitudes e frequências, pode-se obter um pacote de ondas que viaja a uma velocidade igual a velocidade de grupo $v_{g}$, já as ondas individuais constituintes do pacote, em geral movem-se em diferentes fases e velocidades, cada onda tem a sua própria velocidade de fase $v_{ph}$, que em geral, pode assmuir valores: $v_{ph}>v_{g}$, $v_{ph}<v_{g}$ ou $v_{ph}=v_{g}$.
+
+	\end{sol}
 \end{prob}
 % --------------------------------------------- %
 % --------------| Q09 |------------------------ %
@@ -1167,5 +1242,55 @@
 	\begin{align}
 		j &= \frac{i \hbar}{2m}\left[\Psi(x,t)\frac{\partial \Psi^{*}(x,t)}{\partial x}-\Psi^{*}(x,t)\frac{\partial \Psi(x,t)}{\partial x}\right]
 	\end{align}
-\end{prob}
+	\begin{proof}
+		Dado que
+		\begin{align}
+			\begin{split}
+				\frac{\partial j}{\partial x} &= \frac{i \hbar}{2m}\frac{\partial }{\partial x}\left[\Psi \frac{\partial \Psi^{*}}{\partial x}-\Psi^{*}\frac{\partial \Psi}{\partial x} \right]\\
+																			&= \frac{i \hbar}{2m}\left[\frac{\partial \Psi}{\partial x}\frac{\partial \Psi^{*}}{\partial x}+\Psi\frac{\partial^{2} \Psi^{*}}{\partial x^{2}}-\frac{\partial \Psi^{*}}{\partial x}\frac{\partial \Psi}{\partial x}-\Psi^{*}\frac{\partial^{2} \Psi}{\partial x^{2}}\right]\\
+																			&= \frac{i \hbar}{2m}\left[\Psi \frac{\partial^{2} \Psi^{*}}{\partial x^{2}}-\Psi^{*}\frac{\partial^{2} \Psi}{\partial x^{2}}\right]
+			\end{split}
+		\end{align}
+		usando ainda $\rho=\Psi^{*}(x,t) \Psi(x,t)$
+		\begin{align}
+				\begin{split}
+					\label{eq:p10-01}
+					\frac{\partial \rho}{\partial t} &= \frac{\partial }{\partial t}\left[\Psi^{*} \Psi\right]\\
+																					 &= \frac{\partial \Psi^{*}}{\partial t} \Psi+\Psi^{*}\frac{\partial \Psi}{\partial t}
+				\end{split}
+		\end{align}
+		pela equação de Schrödinger, sabemos que
+		\begin{align}
+				\begin{split}
+					i \hbar \frac{\partial \Psi(x,t)}{\partial t} &= -\frac{h^{2}}{2m}\frac{\partial^{2} \Psi(x,t)}{\partial x^{2}}+V(x) \Psi(x,t)\\
+					\frac{\partial \Psi}{\partial t} &= \frac{i \hbar}{2m}\frac{\partial^{2} \Psi}{\partial x^{2}}-\frac{i}{\hbar}V \Psi 
+				\end{split}
+		\end{align}
+		note que
+		\begin{align}
+			\frac{\partial \Psi^{*}}{\partial t} &= -\frac{i \hbar}{2m}\frac{\partial^{2} \Psi^{*}}{\partial x^{2}}+\frac{i}{\hbar}V \Psi^{*}
+		\end{align}
+		usando a eq. de Sch. em \eqref{eq:p10-01}
+		\begin{align}
+				\begin{split}
+					\frac{\partial \rho}{\partial t} &= \left[-\frac{i \hbar}{2m}\frac{\partial^{2} \Psi^{*}}{\partial x^{2}}+\frac{i}{\hbar}V \Psi^{*}\right] \Psi+\Psi^{*}\left[\frac{i \hbar}{2m}\frac{\partial^{2} \Psi}{\partial x^{2}}-\frac{i}{\hbar}V \Psi\right]\\
+																					 &= -\frac{i \hbar}{2m}\frac{\partial^{2} \Psi^{*}}{\partial x^{2}} \Psi+\Psi^{*}\frac{i \hbar}{2m}\frac{\partial^{2} \Psi}{\partial x^{2}}+\frac{i}{h}V \Psi^{*} \Psi-\frac{i}{\hbar}V \Psi^{*}\Psi\\
+																					 &=\frac{i \hbar}{2m}\left[\Psi^{*}\frac{\partial^{2} \Psi}{\partial x^{2}}-\Psi \frac{\partial^{2} \Psi^{*}}{\partial x^{2}}\right]
+				\end{split}
+		\end{align}
+		logo
+		\begin{align}
+				\begin{split}
+					\frac{\partial j}{\partial x}+\frac{\partial \rho}{\partial t} &= \frac{i \hbar}{2m}\left[\Psi \frac{\partial^{2} \Psi^{*}}{\partial x^{2}}-\Psi^{*}\frac{\partial^{2} \Psi}{\partial x^{2}}\right] + \frac{i \hbar}{2m}\left[\Psi^{*}\frac{\partial^{2} \Psi}{\partial x^{2}}-\Psi \frac{\partial^{2} \Psi^{*}}{\partial x^{2}}\right]\\
+																																				 &= \frac{i \hbar}{2m}\left[\Psi \left(\frac{\partial^{2} \Psi^{*}}{\partial x^{2}}-\frac{\partial^{2} \Psi^{*}}{\partial x^{2}}\right)+\Psi^{*}\left(\frac{\partial^{2} \Psi}{\partial x^{2}}-\frac{\partial^{2} \Psi}{\partial x^{2}}\right)\right]
+				\end{split}
+		\end{align}
+		\begin{align}
+				\boxed{
+					\frac{\partial j}{\partial x}+\frac{\partial \rho}{\partial t} = 0
+				}
+		\end{align}
+			
+	\end{proof}
+	\end{prob}
 % --------------------------------------------- %
