@@ -1086,14 +1086,69 @@
 								\psi^{\prime\prime}(x) = -2 \gamma^{3} \delta(x)+\gamma^{4} \psi(x)
 							}
 						\end{align}
-													
 					\end{proof}
+				\item Calculo dos valores médios e teste do princípio de incerteza, usando $\gamma=\sqrt{m \alpha}/\hbar^{2}$ pra simplificar os cálculos
 					
-					
-
+				Cálculo do $\langle x \rangle$:
+					\begin{align}
+							\begin{split}
+								\langle x \rangle &= \int\limits_{-\infty}^{\infty} x \abs{\psi(x)}^{2} ,d{x}\\
+																	&= \gamma^{2}\left[\int\limits_{-\infty}^{0}x \mathrm{e}^{2 \gamma^{2}x}\,d{x}+\int\limits_{0}^{\infty}x \mathrm{e}^{-2 \gamma^{2}x}\,d{x}\right]\\
+																	&= \frac{1}{4 \gamma^{2}}-\frac{1}{4 \gamma^{2}}\implies \boxed{\langle x \rangle=0}
+							\end{split}
+					\end{align}
+					Cálculo do $\langle x^{2} \rangle$:
+					\begin{align}
+							\begin{split}
+								\langle x^{2} \rangle &= \int\limits_{-\infty}^{\infty}x^{2}\abs{\psi(x)}^{2}\,d{x}\\
+																			&= \gamma^{2}\left[\int\limits_{-\infty}^{0}x^{2}\mathrm{e}^{2\gamma^{2}x}\,d{x}+\int\limits_{0}^{\infty}x^{2}\mathrm{e}^{-2 \gamma^{2}x}\,d{x}\right]\\
+																			&= \frac{1}{2 \gamma^{4}}\implies \boxed{\langle x^{2} \rangle=\frac{\hbar^{4}}{2m^{2} \alpha^{2}}}
+							\end{split}
+					\end{align}
+					Cálculo do $\langle p \rangle$
+					\begin{align}
+							\begin{split}
+								\langle p \rangle &= \frac{d \langle x \rangle}{dx}\implies \boxed{\langle p \rangle=0}
+							\end{split}
+					\end{align}
+					Cálculo do $\langle p^{2} \rangle$
+					\begin{align}
+						\begin{split}
+							\langle p^{2} \rangle &= -\hbar^{2}\int\limits_{-\infty}^{\infty} \psi \left(\frac{d^{2}}{dx^{2}}\right) \psi\,d{x}\\
+																		&= -\hbar^{2}\int\limits_{-\infty}^{\infty} \psi(x)\left[-2 \gamma^{3} \delta(x)+ \gamma^{4} \psi(x)\right]\,d{x}\\
+																		&= 2\hbar^{2} \gamma^{3}\underbrace{\int\limits_{-\infty}^{\infty} \psi(x) \delta(x)\,d{x}}_{\displaystyle{\psi(0)=\gamma}}-\hbar^{2} \gamma^{4}\int\limits_{-\infty}^{\infty} \psi^{2}(x)\,d{x}\\
+																		&=2\hbar^{2} \gamma^{4}-\hbar^{2} \gamma^{4}\left[\underbrace{\int\limits_{-\infty}^{0} \gamma^{2}\mathrm{e}^{2\gamma^{2}x}\,d{x}+\int\limits_{0}^{\infty} \gamma^{2}\mathrm{e}^{-2 \gamma^{2}x}\,d{x}}_{\displaystyle{1}}\right]\\
+																		&= \hbar^{2} \gamma^{4}\implies{\boxed{\langle p^{2} \rangle=\frac{m^{2} \alpha^{2}}{\hbar^{2}}}}
+						\end{split}
+					\end{align}
+					Verificando o princípio de incerteza
+					\begin{align}
+							\begin{split}
+								\sigma_{x} &= \sqrt{\langle x^{2} \rangle-\langle x \rangle^{2}}\\
+													 &=\sqrt{\frac{h^{4}}{2m^{2} \alpha^{2}}}=\frac{\sqrt{2}\hbar^{2}}{2m \alpha}
+							\end{split}
+					\end{align}
+					e
+					\begin{align}
+							\begin{split}
+								\sigma_{p} &= \sqrt{\langle p^{2} \rangle-\langle p \rangle^{2}}\\
+													 &=\sqrt{\frac{m^{2} \alpha^{2}}{\hbar^{2}}}=\frac{m \alpha}{\hbar}
+							\end{split}
+					\end{align}
+					logo
+					\begin{align}
+							\begin{split}
+								\sigma_{x} \sigma_{p} &= \frac{\sqrt{2}\hbar^{2}}{2m \alpha}\frac{m \alpha}{\hbar}\\
+																			&= \frac{\sqrt{2}\hbar}{2}
+							\end{split}
+					\end{align}
+					 princípio de incerteza, continua satisfeto
+					 \begin{align}
+					 		\boxed{
+								\sigma_{x} \sigma_{p} \geq \frac{\hbar}{2}
+							}
+					 \end{align}
 		\end{enumerate}
-
-
 	\end{sol}
 \end{prob}
 % --------------------------------------------- %
