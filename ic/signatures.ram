@@ -1,0 +1,3 @@
+rtsp://streamer.slac.stanford.edu:5554/mountpoint1/events/Artfilm.rm
+--stop--
+pnm://streamer.slac.stanford.edu:7070/mountpoint1/events/Artfilm.rm

@@ -5,10 +5,9 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9.7 }
 
-\bibitem[Artigodeperiodico Ano]{article2016}
-\abntrefinfo{Artigodeperiodico}{ARTIGODEPERIODICO}{Ano}
-{ARTIGODEPERIODICO, A. Titulo.
-\textbf{Revista ou periódico}, Local, Volume, n. Numero, p. Pagina
-  inicial--Pagina final, Ano.}
+\bibitem[Workman et al. 2022]{WORKMAN:2022}
+\abntrefinfo{Workman et al.}{WORKMAN et al.}{2022}
+{WORKMAN, R.~L. et al. Review of particle physics.
+\textbf{PTEP}, v.~2022, p. 083C01, 2022.}
 
 \end{thebibliography}

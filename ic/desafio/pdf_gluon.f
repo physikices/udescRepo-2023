@@ -5,7 +5,7 @@
 	
 	integer i, j ! variaveis inteiras
 	
-	open(11, file = 'pdf_gluons.dat')
+	open(11, file = 'pdf_gluons01.dat')
 	
 	
 	

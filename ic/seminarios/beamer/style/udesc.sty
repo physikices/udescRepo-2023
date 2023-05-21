@@ -4,14 +4,68 @@
 \usepackage{lmodern}
 \usepackage[absolute,overlay]{textpos}
 \usefonttheme[onlymath]{serif}
-
+\usepackage{mathtools}
+\usepackage{siunitx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+% \usepackage{feynman}
 % Imagens
 \usepackage{graphicx}
+\usepackage{svg}
 
 % Tikz
 \usepackage{tikz}
 \usetikzlibrary{shadows}
-
+\tikzset{
+	invisible/.style={opacity=0},
+	visible on/.style={alt={#1{}{invisible}}},
+	alt/.code args={<#1>#2#3}{%
+		\alt<#1>{\pgfkeysalso{#2}}{\pgfkeysalso{#3}} % \pgfkeysalso doesn't change the path
+	hide on/.code={\only<#1>{\color{white}}}
+	},
+		basic/.style = {
+			sibling distance=4.5cm,
+			draw,
+			rectangle
+		},
+		root/.style = {
+			basic,
+			align=center,
+			fill=blue!75,
+			text width=15em,
+			blur shadow={
+				shadow blur steps=10,
+				shadow blur extra rounding=2pt,
+				shadow xshift=1pt
+			},
+			thin,
+		},
+		level 1/.style = {
+			basic,
+			thin,
+			align=center,
+			fill=red!60,
+			text=white,
+			text width=11em
+		},
+		level 2/.style = {
+			basic,
+			thin,
+			align=center,
+			fill=green!30,
+			text width=7em,
+			text=black
+		},
+		level 3/.style = {
+			basic,
+			rounded corners,
+			thin,
+			align=center,
+			fill=cyan!20,
+			text width=9.5em
+		}
+}
+\usepackage[compat=1.1.0]{tikz-feynhand}
 % Legendas
 \usepackage[font=footnotesize,labelfont=bf]{caption}
 \setbeamertemplate{caption}[numbered]
