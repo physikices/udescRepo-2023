@@ -1,0 +1,14 @@
+\begin{feynhand}
+	\vertex (v1);
+	\vertex[right=2cm of v1] (v2);
+
+	\propag[pho] (v1) to [edge label=$\gamma$] (-.5,1);
+	\draw[postaction={decorate}] (-.5,-1) to [edge label=$q$] (v1);
+	\draw[postaction={decorate}] (v1) to [edge label=$z(yp)-xp$] (2,0);
+	\propag[glu] (v2) to [edge label=$g$] (2.5,-1);
+	\draw[postaction={decorate}] (v2) to [edge label=$q$] (2.5,1);
+\end{feynhand}
+
+ 
+% \draw [postaction={decorate}] (0,0) -- (2,2); 
+

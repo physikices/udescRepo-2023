@@ -1,0 +1,55 @@
+\begin{feynhand}
+	% proton
+	\vertex(p1) {$P$};
+	\vertex[right=2cm of p1](blob) {};
+	\vertex[right=2cm of blob](p2) {$P^{\prime}$};
+
+	\propag[fer] (p1) -- (blob);
+	\propag[fer] (blob) -- (p2);
+
+	% eletron
+	\vertex[above=2cm of p1] (e1) {$\mathrm{e}^{-}$};
+	\vertex[right=1cm of e1] (e2);
+	\vertex[above right=1cm of e2] (e3);
+
+	\propag[fer] (e1) -- (e2);
+	\propag[fer] (e2) -- (e3);
+
+	% foton
+	\vertex[below right=1cm of e2] (f1);
+
+	% gluons
+	\vertex[left=.1cm of blob] (g1);
+	\vertex[right=.1cm of blob] (g2);
+	\vertex[above=1.77cm of g1] (g3);
+	\only<1>{\vertex[above=1.77cm of g2] (g4);\node[left=.5cm of f1]{$q(l)$};}
+	\only<2>{\vertex[above=2.49cm of g2] (g4);\node[left=.5cm of f1]{$q(l^{\prime})$};}
+	\only<3->{\vertex[above=1.77cm of g2] (g4);\node[left=.5cm of f1]{$q(l^{\prime})$};}
+
+	\propag[glu] (g1) to [edge label=$g(k)$] (g3);
+	\propag[glu] (g2) to node [right] {$g(k^{\prime})$} (g4);
+
+	% loop
+	\vertex[above=2cm of blob] (center_loop);
+	\vertex[right=.8cm of center_loop] (l1);
+	\vertex[left=.8cm of center_loop] (l2);
+
+	\propag[fer] (l1) to [half right,looseness=.8] (l2);
+	\propag[fer] (l2) to [half right,looseness=.8] (l1);
+
+	% j/psi
+	\vertex[right=2cm of center_loop] (pivot);
+	\vertex[above=.01cm of pivot] (pivot-a){$\bar{c}$};
+	\vertex[below=.01cm of pivot] (pivot-b){$c$};
+
+	\propag[fer] (pivot-a) to ++(-1.42cm,0);
+	\propag[antfer] (pivot-b) to ++(-1.35cm,0);
+
+	
+
+
+	\vertex[blob, fill=gray] at (blob) {};
+	\propag[pho] (e2) to [edge label=$\gamma$] (l2);
+	\draw [decoration={brace}, decorate] (pivot-a.north east) -- (pivot-b.south east)
+          node [pos=0.5, right] {$J/\psi$};
+\end{feynhand}

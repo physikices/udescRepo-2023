@@ -1,0 +1,55 @@
+\begin{feynhand}
+	% próton
+	\vertex (a1) {$u$};
+	\vertex[right=2cm of a1] (a2);
+	\vertex[right=2cm of a2] (a3);
+	\vertex[right=2cm of a3] (a4){$u$};
+	
+	\vertex[below=.1cm of a1] (b1) {$d$};
+	\vertex[below=.1cm of a4] (b2) {$d$};
+
+	\vertex[below=.1cm of b1] (c1) {$u$};
+	\vertex[below=.1cm of b2] (c2) {$u$};
+
+	\propag[fer] (a1) to (a4);
+	\propag[fer] (b1) to (b2);
+	\propag[fer] (c1) to (c2);
+
+	\draw [decoration={brace}, decorate] (c1.south west) -- (a1.north west)
+	node [pos=0.5, left] {$P$};
+	\draw [decoration={brace}, decorate] (a4.north east) -- (c2.south east)
+          node [pos=0.5, right] {$P^{\prime}$};
+
+  % foton
+					\vertex[above=8em of a1] (q1){$\mathrm{e}^{-}$};
+					\vertex[right=2.1em of q1] (q2);
+					\vertex[dot, below right=of q2] (q3){};
+					\vertex[above right=2cm of q3] (q4) {};% scattering
+
+					\propag[fer] (q1) to (q2);
+					\propag[fer] (q2) to (q4);
+					\propag[pho] (q2) to [edge label=$\gamma$] (q3);
+	% gluons
+					\vertex[dot,above=3em of a2] (g1){};
+					\only<1>{\vertex[dot,above=3em of a3] (g2){};}
+					\only<2>{\vertex[dot,above=6.32em of a3] (g3){};}
+
+					\propag[glu] (a2) to [edge label=$g$] (g1);
+					\only<1>{\propag[glu] (a3) to [edge label=$g$] (g2);}
+					\only<2>{\propag[glu] (a3) to [edge label=$g$] (g3);}
+	
+	% propagadores J/Psi
+					\vertex[right=2cm of g2] (j1){$c$};
+					\vertex[above=.8cm of j1] (j2){$\bar{c}$};
+
+					\only<1>{\propag[antfer] (j1) to (g2);}
+					\only<2>{\propag[antfer] (j1) to (g1);}
+					\only<1>{\propag[antfer] (g2) to (g1);}
+					\propag[antfer] (g1) to (q3);
+					\only<1>{\propag[antfer] (q3) to (j2);}
+					\only<2>{\propag[antfer] (q3) to (g3);}
+					\only<2>{\propag[antfer] (g3) to (j2);}
+  % J/Psi
+	\draw [decoration={brace}, decorate] (j2.north east) -- (j1.south east)
+          node [pos=0.5, right] {$J/\psi$};
+\end{feynhand}

@@ -5,9 +5,10 @@
 \usepackage[absolute,overlay]{textpos}
 \usefonttheme[onlymath]{serif}
 \usepackage{mathtools}
-\usepackage{siunitx}
+% \usepackage{siunitx}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{physics}
 % \usepackage{feynman}
 % Imagens
 \usepackage{graphicx}
@@ -15,6 +16,7 @@
 
 % Tikz
 \usepackage{tikz}
+\usetikzlibrary{decorations.markings}
 \usetikzlibrary{shadows}
 \tikzset{
 	invisible/.style={opacity=0},
@@ -62,10 +64,32 @@
 			thin,
 			align=center,
 			fill=cyan!20,
-			text width=9.5em
+			minimum size=5mm
+		},
+	  roundnode/.style = {
+		  circle,
+		  draw=greenudesc,
+		  fill=greenudesc!15,
+		  ultra thin,
+		  minimum size=7mm
+		},
+		squarednode/.style = {
+		rectangle,
+	  draw=red!60,
+	  fill=red!5,
+	  ultra thin,
+	  minimum size=5mm
+	  },
+		mathnode/.style = {
+			rectangle,
+			draw=cyan!60,
+			fill=cyan!5,
+			ultra thin,
+			minimum size=.1cm
 		}
 }
 \usepackage[compat=1.1.0]{tikz-feynhand}
+	\setlength{\feynhandarrowsize}{3pt}
 % Legendas
 \usepackage[font=footnotesize,labelfont=bf]{caption}
 \setbeamertemplate{caption}[numbered]
@@ -145,9 +169,9 @@
 
 			\makeatletter
 
-			\vskip -2em
+			\vskip -4em
 			\begin{beamercolorbox}[sep=3pt,right]{author}
-				\hfill \scriptsize \textbf{\textcolor{black!65}{\@frase}}
+				\hfill \scriptsize \textbf{\textcolor{black!0}{\@frase}}
 			\end{beamercolorbox}
 
 			\vskip 2.7em

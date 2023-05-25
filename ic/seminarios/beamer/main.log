@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.4)  21 MAY 2023 18:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.4)  25 MAY 2023 14:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -643,43 +643,16 @@ Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 \l_MT_below_shortintertext_sep=\dimen310
 \xmathstrut@box=\box78
 \xmathstrut@dim=\dimen311
-) (/usr/local/texlive/2022/texmf-dist/tex/latex/siunitx/siunitx.sty
-Package: siunitx 2022-12-05 v3.1.11 A comprehensive (SI) units package
-\l__siunitx_angle_tmp_dim=\dimen312
-\l__siunitx_angle_marker_box=\box79
-\l__siunitx_angle_unit_box=\box80
-\l__siunitx_compound_count_int=\count340
- (/usr/local/texlive/2022/texmf-dist/tex/latex/translations/translations.sty
-Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages (CN)
-)
-\l__siunitx_number_exponent_fixed_int=\count341
-\l__siunitx_number_min_decimal_int=\count342
-\l__siunitx_number_min_integer_int=\count343
-\l__siunitx_number_round_precision_int=\count344
-\l__siunitx_number_group_first_int=\count345
-\l__siunitx_number_group_size_int=\count346
-\l__siunitx_number_group_minimum_int=\count347
-\l__siunitx_table_tmp_box=\box81
-\l__siunitx_table_tmp_dim=\dimen313
-\l__siunitx_table_column_width_dim=\dimen314
-\l__siunitx_table_integer_box=\box82
-\l__siunitx_table_decimal_box=\box83
-\l__siunitx_table_before_box=\box84
-\l__siunitx_table_after_box=\box85
-\l__siunitx_table_before_dim=\dimen315
-\l__siunitx_table_carry_dim=\dimen316
-\l__siunitx_unit_tmp_int=\count348
-\l__siunitx_unit_position_int=\count349
-\l__siunitx_unit_total_int=\count350
- (/usr/local/texlive/2022/texmf-dist/tex/latex/tools/array.sty
-Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
-\col@sep=\dimen317
-\ar@mcellbox=\box86
-\extrarowheight=\dimen318
-\NC@list=\toks48
-\extratabsurround=\skip69
-\backup@length=\skip70
-\ar@cellbox=\box87
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/physics/physics.sty
+Package: physics 
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (/usr/local/texlive/2022/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2022-12-17 L3 programming layer (loader) 
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-10-26 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count340
+\l__pdf_internal_box=\box79
+))
+Package: xparse 2022-12-17 L3 Experimental document command parser
 )) (/usr/local/texlive/2022/texmf-dist/tex/latex/svg/svg.sty
 Package: svg 2020/11/26 v2.02k (include SVG pictures)
  (/usr/local/texlive/2022/texmf-dist/tex/latex/koma-script/scrbase.sty
@@ -692,9 +665,9 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
 Package shellesc Info: Restricted shell escape enabled on input line 77.
 )
-\c@svg@param@lastpage=\count351
-\svg@box=\box88
-\c@svg@param@currpage=\count352
+\c@svg@param@lastpage=\count341
+\svg@box=\box80
+\c@svg@param@currpage=\count342
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/transparent/transparent.sty
 Package: transparent 2022-10-27 v1.5 Transparency with color stacks
  (/usr/local/texlive/2022/texmf-dist/tex/latex/transparent/transparent-nometadata.sty
@@ -703,56 +676,67 @@ Package: transparent-nometadata 2022-10-27 v1.5 Transparency via pdfTeX's color 
 Package: pgf 2021/05/15 v3.1.9a (3.1.9a)
  (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfnodeparttextbox=\box89
+\pgfnodeparttextbox=\box81
 ) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@nodesepstart=\dimen319
-\pgf@nodesepend=\dimen320
+\pgf@nodesepstart=\dimen312
+\pgf@nodesepend=\dimen313
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2021/05/15 v3.1.9a (3.1.9a)
 )) (/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2021/05/15 v3.1.9a (3.1.9a)
  (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen321
-\pgffor@skip=\dimen322
-\pgffor@stack=\toks49
-\pgffor@toks=\toks50
+\pgffor@iter=\dimen314
+\pgffor@skip=\dimen315
+\pgffor@stack=\toks48
+\pgffor@toks=\toks49
 )) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
  (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@plot@mark@count=\count353
-\pgfplotmarksize=\dimen323
+\pgf@plot@mark@count=\count343
+\pgfplotmarksize=\dimen316
 )
-\tikz@lastx=\dimen324
-\tikz@lasty=\dimen325
-\tikz@lastxsaved=\dimen326
-\tikz@lastysaved=\dimen327
-\tikz@lastmovetox=\dimen328
-\tikz@lastmovetoy=\dimen329
-\tikzleveldistance=\dimen330
-\tikzsiblingdistance=\dimen331
-\tikz@figbox=\box90
-\tikz@figbox@bg=\box91
-\tikz@tempbox=\box92
-\tikz@tempbox@bg=\box93
-\tikztreelevel=\count354
-\tikznumberofchildren=\count355
-\tikznumberofcurrentchild=\count356
-\tikz@fig@count=\count357
+\tikz@lastx=\dimen317
+\tikz@lasty=\dimen318
+\tikz@lastxsaved=\dimen319
+\tikz@lastysaved=\dimen320
+\tikz@lastmovetox=\dimen321
+\tikz@lastmovetoy=\dimen322
+\tikzleveldistance=\dimen323
+\tikzsiblingdistance=\dimen324
+\tikz@figbox=\box82
+\tikz@figbox@bg=\box83
+\tikz@tempbox=\box84
+\tikz@tempbox@bg=\box85
+\tikztreelevel=\count344
+\tikznumberofchildren=\count345
+\tikznumberofcurrentchild=\count346
+\tikz@fig@count=\count347
  (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfmatrixcurrentrow=\count358
-\pgfmatrixcurrentcolumn=\count359
-\pgf@matrix@numberofcolumns=\count360
+\pgfmatrixcurrentrow=\count348
+\pgfmatrixcurrentcolumn=\count349
+\pgf@matrix@numberofcolumns=\count350
 )
-\tikz@expandcount=\count361
+\tikz@expandcount=\count351
 
 (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-))) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshadows.code.tex
+))) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.markings.code.tex (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
+\pgfdecoratedcompleteddistance=\dimen325
+\pgfdecoratedremainingdistance=\dimen326
+\pgfdecoratedinputsegmentcompleteddistance=\dimen327
+\pgfdecoratedinputsegmentremainingdistance=\dimen328
+\pgf@decorate@distancetomove=\dimen329
+\pgf@decorate@repeatstate=\count352
+\pgfdecorationsegmentamplitude=\dimen330
+\pgfdecorationsegmentlength=\dimen331
+)
+\tikz@lib@dec@box=\box86
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.markings.code.tex)) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshadows.code.tex
 File: tikzlibraryshadows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
  (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfadings.code.tex
 File: tikzlibraryfadings.code.tex 2021/05/15 v3.1.9a (3.1.9a)
@@ -762,8 +746,8 @@ File: pgflibraryfadings.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 Package: tikz-feynhand 2019/08/19v1.1.0Feynman diagrams with TikZ (LaTex manual version)
  (/usr/local/texlive/2022/texmf-dist/tex/latex/pgfopts/pgfopts.sty
 Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
-\pgfopts@list@add@a@toks=\toks51
-\pgfopts@list@add@b@toks=\toks52
+\pgfopts@list@add@a@toks=\toks50
+\pgfopts@list@add@b@toks=\toks51
 ) (./tikzlibraryfeynhand.code.tex (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
 File: pgflibraryarrows.meta.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgfarrowinset=\dimen332
@@ -772,18 +756,7 @@ File: pgflibraryarrows.meta.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgfarrowlinewidth=\dimen335
 ) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
 File: tikzlibrarycalc.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
-\pgfdecoratedcompleteddistance=\dimen336
-\pgfdecoratedremainingdistance=\dimen337
-\pgfdecoratedinputsegmentcompleteddistance=\dimen338
-\pgfdecoratedinputsegmentremainingdistance=\dimen339
-\pgf@decorate@distancetomove=\dimen340
-\pgf@decorate@repeatstate=\count362
-\pgfdecorationsegmentamplitude=\dimen341
-\pgfdecorationsegmentlength=\dimen342
-)
-\tikz@lib@dec@box=\box94
-) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.markings.code.tex (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.markings.code.tex)) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathmorphing.code.tex (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathmorphing.code.tex)) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathreplacing.code.tex (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathreplacing.code.tex)) (/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/frontendlayer/libraries/tikzlibraryexternal.code.tex (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzexternalshared.code.tex))
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathmorphing.code.tex (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathmorphing.code.tex)) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathreplacing.code.tex (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathreplacing.code.tex)) (/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/frontendlayer/libraries/tikzlibraryexternal.code.tex (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzexternalshared.code.tex))
 (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypatterns.code.tex
 File: tikzlibrarypatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
  (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/pgflibrarypatterns.code.tex
@@ -795,54 +768,54 @@ File: tikzlibraryshapes.geometric.code.tex 2021/05/15 v3.1.9a (3.1.9a)
  (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.geometric.code.tex
 File: pgflibraryshapes.geometric.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )) (./tikzfeynhand.keys.code.tex
-\feynhanddotsize=\skip71
-\feynhandblobsize=\skip72
-\feynhandlinesize=\skip73
-\feynhandarrowsize=\skip74
-\feynhandtopsep=\skip75
+\feynhanddotsize=\skip69
+\feynhandblobsize=\skip70
+\feynhandlinesize=\skip71
+\feynhandarrowsize=\skip72
+\feynhandtopsep=\skip73
 )) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/graphs/tikzlibrarygraphs.code.tex
 File: tikzlibrarygraphs.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\tikz@lib@auto@number=\count363
-\tikz@qnode@count=\count364
+\tikz@lib@auto@number=\count353
+\tikz@qnode@count=\count354
 )) (/usr/local/texlive/2022/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2022/03/01 v3.6b Customizing captions (AR)
  (/usr/local/texlive/2022/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
-\caption@tempdima=\dimen343
-\captionmargin=\dimen344
-\caption@leftmargin=\dimen345
-\caption@rightmargin=\dimen346
-\caption@width=\dimen347
-\caption@indent=\dimen348
-\caption@parindent=\dimen349
-\caption@hangindent=\dimen350
+\caption@tempdima=\dimen336
+\captionmargin=\dimen337
+\caption@leftmargin=\dimen338
+\caption@rightmargin=\dimen339
+\caption@width=\dimen340
+\caption@indent=\dimen341
+\caption@parindent=\dimen342
+\caption@hangindent=\dimen343
 Package caption Info: beamer document class detected.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/caption/caption-beamer.sto
 File: caption-beamer.sto 2022/01/06 v2.0c Adaption of the caption package to the beamer document classes (AR)
 ))
-\c@caption@flags=\count365
-\c@continuedfloat=\count366
+\c@caption@flags=\count355
+\c@continuedfloat=\count356
 Package caption Info: hyperref package is loaded.
 Package caption Info: Hyperref support is turned off
 (caption)             because hyperref has stopped early.
 )) (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count367
-\lst@gtempboxa=\box95
-\lst@token=\toks53
-\lst@length=\count368
-\lst@currlwidth=\dimen351
-\lst@column=\count369
-\lst@pos=\count370
-\lst@lostspace=\dimen352
-\lst@width=\dimen353
-\lst@newlines=\count371
-\lst@lineno=\count372
-\lst@maxwidth=\dimen354
+\lst@mode=\count357
+\lst@gtempboxa=\box87
+\lst@token=\toks52
+\lst@length=\count358
+\lst@currlwidth=\dimen344
+\lst@column=\count359
+\lst@pos=\count360
+\lst@lostspace=\dimen345
+\lst@width=\dimen346
+\lst@newlines=\count361
+\lst@lineno=\count362
+\lst@maxwidth=\dimen347
  (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-\c@lstnumber=\count373
-\lst@skipnumbers=\count374
-\lst@framebox=\box96
+\c@lstnumber=\count363
+\lst@skipnumbers=\count364
+\lst@framebox=\box88
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
@@ -854,11 +827,11 @@ Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/abntex2/abntex2abrev.sty) (/usr/local/texlive/2022/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2022/12/04 v6.7b set line spacing
 )
-\bibindent=\skip76
-\minimumbiblabelwidth=\skip77
-\ABCIauxlen=\skip78
-\c@ABCIaux=\count375
-\c@ABCImax=\count376
+\bibindent=\skip74
+\minimumbiblabelwidth=\skip75
+\ABCIauxlen=\skip76
+\c@ABCIaux=\count365
+\c@ABCImax=\count366
  (/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/ifpdf.sty
 Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
 ) (/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/ifxetex.sty
@@ -866,51 +839,44 @@ Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/relsize/relsize.sty
 Package: relsize 2013/03/29 ver 4.1
 )
-\biblabelsep=\skip79
+\biblabelsep=\skip77
 LaTeX Info: Redefining \newblock on input line 591.
 LaTeX Info: Redefining \cite on input line 618.
-\ABCItoken=\toks54
-) (/usr/local/texlive/2022/texmf-dist/tex/latex/lipsum/lipsum.sty (/usr/local/texlive/2022/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty (/usr/local/texlive/2022/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2022-12-17 L3 programming layer (loader) 
- (/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2022-10-26 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count377
-\l__pdf_internal_box=\box97
-))
+\ABCItoken=\toks53
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/lipsum/lipsum.sty (/usr/local/texlive/2022/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
 Package: l3keys2e 2022-12-17 LaTeX2e option processing using LaTeX3 keys
 )
 Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
-\g__lipsum_par_int=\count378
-\l__lipsum_a_int=\count379
-\l__lipsum_b_int=\count380
- (/usr/local/texlive/2022/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex))
-(/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
+\g__lipsum_par_int=\count367
+\l__lipsum_a_int=\count368
+\l__lipsum_b_int=\count369
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex)) (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
-LaTeX Font Info:    Trying to load font information for T1+lmss on input line 47.
+LaTeX Font Info:    Trying to load font information for T1+lmss on input line 46.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -948,24 +914,24 @@ LaTeX Font Info:    ... okay on input line 47.
 
 (/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count381
-\scratchdimen=\dimen355
-\scratchbox=\box98
-\nofMPsegments=\count382
-\nofMParguments=\count383
-\everyMPshowfont=\toks55
-\MPscratchCnt=\count384
-\MPscratchDim=\dimen356
-\MPnumerator=\count385
-\makeMPintoPDFobject=\count386
-\everyMPtoPDFconversion=\toks56
+\scratchcounter=\count370
+\scratchdimen=\dimen348
+\scratchbox=\box89
+\nofMPsegments=\count371
+\nofMParguments=\count372
+\everyMPshowfont=\toks54
+\MPscratchCnt=\count373
+\MPscratchDim=\dimen349
+\MPnumerator=\count374
+\makeMPintoPDFobject=\count375
+\everyMPtoPDFconversion=\toks55
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring OFF on input line 47.
+Package hyperref Info: Link coloring OFF on input line 46.
  (./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
@@ -982,20 +948,24 @@ Dictionary: translator-months-dictionary, Language: English
 Dictionary: translator-numbers-dictionary, Language: English 
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/translator/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
-) (/usr/local/texlive/2022/texmf-dist/tex/latex/translations/translations-basic-dictionary-brazil.trsl
-File: translations-basic-dictionary-brazil.trsl (brazil translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `brazil'. on input line 47.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count387
+\c@lstlisting=\count376
  (./main.nav) (/usr/local/texlive/2022/texmf-dist/tex/latex/pgf-blur/tikzlibraryshadows.blur.code.tex  v1.02, 2012/12/09
-\pgfbs@fading@count=\count388
+\pgfbs@fading@count=\count377
 ) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytrees.code.tex
 File: tikzlibrarytrees.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/modules/pgfmoduleanimations.code.tex
+File: pgfmoduleanimations.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgfsysanimations.code.tex
+\pgfsysanim@snap@count=\count378
+\pgfsysanim@lasttime=\dimen350
 )
-<style/capa.pdf, id=69, 796.6487pt x 448.10245pt>
+\pgf@anim@dim=\dimen351
+)
+<style/capa.pdf, id=81, 796.6487pt x 448.10245pt>
 File: style/capa.pdf Graphic file (type pdf)
 <use style/capa.pdf>
 Package pdftex.def Info: style/capa.pdf  used on input line 63.
@@ -1003,37 +973,39 @@ Package pdftex.def Info: style/capa.pdf  used on input line 63.
  [1
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./style/capa.pdf>] (./main.toc
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 9.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 10.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 11.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 9.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 11.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 9.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 11.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 9.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 11.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 9.
+(Font)              <10.95> on input line 11.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 9.
+(Font)              <8> on input line 11.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 9.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 9.
+(Font)              <6> on input line 11.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 11.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 9.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 11.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
-<style/slide.pdf, id=100, 796.59178pt x 448.07399pt>
+<style/slide.pdf, id=115, 796.59178pt x 448.07399pt>
 File: style/slide.pdf Graphic file (type pdf)
 <use style/slide.pdf>
 Package pdftex.def Info: style/slide.pdf  used on input line 70.
@@ -1050,221 +1022,472 @@ Package pdftex.def Info: style/slide.pdf  used on input line 71.
 ] (./main.toc)
 File: style/slide.pdf Graphic file (type pdf)
 <use style/slide.pdf>
-Package pdftex.def Info: style/slide.pdf  used on input line 75.
+Package pdftex.def Info: style/slide.pdf  used on input line 76.
 (pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
  [4
 
-]
+] (./main.toc)
 File: style/slide.pdf Graphic file (type pdf)
 <use style/slide.pdf>
-Package pdftex.def Info: style/slide.pdf  used on input line 105.
+Package pdftex.def Info: style/slide.pdf  used on input line 80.
 (pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
  [5
 
 ]
-<./img//tabela_modeloPadrao.png, id=148, 616.4631pt x 463.0098pt>
+File: style/slide.pdf Graphic file (type pdf)
+<use style/slide.pdf>
+Package pdftex.def Info: style/slide.pdf  used on input line 108.
+(pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
+ [6
+
+]
+<./img//tabela_modeloPadrao.png, id=189, 616.4631pt x 463.0098pt>
 File: ./img//tabela_modeloPadrao.png Graphic file (type png)
 <use ./img//tabela_modeloPadrao.png>
-Package pdftex.def Info: ./img//tabela_modeloPadrao.png  used on input line 113.
+Package pdftex.def Info: ./img//tabela_modeloPadrao.png  used on input line 116.
 (pdftex.def)             Requested size: 228.08228pt x 171.30386pt.
 File: style/slide.pdf Graphic file (type pdf)
 <use style/slide.pdf>
-Package pdftex.def Info: style/slide.pdf  used on input line 113.
+Package pdftex.def Info: style/slide.pdf  used on input line 116.
 (pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
- [6
+ [7
 
  <./img//tabela_modeloPadrao.png>]
 File: style/slide.pdf Graphic file (type pdf)
 <use style/slide.pdf>
-Package pdftex.def Info: style/slide.pdf  used on input line 138.
-(pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
- [7
-
-] (./img/dis.tex)
-File: style/slide.pdf Graphic file (type pdf)
-<use style/slide.pdf>
-Package pdftex.def Info: style/slide.pdf  used on input line 176.
+Package pdftex.def Info: style/slide.pdf  used on input line 141.
 (pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
  [8
 
 ] (./img/dis.tex)
 File: style/slide.pdf Graphic file (type pdf)
 <use style/slide.pdf>
-Package pdftex.def Info: style/slide.pdf  used on input line 176.
+Package pdftex.def Info: style/slide.pdf  used on input line 179.
 (pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
  [9
 
 ] (./img/dis.tex)
 File: style/slide.pdf Graphic file (type pdf)
 <use style/slide.pdf>
-Package pdftex.def Info: style/slide.pdf  used on input line 176.
+Package pdftex.def Info: style/slide.pdf  used on input line 179.
 (pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
  [10
 
 ] (./img/dis.tex)
 File: style/slide.pdf Graphic file (type pdf)
 <use style/slide.pdf>
-Package pdftex.def Info: style/slide.pdf  used on input line 176.
+Package pdftex.def Info: style/slide.pdf  used on input line 179.
 (pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
  [11
 
 ] (./img/dis.tex)
 File: style/slide.pdf Graphic file (type pdf)
 <use style/slide.pdf>
-Package pdftex.def Info: style/slide.pdf  used on input line 176.
+Package pdftex.def Info: style/slide.pdf  used on input line 179.
 (pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
  [12
 
 ] (./img/dis.tex)
 File: style/slide.pdf Graphic file (type pdf)
 <use style/slide.pdf>
-Package pdftex.def Info: style/slide.pdf  used on input line 176.
+Package pdftex.def Info: style/slide.pdf  used on input line 179.
 (pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
  [13
 
 ] (./img/dis.tex)
 File: style/slide.pdf Graphic file (type pdf)
 <use style/slide.pdf>
-Package pdftex.def Info: style/slide.pdf  used on input line 176.
+Package pdftex.def Info: style/slide.pdf  used on input line 179.
 (pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
  [14
 
 ] (./img/dis.tex)
 File: style/slide.pdf Graphic file (type pdf)
 <use style/slide.pdf>
-Package pdftex.def Info: style/slide.pdf  used on input line 176.
+Package pdftex.def Info: style/slide.pdf  used on input line 179.
 (pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
  [15
 
-]
+] (./img/dis.tex)
 File: style/slide.pdf Graphic file (type pdf)
 <use style/slide.pdf>
-Package pdftex.def Info: style/slide.pdf  used on input line 256.
+Package pdftex.def Info: style/slide.pdf  used on input line 179.
 (pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
  [16
 
 ]
 File: style/slide.pdf Graphic file (type pdf)
 <use style/slide.pdf>
-Package pdftex.def Info: style/slide.pdf  used on input line 256.
+Package pdftex.def Info: style/slide.pdf  used on input line 266.
 (pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
  [17
 
 ]
 File: style/slide.pdf Graphic file (type pdf)
 <use style/slide.pdf>
-Package pdftex.def Info: style/slide.pdf  used on input line 256.
+Package pdftex.def Info: style/slide.pdf  used on input line 266.
 (pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
  [18
 
 ]
-<./img//f2vsx.pdf, id=237, 514.92375pt x 490.83376pt>
+File: style/slide.pdf Graphic file (type pdf)
+<use style/slide.pdf>
+Package pdftex.def Info: style/slide.pdf  used on input line 266.
+(pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
+ [19
+
+]
+<./img//f2vsx.pdf, id=276, 514.92375pt x 490.83376pt>
 File: ./img//f2vsx.pdf Graphic file (type pdf)
 <use ./img//f2vsx.pdf>
-Package pdftex.def Info: ./img//f2vsx.pdf  used on input line 256.
+Package pdftex.def Info: ./img//f2vsx.pdf  used on input line 266.
 (pdftex.def)             Requested size: 176.95863pt x 168.67874pt.
 File: style/slide.pdf Graphic file (type pdf)
 <use style/slide.pdf>
-Package pdftex.def Info: style/slide.pdf  used on input line 256.
+Package pdftex.def Info: style/slide.pdf  used on input line 266.
 (pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
- [19
+ [20
 
  <./img//f2vsx.pdf>] (./img/dis-parton.tex)
 File: style/slide.pdf Graphic file (type pdf)
 <use style/slide.pdf>
-Package pdftex.def Info: style/slide.pdf  used on input line 256.
-(pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
- [20
-
-] (./img/dis-parton.tex)
-File: style/slide.pdf Graphic file (type pdf)
-<use style/slide.pdf>
-Package pdftex.def Info: style/slide.pdf  used on input line 256.
+Package pdftex.def Info: style/slide.pdf  used on input line 266.
 (pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
  [21
 
 ] (./img/dis-parton.tex)
 File: style/slide.pdf Graphic file (type pdf)
 <use style/slide.pdf>
-Package pdftex.def Info: style/slide.pdf  used on input line 256.
+Package pdftex.def Info: style/slide.pdf  used on input line 266.
 (pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
  [22
 
-]
-(./img/dis-parton.tex)
+] (./img/dis-parton.tex)
 File: style/slide.pdf Graphic file (type pdf)
 <use style/slide.pdf>
-Package pdftex.def Info: style/slide.pdf  used on input line 256.
+Package pdftex.def Info: style/slide.pdf  used on input line 266.
 (pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
  [23
 
 ] (./img/dis-parton.tex)
 File: style/slide.pdf Graphic file (type pdf)
 <use style/slide.pdf>
-Package pdftex.def Info: style/slide.pdf  used on input line 256.
+Package pdftex.def Info: style/slide.pdf  used on input line 266.
 (pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
  [24
 
 ] (./img/dis-parton.tex)
 File: style/slide.pdf Graphic file (type pdf)
 <use style/slide.pdf>
-Package pdftex.def Info: style/slide.pdf  used on input line 256.
+Package pdftex.def Info: style/slide.pdf  used on input line 266.
 (pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
  [25
 
 ] (./img/dis-parton.tex)
 File: style/slide.pdf Graphic file (type pdf)
 <use style/slide.pdf>
-Package pdftex.def Info: style/slide.pdf  used on input line 256.
+Package pdftex.def Info: style/slide.pdf  used on input line 266.
 (pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
  [26
 
 ] (./img/dis-parton.tex)
 File: style/slide.pdf Graphic file (type pdf)
 <use style/slide.pdf>
-Package pdftex.def Info: style/slide.pdf  used on input line 256.
+Package pdftex.def Info: style/slide.pdf  used on input line 266.
 (pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
  [27
 
 ] (./img/dis-parton.tex)
 File: style/slide.pdf Graphic file (type pdf)
 <use style/slide.pdf>
-Package pdftex.def Info: style/slide.pdf  used on input line 256.
+Package pdftex.def Info: style/slide.pdf  used on input line 266.
 (pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
  [28
 
 ] (./img/dis-parton.tex)
 File: style/slide.pdf Graphic file (type pdf)
 <use style/slide.pdf>
-Package pdftex.def Info: style/slide.pdf  used on input line 256.
+Package pdftex.def Info: style/slide.pdf  used on input line 266.
 (pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
  [29
 
 ] (./img/dis-parton.tex)
-<img/alphas-v-Q-2021.pdf, id=306, 578.16pt x 578.16pt>
-File: img/alphas-v-Q-2021.pdf Graphic file (type pdf)
-<use img/alphas-v-Q-2021.pdf>
-Package pdftex.def Info: img/alphas-v-Q-2021.pdf  used on input line 256.
-(pdftex.def)             Requested size: 167.12993pt x 167.12396pt.
 File: style/slide.pdf Graphic file (type pdf)
 <use style/slide.pdf>
-Package pdftex.def Info: style/slide.pdf  used on input line 256.
+Package pdftex.def Info: style/slide.pdf  used on input line 266.
 (pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
  [30
 
- <./img/alphas-v-Q-2021.pdf>] (./main.bbl)
+]
+<img/alphas-v-Q-2021.pdf, id=351, 578.16pt x 578.16pt>
+File: img/alphas-v-Q-2021.pdf Graphic file (type pdf)
+<use img/alphas-v-Q-2021.pdf>
+Package pdftex.def Info: img/alphas-v-Q-2021.pdf  used on input line 300.
+(pdftex.def)             Requested size: 117.97441pt x 117.96777pt.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 300.
 File: style/slide.pdf Graphic file (type pdf)
 <use style/slide.pdf>
-Package pdftex.def Info: style/slide.pdf  used on input line 263.
+Package pdftex.def Info: style/slide.pdf  used on input line 300.
 (pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
  [31
+
+ <./img/alphas-v-Q-2021.pdf>]
+File: img/alphas-v-Q-2021.pdf Graphic file (type pdf)
+<use img/alphas-v-Q-2021.pdf>
+Package pdftex.def Info: img/alphas-v-Q-2021.pdf  used on input line 300.
+(pdftex.def)             Requested size: 117.97441pt x 117.96777pt.
+File: style/slide.pdf Graphic file (type pdf)
+<use style/slide.pdf>
+Package pdftex.def Info: style/slide.pdf  used on input line 300.
+(pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
+ [32
+
+]
+File: style/slide.pdf Graphic file (type pdf)
+<use style/slide.pdf>
+Package pdftex.def Info: style/slide.pdf  used on input line 328.
+(pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
+ [33
+
+] (./img/dglap_01.tex)
+File: style/slide.pdf Graphic file (type pdf)
+<use style/slide.pdf>
+Package pdftex.def Info: style/slide.pdf  used on input line 367.
+(pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
+ [34
+
+] (./img/dglap_01.tex)
+File: style/slide.pdf Graphic file (type pdf)
+<use style/slide.pdf>
+Package pdftex.def Info: style/slide.pdf  used on input line 367.
+(pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
+ [35
+
+] (./img/dglap_01.tex)
+File: style/slide.pdf Graphic file (type pdf)
+<use style/slide.pdf>
+Package pdftex.def Info: style/slide.pdf  used on input line 367.
+(pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
+ [36
+
+] (./img/dglap_01.tex) (./img/dglap_02.tex)
+File: style/slide.pdf Graphic file (type pdf)
+<use style/slide.pdf>
+Package pdftex.def Info: style/slide.pdf  used on input line 367.
+(pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
+ [37
+
+] (./img/dglap_01.tex) (./img/dglap_02.tex) (./img/dglap_03.tex)
+File: style/slide.pdf Graphic file (type pdf)
+<use style/slide.pdf>
+Package pdftex.def Info: style/slide.pdf  used on input line 367.
+(pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
+ [38
+
+] (./img/dglap_01.tex)
+File: style/slide.pdf Graphic file (type pdf)
+<use style/slide.pdf>
+Package pdftex.def Info: style/slide.pdf  used on input line 367.
+(pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
+ [39
+
+] (./img/dglap_01.tex)
+File: style/slide.pdf Graphic file (type pdf)
+<use style/slide.pdf>
+Package pdftex.def Info: style/slide.pdf  used on input line 367.
+(pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
+ [40
+
+] (./img/dglap_04.tex)
+File: style/slide.pdf Graphic file (type pdf)
+<use style/slide.pdf>
+Package pdftex.def Info: style/slide.pdf  used on input line 384.
+(pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
+ [41
+
+] (./img/splitting_01.tex) (./img/splitting_02.tex) (./img/splitting_03.tex) (./img/splitting_04.tex)
+File: style/slide.pdf Graphic file (type pdf)
+<use style/slide.pdf>
+Package pdftex.def Info: style/slide.pdf  used on input line 422.
+(pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
+ [42
+
+] (./img/splitting_01.tex) (./img/splitting_02.tex) (./img/splitting_03.tex) (./img/splitting_04.tex)
+File: style/slide.pdf Graphic file (type pdf)
+<use style/slide.pdf>
+Package pdftex.def Info: style/slide.pdf  used on input line 422.
+(pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
+ [43
+
+] (./img/splitting_01.tex) (./img/splitting_02.tex) (./img/splitting_03.tex) (./img/splitting_04.tex)
+File: style/slide.pdf Graphic file (type pdf)
+<use style/slide.pdf>
+Package pdftex.def Info: style/slide.pdf  used on input line 422.
+(pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
+ [44
+
+] (./img/splitting_01.tex) (./img/splitting_02.tex) (./img/splitting_03.tex) (./img/splitting_04.tex)
+File: style/slide.pdf Graphic file (type pdf)
+<use style/slide.pdf>
+Package pdftex.def Info: style/slide.pdf  used on input line 422.
+(pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
+ [45
+
+]
+File: style/slide.pdf Graphic file (type pdf)
+<use style/slide.pdf>
+Package pdftex.def Info: style/slide.pdf  used on input line 452.
+(pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
+ [46
+
+]
+<./img//grupos_parametrizacoes.png, id=531, 1041.1397pt x 712.91344pt>
+File: ./img//grupos_parametrizacoes.png Graphic file (type png)
+<use ./img//grupos_parametrizacoes.png>
+Package pdftex.def Info: ./img//grupos_parametrizacoes.png  used on input line 462.
+(pdftex.def)             Requested size: 216.28543pt x 148.09538pt.
+File: style/slide.pdf Graphic file (type pdf)
+<use style/slide.pdf>
+Package pdftex.def Info: style/slide.pdf  used on input line 462.
+(pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
+ [47
+
+ <./img//grupos_parametrizacoes.png (PNG copy)>]
+File: style/slide.pdf Graphic file (type pdf)
+<use style/slide.pdf>
+Package pdftex.def Info: style/slide.pdf  used on input line 492.
+(pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
+ [48
+
+]
+File: style/slide.pdf Graphic file (type pdf)
+<use style/slide.pdf>
+Package pdftex.def Info: style/slide.pdf  used on input line 511.
+(pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
+ [49
+
+]
+File: style/slide.pdf Graphic file (type pdf)
+<use style/slide.pdf>
+Package pdftex.def Info: style/slide.pdf  used on input line 526.
+(pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
+ [50
+
+] (./img/jpsi_diagram-b.tex)
+File: style/slide.pdf Graphic file (type pdf)
+<use style/slide.pdf>
+Package pdftex.def Info: style/slide.pdf  used on input line 601.
+(pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
+ [51
+
+] (./img/jpsi_diagram-b.tex)
+File: style/slide.pdf Graphic file (type pdf)
+<use style/slide.pdf>
+Package pdftex.def Info: style/slide.pdf  used on input line 601.
+(pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
+ [52
+
+] (./img/jpsi_diagram-b.tex)
+File: style/slide.pdf Graphic file (type pdf)
+<use style/slide.pdf>
+Package pdftex.def Info: style/slide.pdf  used on input line 601.
+(pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
+ [53
+
+] (./img/jpsi_diagram-b.tex)
+File: style/slide.pdf Graphic file (type pdf)
+<use style/slide.pdf>
+Package pdftex.def Info: style/slide.pdf  used on input line 601.
+(pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
+ [54
+
+] (./img/jpsi_diagram-b.tex)
+File: style/slide.pdf Graphic file (type pdf)
+<use style/slide.pdf>
+Package pdftex.def Info: style/slide.pdf  used on input line 601.
+(pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
+ [55
+
+] (./img/jpsi_diagram-b.tex)
+File: style/slide.pdf Graphic file (type pdf)
+<use style/slide.pdf>
+Package pdftex.def Info: style/slide.pdf  used on input line 601.
+(pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
+ [56
+
+] (./img/jpsi_diagram-b.tex)
+File: style/slide.pdf Graphic file (type pdf)
+<use style/slide.pdf>
+Package pdftex.def Info: style/slide.pdf  used on input line 601.
+(pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
+ [57
+
+] (./img/jpsi_diagram-c.tex)
+File: style/slide.pdf Graphic file (type pdf)
+<use style/slide.pdf>
+Package pdftex.def Info: style/slide.pdf  used on input line 642.
+(pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
+ [58
+
+] (./img/jpsi_diagram-c.tex)
+File: style/slide.pdf Graphic file (type pdf)
+<use style/slide.pdf>
+Package pdftex.def Info: style/slide.pdf  used on input line 642.
+(pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
+ [59
+
+] (./img/jpsi_diagram-c.tex)
+File: style/slide.pdf Graphic file (type pdf)
+<use style/slide.pdf>
+Package pdftex.def Info: style/slide.pdf  used on input line 642.
+(pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
+ [60
+
+]
+File: style/slide.pdf Graphic file (type pdf)
+<use style/slide.pdf>
+Package pdftex.def Info: style/slide.pdf  used on input line 672.
+(pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
+ [61
+
+]
+<img/plot-J_psi.png, id=634, 794.97pt x 614.295pt>
+File: img/plot-J_psi.png Graphic file (type png)
+<use img/plot-J_psi.png>
+Package pdftex.def Info: img/plot-J_psi.png  used on input line 693.
+(pdftex.def)             Requested size: 196.62204pt x 151.93303pt.
+File: style/slide.pdf Graphic file (type pdf)
+<use style/slide.pdf>
+Package pdftex.def Info: style/slide.pdf  used on input line 693.
+(pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
+ [62
+
+ <./img/plot-J_psi.png>]
+<img/plot-J_psi-Luis.png, id=645, 1065.9825pt x 394.47375pt>
+File: img/plot-J_psi-Luis.png Graphic file (type png)
+<use img/plot-J_psi-Luis.png>
+Package pdftex.def Info: img/plot-J_psi-Luis.png  used on input line 693.
+(pdftex.def)             Requested size: 314.59645pt x 116.4169pt.
+File: style/slide.pdf Graphic file (type pdf)
+<use style/slide.pdf>
+Package pdftex.def Info: style/slide.pdf  used on input line 693.
+(pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
+ [63
+
+ <./img/plot-J_psi-Luis.png (PNG copy)>] (./main.bbl)
+File: style/slide.pdf Graphic file (type pdf)
+<use style/slide.pdf>
+Package pdftex.def Info: style/slide.pdf  used on input line 699.
+(pdftex.def)             Requested size: 455.25323pt x 256.07484pt.
+ [64
 
  </usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamericonarticle.pdf>]
 File: style/capa.pdf Graphic file (type pdf)
 <use style/capa.pdf>
-Package pdftex.def Info: style/capa.pdf  used on input line 273.
+Package pdftex.def Info: style/capa.pdf  used on input line 709.
 (pdftex.def)             Requested size: 455.24928pt x 256.07744pt.
- [32
+ [65
 
 ]
 \tf@nav=\write6
@@ -1278,21 +1501,21 @@ Package pdftex.def Info: style/capa.pdf  used on input line 273.
 
  (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 2BE8931A7FD8F39A8168ECE53BA73447;1364.
+(rerunfilecheck)             Checksum: 5DC3E88DDEE47D3CC2C83172037C899A;1753.
  ) 
 Here is how much of TeX's memory you used:
- 38938 strings out of 476093
- 849034 string characters out of 5791592
- 1876793 words of memory out of 5000000
- 58451 multiletter control sequences out of 15000+600000
- 561999 words of font info for 64 fonts, out of 8000000 for 9000
+ 37124 strings out of 476093
+ 769230 string characters out of 5791592
+ 1880793 words of memory out of 5000000
+ 56469 multiletter control sequences out of 15000+600000
+ 572817 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,17n,122p,618b,1686s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmss12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmss17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmss8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmss9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
-Output written on main.pdf (32 pages, 1204511 bytes).
+ 128i,20n,122p,602b,1782s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmss12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmss17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmss8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmss9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsso10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy9.pfb>
+Output written on main.pdf (65 pages, 1682459 bytes).
 PDF statistics:
- 499 PDF objects out of 1000 (max. 8388607)
- 357 compressed objects within 4 object streams
- 74 named destinations out of 1000 (max. 500000)
- 252 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 793 PDF objects out of 1000 (max. 8388607)
+ 586 compressed objects within 6 object streams
+ 146 named destinations out of 1000 (max. 500000)
+ 339 words of extra memory for PDF output out of 10000 (max. 10000000)
 

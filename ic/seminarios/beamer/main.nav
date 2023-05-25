@@ -16,31 +16,68 @@
 \headcommand {\beamer@subsectionentry {0}{2}{2}{4}{DIS no modelo de Pártons}}
 \headcommand {\beamer@subsectionpages {4}{3}}
 \headcommand {\beamer@subsectionentry {0}{2}{3}{4}{As Equações de Evolução -- DGLAP}}
+\headcommand {\beamer@subsectionpages {4}{3}}
+\headcommand {\beamer@subsectionentry {0}{2}{4}{4}{Parametrizações}}
 \headcommand {\beamer@sectionpages {3}{3}}
 \headcommand {\beamer@subsectionpages {4}{3}}
-\headcommand {\sectionentry {3}{Simulação Numérica}{4}{Simulação Numérica}{0}}
+\headcommand {\sectionentry {3}{Produção Difrativa de Mésons Vetoriais}{4}{Produção Difrativa de Mésons Vetoriais}{0}}
 \headcommand {\slideentry {3}{0}{1}{4/4}{}{0}}
 \headcommand {\beamer@framepages {4}{4}}
 \headcommand {\beamer@subsectionpages {4}{4}}
-\headcommand {\beamer@subsectionentry {0}{3}{1}{5}{Produção de Méson Vetorial}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{5}{Mésons}}
 \headcommand {\beamer@subsectionpages {5}{4}}
-\headcommand {\beamer@subsectionentry {0}{3}{2}{5}{Produção $J/\psi $ com correções da LO}}
-\headcommand {\slideentry {3}{2}{1}{5/5}{Produção $J/\psi $ com correções da LO}{0}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{5}{\textit {Hadronic Diffraction}}}
+\headcommand {\beamer@subsectionpages {5}{4}}
+\headcommand {\beamer@subsectionentry {0}{3}{3}{5}{Seção de Choque p/ o Processo ${\gamma ^{*}p\to pV}$}}
+\headcommand {\beamer@sectionpages {4}{4}}
+\headcommand {\beamer@subsectionpages {5}{4}}
+\headcommand {\sectionentry {4}{Resultados}{5}{Resultados}{0}}
+\headcommand {\slideentry {4}{0}{1}{5/5}{}{0}}
 \headcommand {\beamer@framepages {5}{5}}
-\headcommand {\slideentry {3}{2}{2}{6/6}{Produção $J/\psi $ com correções da LO}{0}}
+\headcommand {\slideentry {4}{0}{2}{6/6}{}{0}}
 \headcommand {\beamer@framepages {6}{6}}
-\headcommand {\slideentry {3}{2}{3}{7/7}{Produção $J/\psi $ com correções da LO}{0}}
+\headcommand {\slideentry {4}{0}{3}{7/7}{}{0}}
 \headcommand {\beamer@framepages {7}{7}}
-\headcommand {\slideentry {3}{2}{4}{8/15}{Produção $J/\psi $ com correções da LO}{0}}
-\headcommand {\beamer@framepages {8}{15}}
-\headcommand {\slideentry {3}{2}{5}{16/30}{Produção $J/\psi $ com correções da LO}{0}}
-\headcommand {\beamer@framepages {16}{30}}
-\headcommand {\slideentry {3}{2}{6}{31/31}{Produção $J/\psi $ com correções da LO}{0}}
-\headcommand {\beamer@framepages {31}{31}}
-\headcommand {\slideentry {3}{2}{7}{32/32}{Produção $J/\psi $ com correções da LO}{0}}
-\headcommand {\beamer@framepages {32}{32}}
-\headcommand {\beamer@partpages {1}{32}}
-\headcommand {\beamer@subsectionpages {5}{32}}
-\headcommand {\beamer@sectionpages {4}{32}}
-\headcommand {\beamer@documentpages {32}}
-\headcommand {\gdef \inserttotalframenumber {11}}
+\headcommand {\slideentry {4}{0}{4}{8/8}{}{0}}
+\headcommand {\beamer@framepages {8}{8}}
+\headcommand {\slideentry {4}{0}{5}{9/16}{}{0}}
+\headcommand {\beamer@framepages {9}{16}}
+\headcommand {\slideentry {4}{0}{6}{17/30}{}{0}}
+\headcommand {\beamer@framepages {17}{30}}
+\headcommand {\slideentry {4}{0}{7}{31/32}{}{0}}
+\headcommand {\beamer@framepages {31}{32}}
+\headcommand {\slideentry {4}{0}{8}{33/33}{}{0}}
+\headcommand {\beamer@framepages {33}{33}}
+\headcommand {\slideentry {4}{0}{9}{34/40}{}{0}}
+\headcommand {\beamer@framepages {34}{40}}
+\headcommand {\slideentry {4}{0}{10}{41/41}{}{0}}
+\headcommand {\beamer@framepages {41}{41}}
+\headcommand {\slideentry {4}{0}{11}{42/45}{}{0}}
+\headcommand {\beamer@framepages {42}{45}}
+\headcommand {\slideentry {4}{0}{12}{46/46}{}{0}}
+\headcommand {\beamer@framepages {46}{46}}
+\headcommand {\slideentry {4}{0}{13}{47/47}{}{0}}
+\headcommand {\beamer@framepages {47}{47}}
+\headcommand {\slideentry {4}{0}{14}{48/48}{}{0}}
+\headcommand {\beamer@framepages {48}{48}}
+\headcommand {\slideentry {4}{0}{15}{49/49}{}{0}}
+\headcommand {\beamer@framepages {49}{49}}
+\headcommand {\slideentry {4}{0}{16}{50/50}{}{0}}
+\headcommand {\beamer@framepages {50}{50}}
+\headcommand {\slideentry {4}{0}{17}{51/57}{}{0}}
+\headcommand {\beamer@framepages {51}{57}}
+\headcommand {\slideentry {4}{0}{18}{58/60}{}{0}}
+\headcommand {\beamer@framepages {58}{60}}
+\headcommand {\slideentry {4}{0}{19}{61/61}{}{0}}
+\headcommand {\beamer@framepages {61}{61}}
+\headcommand {\slideentry {4}{0}{20}{62/63}{}{0}}
+\headcommand {\beamer@framepages {62}{63}}
+\headcommand {\slideentry {4}{0}{21}{64/64}{}{0}}
+\headcommand {\beamer@framepages {64}{64}}
+\headcommand {\slideentry {4}{0}{22}{65/65}{}{0}}
+\headcommand {\beamer@framepages {65}{65}}
+\headcommand {\beamer@partpages {1}{65}}
+\headcommand {\beamer@subsectionpages {5}{65}}
+\headcommand {\beamer@sectionpages {5}{65}}
+\headcommand {\beamer@documentpages {65}}
+\headcommand {\gdef \inserttotalframenumber {26}}

@@ -4,6 +4,9 @@
 \beamer@subsectionintoc {2}{1}{DIS}{4}{0}{2}
 \beamer@subsectionintoc {2}{2}{DIS no modelo de Pártons}{4}{0}{2}
 \beamer@subsectionintoc {2}{3}{As Equações de Evolução -- DGLAP}{4}{0}{2}
-\beamer@sectionintoc {3}{Simulação Numérica}{4}{0}{3}
-\beamer@subsectionintoc {3}{1}{Produção de Méson Vetorial}{5}{0}{3}
-\beamer@subsectionintoc {3}{2}{Produção $J/\psi $ com correções da LO}{5}{0}{3}
+\beamer@subsectionintoc {2}{4}{Parametrizações}{4}{0}{2}
+\beamer@sectionintoc {3}{Produção Difrativa de Mésons Vetoriais}{4}{0}{3}
+\beamer@subsectionintoc {3}{1}{Mésons}{5}{0}{3}
+\beamer@subsectionintoc {3}{2}{\textit {Hadronic Diffraction}}{5}{0}{3}
+\beamer@subsectionintoc {3}{3}{Seção de Choque p/ o Processo ${\gamma ^{*}p\to pV}$}{5}{0}{3}
+\beamer@sectionintoc {4}{Resultados}{5}{0}{4}
