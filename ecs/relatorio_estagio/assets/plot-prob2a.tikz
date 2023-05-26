@@ -1,0 +1,31 @@
+\begin{tikzpicture}[scale=1] 
+  \begin{axis}[
+	 axis lines = left,                
+	 xmin = 0, xmax = 10,
+	 ymin = -0.6, ymax = 0,
+	 xlabel = \(T\),
+	 ylabel = {\(u(T)\)},
+	 ylabel style={rotate=-90},
+	 ytick = {-0.5, 0},
+	 yticklabels = {$-\frac{J}{2}$,$0$},
+	 xtick = {0},
+	 %xticklabels = {$0$,$T_1$},
+	 legend pos = south east,
+	 ]
+	 \addplot[
+	 domain = 0:100,
+	 samples = 1000,
+	 smooth,
+	 thick,
+	 javapurple,
+	 ] {(-1/2)*((exp(2/x)-1)/(exp(2/x)+1))};                
+	 \addlegendentry{\(u(T)=-\frac{J}{2}\left(\frac{\E^{2J/k_BT}-1}{\E^{2J/k_BT}+1}\right)\)}
+	 \addplot[
+	 domain = 0:100,
+	 samples = 1000,
+	 dashed,
+	 thick,
+	 gray,
+	 ] {0};
+  \end{axis}         
+\end{tikzpicture}  

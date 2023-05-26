@@ -1,0 +1,69 @@
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{stdtheme}[2023/02/03 Standart theme for my all docs]
+\RequirePackage{xcolor}
+
+\definecolor{coolblack}      	{RGB} {000,  018,  039}
+\definecolor{darkcerulean}   	{RGB} {008,  069,  125}
+\definecolor{darckpastelblue} {RGB} {120,  158,  204}
+\definecolor{indigo} 			{RGB} {000,  064,  107}
+\definecolor{azul}    			{RGB} {125,  166,  203}
+\definecolor{amarelo}   		{RGB} {240,  180,  000}
+\definecolor{midnightblue}  	{RGB} {026,  026,  112}
+
+% -------------------------------------------------%
+% Configurações para o listing
+% -------------------------------------------------%
+\definecolor{hellgelb}{rgb}{1,1,0.9}
+\definecolor{colKeys}{rgb}{0,0,0}
+\definecolor{colIdentifier}{rgb}{0,0,0.9}
+\definecolor{colComments}{rgb}{.4,.4,.4}
+\definecolor{colString}{rgb}{0,0,0.6}
+\definecolor{deepblue}{rgb}{0,0,0.8}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+\definecolor{colBack}{rgb}{1,1,0.9}
+\definecolor{colKeys}{rgb}{108,48,130}%{0,0,0}
+\definecolor{colIdentifier}{rgb}{0,0,0.9}
+\definecolor{colComments}{rgb}{0,0.6,0}%{.4,.4,.4}
+\definecolor{colString}{rgb}{0.6,0,0}
+\definecolor{javared}{rgb}{0.6,0,0} % for strings
+\definecolor{javagreen}{rgb}{0.25,0.5,0.35} % comments
+\definecolor{javapurple}{rgb}{0.5,0,0.35} % keywords
+\definecolor{javadocblue}{rgb}{0.25,0.35,0.75} % javadoc
+% XML color
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\definecolor{gray}{rgb}{0.4,0.4,0.4}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.6}
+\definecolor{lightblue}{rgb}{0.0,0.0,0.9}
+\definecolor{cyan}{rgb}{0.0,0.6,0.6}
+\definecolor{darkred}{rgb}{0.6,0.0,0.0}
+% Criando definição para linguagem Groovy
+\definecolor{groovyblue}{HTML}{0000A0}
+\definecolor{groovygreen}{HTML}{008000}
+\definecolor{darkgray}{rgb}{.4,.4,.4}
+% json
+\definecolor{eclipseStrings}{RGB}{42,0.0,255}
+\definecolor{eclipseKeywords}{RGB}{127,0,85}
+
+\pagecolor{white}
+\color{coolblack}
+
+\AtEndPreamble{
+  \RequirePackage{hyperref}
+  \hypersetup{
+	 pdftitle={\@title},%
+	 pdfauthor={\@author},%
+	 pdfsubject={\imprimirpreambulo},%
+	 pdfkeywords={\firstkey , \secondkey , \thirdkey .},% 
+	 colorlinks=true,
+	 urlcolor=black,%
+	 linkcolor=midnightblue,
+	 citecolor=midnightblue,
+	 urlcolor=indigo,
+	 bookmarksdepth=4%	 
+  }  
+}
+

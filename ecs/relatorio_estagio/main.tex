@@ -1,0 +1,45 @@
+\documentclass{udesc_report}
+\usepackage[brazil]{babel}
+\usepackage{stdtheme}
+
+\begin{document}
+% [FIXME] translate \refs: Table, Appendix, etc,
+\selectlanguage{brazil}
+%-----------------------------------------------%
+% Pretextual Elements
+%-----------------------------------------------%
+\pretextual
+\imprimircapa
+\imprimirfolhaderosto
+
+\include{src/folhadeaprovacao}
+%-----------------------------------------------%
+% [XXX] Do not remove the space below!
+%-----------------------------------------------%
+
+%-----------------------------------------------%
+\includepdf[pages=-]{assets/documentos_merged.pdf}
+%-----------------------------------------------%
+\input{src/resumo.tex}
+\input{src/pretextuals.tex}
+%-----------------------------------------------%
+% CONTENTS
+%-----------------------------------------------%
+\include{contents/chap01_introducao}
+
+\postextual
+%-----------------------------------------------%
+% Bibliography
+%-----------------------------------------------%
+\bibliography{src/refs.bib}
+%-----------------------------------------------%
+% Appendix
+%-----------------------------------------------%
+\include{contents/appen_apendices}
+%-----------------------------------------------%
+% Attachments
+%-----------------------------------------------%
+\include{contents/att_anexos}
+%-----------------------------------------------%
+\end{document}
+

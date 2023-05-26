@@ -1,0 +1,111 @@
+% -----------------------------------------------%
+ %% inserir lista de ilustrações, tabelas, listagem 
+% de códigos, abreviaturas, símbolos
+% -----------------------------------------------%
+\pdfbookmark[0]{\listfigurename}{lof}
+\listoffigures*
+\cleardoublepage
+% -----------------------------------------------%
+% inserir lista de TABELAS
+% -----------------------------------------------%
+\pdfbookmark[0]{\listtablename}{lot}
+\listoftables*
+\cleardoublepage
+
+% -----------------------------------------------%
+% inserir lista de QUADROS
+% -----------------------------------------------%
+\pdfbookmark[0]{\listofquadrosname}{loq}
+\listofquadros*
+\cleardoublepage
+
+% -----------------------------------------------%
+% inserir lista de CÓDIGOS
+% -----------------------------------------------%
+\pdfbookmark[0]{\lstlistlistingname}{lol}
+\begin{KeepFromToc}
+\lstlistoflistings
+\end{KeepFromToc}
+\cleardoublepage
+% -----------------------------------------------%
+
+% -----------------------------------------------%
+% inserir lista de abreviaturas e siglas
+% -----------------------------------------------%
+\pdfbookmark[0]{Lista de abreviaturas e siglas}{loa}
+\cleardoublepage
+% --%%%%%%%%%%%%%% Como usar o pacote acronym
+% \ac{acronimo} -- Na primeira vez que for citado o acronimo, o nome completo irá aparecer
+%                  seguido do acronimo entre parênteses. Na proxima vez somente o acronimo
+%                  irá aparecer. Se usou a opção footnote no pacote, entao o nome por extenso
+%                  irá aparecer aparecer no rodapé
+%
+% \acf{acronimo} -- Para aparecer com nome completo + acronimo
+% \acs{acronimo} -- Para aparecer somente o acronimo
+% \acl{acronimo} -- Nome por extenso somente, sem o acronimo
+% \acp{acronimo} -- igual o \ac mas deixando no plural com S (ingles)
+% \acfp{acronimo}--
+% \acsp{acronimo}--
+% \aclp{acronimo}--
+
+
+\chapter*{Lista de abreviaturas e siglas}%
+% \addcontentsline{toc}{chapter}{Lista de abreviaturas e siglas}
+\markboth{Lista de abreviaturas e siglas}{}
+
+% Para diminuir o espaçamento entre linhas no ambiente de listas acronym
+% \let\oldbaselinestretch=\baselinestretch%
+% \renewcommand{\baselinestretch}{.2}%
+% \large\normalsize%
+
+
+
+\begin{acronym}
+	\let\oldbaselinestretch=\baselinestretch%
+	\renewcommand{\baselinestretch}{.2}%
+	\large\normalsize%
+	\acro{BNCC}{Base Nacional Comum Curricular}
+	\acro{LDB}{Lei de Diretrizes de Bases da Educação Nacional}
+	\acro{NEM}{Novo Ensino Médio}
+	\acro{PCSC}{Proposta Curricular de Santa Catarina}
+	\acro{PNE}{Plano Nacional de Educação}
+	\acro{CNE}{Conselho Nacional de Educação}
+	\acro{EEB}{Escola de Educação Básica}
+	\acro{GPF}{Giovani Pasqualini faraco}
+	\acro{EF}{Ensino Fundamental}
+	\acro{PPP}{Projeto Político Pedagógico}
+	\acro{ATP}{Assistente Técnico Pedagógico}
+	\acro{DVD}{\textit{Digital Versatile Disc}}
+	\acro{EI}{Ensino por Investigação}
+	\acro{NI/D}{Não-Interativo/Dialógico}
+	\acro{I/D}{Interativo-Dialógico}
+	\acro{HC}{História da Ciência}
+	\acro{TIC}{Tecnologia da Informação e Comunicação}
+	\acro{ENEM}{Exame Nacional do Ensino Médio}
+	\acro{I/DA}{Interativo/Dialógico de Autoridade}
+\end{acronym}
+
+% -----------------------------------------------%
+% inserir lista de símbolos
+% -----------------------------------------------%
+\begin{simbolos}  
+  \item[$\Delta$] Variações de Grandezas Físicas
+  \item[$X_i$] Medida Inicial da Grandeza $X$
+  \item[$L$] Grandeza Física Associada ao Comprimento
+  \item[$\alpha$] Coeficiente de Dilatação Linear
+  \item[$T$] Grandeza Física Associada a Temperatura
+  \item[$A$] Grandeza Física Associada a Área Superficial
+  \item[$\beta$] Coeficiente de Dilatação Superficial
+  \item[$V$] Grandeza Física Associada ao Volume
+  \item[$\gamma$] Coeficiente de Dilatação Volumétrica 
+  \item[$X_f$] Medida final da Grandeza $X$
+\end{simbolos}
+% -----------------------------------------------%
+
+% -----------------------------------------------%
+% inserir o SUMÁRIO
+% -----------------------------------------------%
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+\cleardoublepage
+% -----------------------------------------------%
