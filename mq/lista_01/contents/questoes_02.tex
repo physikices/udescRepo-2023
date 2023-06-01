@@ -1,0 +1,165 @@
+% --------------------------------------------- %
+% Q01
+% --------------------------------------------- %
+ \addcontentsline{toc}{section}{Problema 01}
+ \begin{prob}
+	Considere os vetores de estados
+	\begin{align} 
+		|\psi\rangle &=
+		\begin{pmatrix}
+			5i\\
+			2\\
+			-1
+		\end{pmatrix}\condition{e $
+			\displaystyle{
+				|\phi\rangle =
+				  \begin{pmatrix}
+						3\\
+						8i\\
+						-9i									 
+				\end{pmatrix}}
+		$} 
+	\end{align}
+	\begin{enumerate}[label=\alph *)]
+		\item Estes vetores estão normalizados? Se não, normalize-os.
+		\item Estes vetores são ortogonais?
+	\end{enumerate}
+
+	\begin{sol}
+
+	\end{sol}		
+ \end{prob}
+	% --------------------------------------------- %
+
+	% --------------------------------------------- %
+	% Q02
+	% --------------------------------------------- %
+	\addcontentsline{toc}{section}{Problema 02}
+	\begin{prob}
+		Mostre que os operadores $\hat{p}$ e $\hat{p}^{2}$ são hermitianos. Lembrando que:
+		\begin{align}
+			\hat{p}&=-i \hbar \frac{d}{dx}
+		\end{align}
+	\end{prob}
+	% --------------------------------------------- %
+
+	% --------------------------------------------- %
+	% Q03
+	% --------------------------------------------- %
+	\addcontentsline{toc}{section}{Problema 03}
+	\begin{prob}
+		Os autoestados do poço infinito são autoestados do momento? Justifique.
+		\par\noindent\textbf{Sugestão:} Teste se a equação atuação do operador  momento  nos autoestados do poço infinito $\hat{p} \psi_{n}$ geram uma equação de autovalores. Se gerarem uma equação de autovalores, então $\psi_{n}$ (que são autoestados do Hamiltoniano) serão também  autoestados do momento.
+	\end{prob}
+	% --------------------------------------------- %
+
+	% --------------------------------------------- %
+	% Q04
+	% --------------------------------------------- %
+	\addcontentsline{toc}{section}{Problema 04}
+	\begin{prob}
+		\textbf{(Problema 3.11 do Griffiths)} Encontre a função de onda $\Phi(p,t)$, para uma partícula no estado fundamental  do hoscilador harmômico. Qual é a probabilidade (com 2 algarismos significativos) de que uma medida do momento $p$ de uma partícula  neste estado produza um valor fora do range clássico.
+		\par\noindent\textbf{Sugestão 01:} Procure numa tabela matemática por uma "Distribuição Normal" ou "Função Erro" ou calcule com algum programa (wxMaxima, Mathematica, etc...) ou ainda consulte as notas da aula 08 (em particular o exercício feito no final desta aula).
+		\par\noindent\textbf{Sugestão 02:} Estude primeiramente o exemplo 3.4 do Griffiths (página 108).
+	\end{prob}
+	% --------------------------------------------- %
+
+	% --------------------------------------------- %
+	% Q05
+	% --------------------------------------------- %
+	\addcontentsline{toc}{section}{Problema 05}
+	\begin{prob}
+		Na lista 1 foi mostrado que $\displaystyle{\left[\hat{p}, f(x)\right]=-i \hbar \frac{\partial f(x)}{\partial x }}$. Utilizando este resultado, obtenha a relação de incerteza entre o operador hamiltoniano do oscilador harmônico
+		\begin{align}
+			\hat{H}&=\frac{\hat{p}^{2}}{2m}+\frac{m \omega^{2}x^{2}}{2}
+		\end{align}
+		e o operador $(\sigma_{H} \sigma_{p})$. Comente se os operadores hamiltoniano e momento são compatíveis.
+	\end{prob}
+	% --------------------------------------------- %
+
+	% --------------------------------------------- %
+	% Q06
+	% --------------------------------------------- %
+	\addcontentsline{toc}{section}{Problema 06}
+	\begin{prob}
+		Um hamiltoniano de um certo sistema de 2 níveis é dado por
+		\begin{align}
+			\hat{H}&=\varepsilon \left(|1\rangle\langle 1|-|2\rangle\langle  2|+|1\rangle\langle  2|+|2\rangle\langle  1|\right)
+		\end{align}
+		onde $|1\rangle$, $\langle  2|$ é uma base ortonormal e $\varepsilon$ é um número com dimensão de energia.
+
+		\begin{enumerate}[label=\alph *)]
+				\item Encontre a matriz que representa este Hamiltoniano (sugestão: encontre os elementos de matriz fazendo os sanduíches do operador).
+				\item Calcule seus autovalores e autovetores normalizados.
+		\end{enumerate}
+	\end{prob}
+	% --------------------------------------------- %
+
+	% --------------------------------------------- %
+	% Q07
+	% --------------------------------------------- %
+	\addcontentsline{toc}{section}{Problema 07}
+	\begin{prob}
+		Um operador $\hat{A}$, representando um observável $A$, têm dois autoestados normalizados $\psi_{1}$ e $\psi_{2}$, com autovalores $a_{1}$ e $a_{2}$ respectivamente. O operador $\hat{B}$, representando o observável $B$, têm dois autoestados normalizados $\phi_{1}$ e $\phi_{2}$, com autovalores $b_{1}$ e $b_{2}$, respectivamente. Os autoestados se relacionam por:
+		\begin{align}
+			|\psi_{1}\rangle &= \frac{1}{5}\left(3|\psi_{1}\rangle+4|\psi_{2}\rangle\right)\condition{e $|\psi_{2}\rangle=\frac{1}{5}\left(4|\psi_{1}\rangle-3|\psi_{2}\rangle\right)$}  
+		\end{align}
+		\begin{enumerate}[label=\alph *)]
+				\item O observável $A$ é medido e o valor $a_{2}$ é obtido. Qual é o estado do sistema imediatamente após esta medida?
+				\item Se $B$ é medido em seguida, quais são os possíveis resultados e quais são suas possibilidades?
+				\item Logo após a medida de $B$, $A$ é medido novamente. Qual a  é a probabilidade de obter $a_{1}$ novamente? \textbf{Cuidado:} considerar o problema completo, onde (item a) medida $a_{2}$, logo após medimos um  dos estados de $B$ (item b), e por fim  medimos $a_{1}$.
+		\end{enumerate}
+	\end{prob}
+
+	% --------------------------------------------- %
+
+	% --------------------------------------------- %
+	% Q08
+	% --------------------------------------------- %
+	\addcontentsline{toc}{section}{Problema 08}
+	\begin{prob}
+		Considere um sistema de dois níveis os kets $|\alpha_{1}\rangle$ e $|\alpha_{2}\rangle$ formam uma base ortonormal. Uma nova base $|\beta_{1}\rangle$ e $|\beta_{2}\rangle$ se relacionam com a antiga por:
+		\begin{align}
+			|\beta_{1}\rangle &= \frac{1}{\sqrt{2}}\left(|\alpha_{1}\rangle+|\alpha_{2}\rangle\right)\condition{e $\displaystyle\frac{1}{\sqrt{2}}\left(|\alpha_{1}\rangle-|\alpha_{2}\rangle\right)$}
+		\end{align}
+		Um operador $\hat{P}$ é representado na base $|\alpha_{1}\rangle$ e $|\alpha_{2}\rangle$ pela matriz
+		\begin{align}
+			P &= 
+			\begin{pmatrix}
+				1 & \epsilon \\
+				\epsilon & 1
+			\end{pmatrix}
+			=
+			\begin{pmatrix}
+			\langle \alpha_{1}|\hat{P}|\alpha_{1}\rangle & \langle \alpha_{1}|\hat{P}|\alpha_{2}\rangle \\
+			\langle \alpha_{2}|\hat{P}|\alpha_{1}\rangle & \langle \alpha_{2}|\hat{P}|\alpha_{2}\rangle
+			\end{pmatrix}
+		\end{align}
+		\begin{enumerate}[label=\alph *)]
+			\item Encontre os autovalores deste operador e escreva-o na forma diagonal.
+			\item Encontre a representação de $\hat{P}$ na base $|\beta_{1}\rangle$ e $|\beta_{2}\rangle$.
+		\end{enumerate}
+
+		\textbf{Sugestão:}
+
+		Escreva $\hat{P}$ na forma matricial abaixo
+		\begin{align}
+			P &=
+			\begin{pmatrix}
+				\langle \beta_{1}|\hat{P}|\beta_{1}\rangle & \langle \beta_{1}|\hat{P}|\beta_{2}\rangle \\
+				\langle \beta_{2}|\hat{P}|\beta_{1}\rangle & \langle \beta_{2}|\hat{P}|\beta_{2}\rangle \\
+			\end{pmatrix}
+			=
+			\begin{pmatrix}
+				\langle \beta_{1}|\mathbb{\hat{1}}\hat{P}\mathbb{\hat{1}}|\beta_{1}\rangle & \langle \beta_{1}|\mathbb{\hat{1}}\hat{P}\mathbb{\hat{1}}|\beta_{2}\rangle \\
+				\langle \beta_{2}|\mathbb{\hat{1}}\hat{P}\mathbb{\hat{1}}|\beta_{\hat{1}}\rangle & \langle \beta_{2}|\mathbb{\hat{1}}\hat{P}\mathbb{\hat{1}}|\beta_{2}\rangle \\
+			\end{pmatrix}
+		\end{align}
+
+		onde a identidade $\mathbb{\hat{1}}$ na base $\alpha_{1}$ e $\alpha_{2}$ é dada por
+
+		\begin{align}
+			\mathbb{\hat{1}} &= \sum_{i=1}^{2}|\alpha_{i}\rangle\langle \alpha_{i}|=|\alpha_{1}\rangle\langle \alpha_{1}|+|\alpha_{2}\rangle\langle \alpha_{2}|
+		\end{align}
+	\end{prob}
+	% --------------------------------------------- %
