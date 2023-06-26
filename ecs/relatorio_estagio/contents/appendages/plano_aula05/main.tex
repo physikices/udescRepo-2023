@@ -1,0 +1,213 @@
+%-----------------------------------------------%
+% Modelo de Plano de Aula com três momentos pedagógicos
+%
+% Autor: Rodrigo Nascimento (2022-08-12)
+%-----------------------------------------------%
+
+\documentclass[
+% -- opções da classe memoir --
+12pt,				% tamanho da fonte
+openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
+oneside,			% twoside para impressão em verso e anverso. Oposto a oneside
+a4paper,			% tamanho do papel. 
+% -- opções da classe abntex2 --
+chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
+%section=TITLE,		% títulos de seções convertidos em letras maiúsculas
+%subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
+%subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
+% -- opções do pacote babel --
+english,			% idioma adicional para hifenização
+%	french,				% idioma adicional para hifenização
+%	spanish,			% idioma adicional para hifenização
+brazil				% o último idioma é o principal do documento
+]{abntex2}
+\selectlanguage{brazil}
+%-----------------------------------------------%
+% Informações do DOCUMENTO
+%-----------------------------------------------%
+\input{00-dados.tex}
+%-----------------------------------------------%
+
+%	Todas as indicações de pacotes e configurações estão no arquivo de estilo
+%  chamado texmodel-udesc.sty.
+\usepackage{texmodel-udesc}
+
+%-----------------------------------------------%
+% Estilo de cabeçalho que só contém o número da 
+% página e uma linha
+%-----------------------------------------------%
+\makepagestyle{cabecalholimpo}
+\makeevenhead{cabecalholimpo}{\thepage}{}{} % páginas pares
+\makeoddhead{cabecalholimpo}{}{}{\thepage} % páginas ímpares
+%\makeheadrule{cabecalholimpo}{\textwidth}{\normalrulethickness} % linha
+%-----------------------------------------------%
+
+%-----------------------------------------------%
+% HEADER
+%-----------------------------------------------%
+\begin{document}
+
+\thispagestyle{empty}
+\begin{center}
+	\begin{minipage}[!]{\linewidth}
+		\begin{minipage}[!]{.19\linewidth}
+			\includegraphics[width=\linewidth]{img/logo.png}           
+		\end{minipage}
+		\begin{minipage}[!]{.8\linewidth}
+			\center
+			\ABNTEXchapterfont\normalsize\MakeUppercase{\imprimirinstituicao}
+			\par
+			\vspace*{10pt}                     
+			\ABNTEXchapterfont\normalsize\MakeUppercase{\centro}
+			\par
+			\vspace*{10pt}           
+			\ABNTEXchapterfont\normalsize\MakeUppercase{\disciplina}
+		\end{minipage}        
+	\end{minipage}
+	\\ \vspace{0.5cm}
+	\rule{\textwidth}{.5pt}   
+\end{center}
+%-----------------------------------------------%
+% Ficha de Identificação
+%-----------------------------------------------%
+\textual
+\begin{center}
+	\textbf{Plano de Aula: Fechamento da Sequência}
+\end{center}
+\par\noindent\textbf{Estagiário(a):} \imprimirautor\hfill{}\textbf{Orientadora:} Prof(a). Ana Paula Grimes
+\par\noindent\textbf{U.E.:} EEB Giovani P. Faraco\hfill{}\textbf{Supervisor:} Prof. Mário Calegari
+\par\noindent\textbf{Série:} 2º Ano\hfill{}\textbf{Turma:} Nº(6)
+\par\noindent\textbf{Aula:} 009/010\hfill{}\textbf{Data:} 28/04/2023\hfill{}\textbf{Duração:} $2\times 40\min$
+\rule{\textwidth}{.5pt}
+%-----------------------------------------------%
+% Início do Plano de Aula
+%-----------------------------------------------%
+\bigskip{}  
+\noindent
+\begin{center}
+	\textbf{Movimentos Atmosféricos em Escalas Globais e Ciclogênese}
+\end{center}
+\par\noindent\textbf{Resumo da aula:} Neste encontro dar-se-á o fechamento da sequência apresentando o principal modelo explicativo do movimento global das massas de ar. Tal modelo não somente faz uso dos conceitos abordados em aulas anteriores como também demonstra a complexidade e necessidade de tais movimentos para a formação/manutenção do clima; para a dissipação da energia térmica armazenada em torno da ZCIT -- \textit{Zona de Convergência Intertropical} e o papel dos sistemas Ciclônicos dentro deste contexto. Ao final será apresentado e discutido ainda a Forçante Antrópica como agente catalizador do aquecimento global.
+\par\noindent\textbf{Habilidades BNCC:} EM13CNT105; EM13CNT206; EM13CNT309.
+
+\section{Objetivo de Aprendizagem}
+\begin{itemize}
+	\item Conhecer os principais motivos que originam os movimentos das grandes massas de ar no planeta; 
+	\item Relacionar os diferentes movimentos atmosféricos globais, através do modelo das três células \textit{Célula de Hadley; Célula de Ferrel; Célula Polar};
+	\item Perceber os Ciclones como mecanismo natural de distribuição da energia térmica acumulada.
+\end{itemize}
+
+\medskip{}
+
+\noindent\textbf{Núcleo Conceitual:} \emph{Geofísica; Movimentos Atmosféricos Globais; Ciclones}
+\newpage
+
+\section{Procedimento Didático} 
+% --------------------------------------------- %
+\noindent\emph{1º Momento:} Movimentos atmosféricos e as zonas de convergências
+\par\noindent\rule{.3\textwidth}{.5pt}  
+\par\noindent\textbf{Tempo previsto:} 25 minutos
+
+\noindent\textbf{Dinâmica:} Iniciar a exposição recordando-os brevemente sobre os tópicos discutidos e investigado no decorrer da sequência, como por exemplo:
+\begin{itemize}
+		\item Caracterização do Fenômeno; seus impactos e locais de ocorrência \textit{(Aulas: 001/002)}
+		\item A influência da temperatura na pressão e por consequência na umidificação das camadas de ar próximas ao oceano \textit{(Aulas 003/004 e 005/006)}
+		\item A relação das variáveis termodinâmicas no estudo e caracterização da atmosfera terrestre dentro do modelo do gás ideal \textit{(Aulas 007/008)}
+\end{itemize}
+Após a etapa acima, informar-lhes que nesta exposição, faremos uma breve explanação sobre como todos estes conceitos são utilizados na meteorologia, com a finalidade de auxiliar os sistemas de monitoramento; diagnóstico; classificação e redução de danos.
+
+Abrir os slides a partir da seção entitulada: \textit{"Movimentos Afmosféricos -- Escala Global"} e discorrer sobre o seu conteúdo de forma dialogada com os estudantes.
+
+Pontos chave da exposição:
+\begin{enumerate}[label=\alph *)]
+		\item Aquecimento diferencial
+			\begin{itemize}
+					\item Causas astronômicas
+					\item Causas geomorfológicas
+			\end{itemize}
+		\item Modelos para o movimento atmosférico
+			\begin{itemize}
+					\item Modelo unicelular
+					\item Modelo de três células
+			\end{itemize}
+		\item O efeito de coriolis como o responsável pela deflexão das grandes massas de ar
+		\item Observáveis a favor do modelo das três Células
+			\begin{itemize}
+					\item Zonas de convergências e a ZCIT
+					\item Os ventos alísios e contra-alísios
+					\item Observações por satélites geoestacionários
+					\item Regiões de maior ocorrência dos desertos/florestas de taiga (climas secos)
+					\item Regiões de ocorrências das florestas úmidas (climas úmidos)
+			\end{itemize}
+\end{enumerate}
+Para auxiliar nesta apresentação, usar o vídeo \href{https://youtu.be/dt_XJp77-mk}{"Coriolis Effect-MIT" }sobre o efeito coriolis e cortes do vídeo \href{https://youtu.be/8w3o6_cn-O8}{"A Year of Weather - 2019" }em que aparecem as zonas de convergência; o perfil das massas de ar e a formação de sistemas ciclônicos ao redor do mundo, num \textit{timelapse} produzido por satélites geostacionários no decorrer de um ano.
+
+Seguindo com a sequência, citar exemplos da importância destes movimentos para o planeta, tendo como um de seus mecanismos mais eficazes os Ciclones.
+
+\vspace{50pt}
+% --------------------------------------------- %
+\par\noindent\emph{2º Momento:} Ciclones
+\par\noindent\rule{.3\textwidth}{.5pt}    
+\par\noindent\textbf{Tempo previsto:} 15 minutos
+
+\noindent\textbf{Dinâmica:} Usando os slides, caracterizar os ciclones conforme suas propriedades, classificações e regiões de ocorrência. Salientar que dentre os três tipos de Ciclones existentes, estudamos apenas o mais típico dentre eles -- O Ciclone Tropical, os demais diferem-se deste por: Região de formação e associação com frentes frias. Ressaltar ainda que não há uma maneira simples de prever se um fenômeno como este irá ou não desenvolver-se até a costa e sua previsibilidade tem por base os inúmeros sistemas de monitoramento contínuo sobre as regiões de baixa pressão nos oceanos (isóbaras), bem como de fatores sazonais que produzem o aquecimento diferencial da atmosfera e das forças equilibradoras atuantes na formação destes sistemas, a saber, as forças do gradiente de pressão; a "força" de coriolis e a força de cisalhamento do vento na vertical.
+
+Usar trechos do vídeo "A Year of Weather" para apresentar o giro característico do sistema ciclonais e anticiclonais no hemisfério norte e sul, diferenciando-os conforme o sentido de rotação em cada caso.
+
+Aproveitar os trechos do vídeo para explorar as regiões de maior ocorrência do fenômeno no globo, além do mapa da NASA (slide da página 26) em que há o registro compilado de todas as trajetórias dos ciclones desde 1985 à 2005.
+
+Chamar-lhes a atenção para que vejam a incidência do fenômeno no Brasil. Justificar a baixa incidência do fenômeno em território nacional como decorrente, dentre outros tantos fatores, do enfraquecimento do aquecimento diferencial e da baixa amplitude térmica anual sobre oceanos.
+
+Justificar a não ocorrência de sistemas ciclônicos exatamente sob a linha do equador em virtude da força de coriolis, nula no equador e máxima nos pólos.
+
+\vspace{50pt}
+% --------------------------------------------- %
+\par\noindent\emph{3º Momento:} A forçante antrópica
+\par\noindent\rule{.3\textwidth}{.5pt}
+\par\noindent\textbf{Tempo previsto:} 35 minutos
+
+\par\noindent\textbf{Dinâmica:} Este momento deve ser iniciado na seção -- "O que fazer?" (slide de pág. 27). Para dar início o professor pode questionar se com o que viram até então, seriam os sistemas ciclônicos puramente vilões ou parte de um todo absolutamente necessário para o planeta?
+
+A fim de orientar esta discussão o professor pode basear-se nas seguintes proposições e/ou questões:
+\begin{enumerate}[label=\alph *)]
+		\item Vimos que os movimentos atmosféricos tem a sua origem nas diferenças de temperatura sobre o globo e que isso decorre de causas ainda mais primodiais de que não temos controle, como a inclinação da eclíptica que gera as diferentes estações do ano e consequentemente um aquecimento de porções diferentes do planeta;
+		\item Vimos ainda que as porções continentais distribuidas sobre o globo, influência de certa forma no aquecimento dos oceanos;
+		\item O que deveria ocorrer se apesar de tudo isso, não fosse de alguma forma possível, a existência destes movimento atmosférico?
+		\item Será que o clima seria melhor, pior, será que a vida como conhecemos seria possível?
+		\item De alguma forma vocês conseguem enxergar alguma vantagem sobre essa dinâmica do movimento atmosférico para manutenção e formação dos diversos climas existentes no planeta?
+		\item Qual o papel dos sistemas ciclônicos neste contexto?
+\end{enumerate}
+A discussão deve encaminhar-se para o conformidade de que tais sistemas são precisamente necessários para o balanço e distribuição da energia térmica sobre o globo, do contrário a acentuação do sistema climático poderia inviabilizar a vida e a biodiversidade pelo menos da maneira como a conhecemos.
+
+As discussões anteriores subsidiam os slides finais que discorrem sobre -- O que fazer frente ao fenômeno?
+
+De início discutir com o grupo o que definitivamente não fazer. Usar como recurso os dois contraexemplos citados a seguir: 
+
+\textbf{Contraexemplo 01:} \textit{"Everbody Points Their Fans at The Hurricane to Blow it Away"}, questionar-lhes de que forma esta ação é passível de obter-se êxito, dado o estudo aqui abarcado.
+\par\textbf{Contexto:} Um grupo de pessoas organizaram-se nas redes sociais, com o intuito de combater a passagem do furacão Ian (cat 4) na costa da Florida em 2022, usando-se de ventiladores\footnote{\url{https://www.facebook.com/events/281828308983096/?active_tab=discussion}}. A ideia do grupo é que quanto mais pessoas aderirem ao movimento e ligarem seus ventiladores na direção do ciclone, esta ação poderia dissipar o fenômeno. Relata-se na matéria que 60 mil estadunidenses aderiram ao movimento.
+
+\textit{Poderamentos:} É provável que esta matéria trate apenas de um \textit{meme}, algo que é bem comum nos dias atuais, também é possível que esta adesão ao movimento, tenha dado-se de forma apenas extrovertida e não legitimada, no entanto, vale ressaltar que não há qualquer respaldo científico que justifique tal ação e que dada a repercursão, alguns mais incautos podem tomá-la por verdade pondo-se em risco, é fundamental o uso consciente das redes sociais de forma responsável. Se criador de conteúdos digitais, cuidar para a informação correta da população de maneira que não gere ambiguidades nem a propagação de falácias ou as famosas \textit{fake news}. Se consumidor de conteúdos digitais, sempre verificar as fontes e buscar fontes confiáveis. No Brasil, o órgão oficial que emite os alertas sobre ciclones é a Marinha em conjunto com a Defesa Civil. 
+
+\textbf{Contraexemplo 02:} Em uma publicação\footnote{\url{https://shre.ink/QTXp}} datada de 26 de agosto do ano de 2019, o jornal Folha de São Paulo afirma que o então presidente dos Estados Unidos, Sr. D. Trump \textit{"Cogitou usar bombas nucleares contra furacões"}. Assim como a ação anterior, questionar aos alunos sobre a possibilidade desta ação obter êxito.
+\par\textbf{Contexto:} Na matéria o jornal descreve que D. Trump perguntou aos seus assessores sobre a possibilidade de usar armas nucleares para "destruir" furacões antes mesmo de chegarem à costa, é citado na matéria o site Axios\footnote{\url{https://www.axios.com/2019/08/25/trump-nuclear-bombs-hurricanes}} como fonte da informação.
+
+\textit{Ponderamentos:} Neste contraexemplo vê-se que a questão climática é tão delicada que mesmo líderes globais podem apresentar um profundo desconhecimento sobre as suas causas e sugerir ações que podem inclusive piorar ainda mais a situação. Para este caso em específico, o então mandatário foi rebatido com a resposta da agência responsável pelo monitoramento e alertas das condições atmosféricas e oceânicas de seu pais, a National Oceanic and Atmospheric Administration (NOAA).
+
+Por fim, citar brevemente as medidas de minimização de danos e proteção à vida (slides de página 29). Reservar o final da aula para apresentar as principais a ações causadoras da forçante antrópica, suas evidências e projeções futuras caso nada seja feito.
+
+%-----------------------------------------------%
+% Referências
+%-----------------------------------------------%
+% \bibliography{bibliografia.bib}
+%-----------------------------------------------%
+% Anexos
+%-----------------------------------------------%
+\begin{anexosenv}		    
+	\chapter{Slides}
+	Esta aula conta com uma apresentação em slides como recurso de didático, esta apresentação contém exatas 13 lâminas que podem ser consultadas nas páginas a seguir.
+	\includepdf[pages={23-57},nup=2x5]{beamer.pdf}
+\end{anexosenv}
+%-----------------------------------------------%
+% Fim do Plano de Aula
+%-----------------------------------------------%
+\end{document}

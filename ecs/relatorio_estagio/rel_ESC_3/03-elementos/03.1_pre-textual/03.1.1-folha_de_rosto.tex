@@ -1,0 +1,48 @@
+%-----------------------------------------------%
+% folha de rosto 
+%-----------------------------------------------%
+\makeatletter
+
+%-----------------------------------------------%
+% O preambulo deve conter o tipo do trabalho, o objetivo, o nome da instituição e a área de concentração 
+\preambulo{Relatorio apresentado ao curso de \curso do \centro da Universidade do Estado de Santa Catarina para aprovação da disciplina de \disciplina.}
+
+\renewcommand{\folhaderostocontent}{
+    \begin{center}
+        \vspace*{3cm}
+        \begin{center}
+            \ABNTEXchapterfont\bfseries\Large\MakeUppercase{\imprimirtitulo}
+        \end{center}
+
+        \vspace*{\fill}
+
+        \abntex@ifnotempty{\imprimirpreambulo}{%
+            \hspace{.45\textwidth}
+            \begin{minipage}{.5\textwidth}
+                \SingleSpacing
+                \imprimirpreambulo
+
+                \vspace*{.3cm}
+
+                \imprimirorientadorRotulo~\imprimirorientador\par
+        
+                \vspace*{.3cm}
+        
+                \abntex@ifnotempty{\imprimircoorientador}{%
+                    \imprimircoorientadorRotulo~\imprimircoorientador%
+                }%  
+            \end{minipage}%
+            \vspace*{\fill}
+        }%
+
+        \vspace*{2cm}
+
+        \imprimirlocal
+
+        \par
+
+        \imprimirdata
+        \vspace*{\fill}
+    \end{center}
+}
+\makeatother

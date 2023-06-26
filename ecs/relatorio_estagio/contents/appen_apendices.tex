@@ -1,6 +1,43 @@
 \begin{apendicesenv}
-	\chapter{Este é um apendice} % (fold)
-	\label{cha:Este é um apendice}
-	\input{contents/appendages/appen-01.tex}
-	% chapter Este é um apendice (end)
+	\chapter{Planos de Aulas} % (fold)
+	\label{cha:Planos de Aulas}
+
+	\input{contents/appendages/plano_aula01}
+	\newpage
+	\input{contents/appendages/plano_aula02}
+	\newpage
+	\input{contents/appendages/plano_aula03}
+	\newpage
+	\input{contents/appendages/plano_aula04}
+	\newpage
+	\input{contents/appendages/plano_aula05}
+
+	% \includepdf[pages=-]{contents/appendages/pla_01.pdf}
+	% \includepdf[pages=-]{contents/appendages/pla_02.pdf}
+	% \includepdf[pages=1-4]{contents/appendages/pla_03.pdf}
+	% \includepdf[pages=1-4]{contents/appendages/pla_04.pdf}
+	% \includepdf[pages=1-5]{contents/appendages/pla_05.pdf}
+	% chapter Planos de Aulas (end)
+
+	\chapter{Slides} % (fold)
+	\label{chap:Slides}
+	\newpage{
+		\pagecolor{olive!15!white}
+		\includepdf[
+		pages=-,
+		scale=.95,
+		nup=2x6,
+		offset=0cm -.2cm,
+		% offset=-0.25in -0.25in,
+		delta=1cm .25cm,
+		]{contents/appendages/slides.pdf}
+	}\pagecolor{white}
+	% chapter Slides (end)
+
+	\chapter{Avaliação da Sequência Didática} % (fold)
+	\label{chap:Avaliação}
+	\input{contents/appendages/questionario}
+	
+	% chapter Avaliação (end)
+
 \end{apendicesenv}

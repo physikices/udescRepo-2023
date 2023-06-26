@@ -2,12 +2,14 @@
  %% inserir lista de ilustrações, tabelas, listagem 
 % de códigos, abreviaturas, símbolos
 % -----------------------------------------------%
+\renewcommand{\listfigurename}{Lista de Figuras}
 \pdfbookmark[0]{\listfigurename}{lof}
 \listoffigures*
 \cleardoublepage
 % -----------------------------------------------%
 % inserir lista de TABELAS
 % -----------------------------------------------%
+\renewcommand{\listtablename}{Lista de Tabelas}
 \pdfbookmark[0]{\listtablename}{lot}
 \listoftables*
 \cleardoublepage
@@ -15,6 +17,7 @@
 % -----------------------------------------------%
 % inserir lista de QUADROS
 % -----------------------------------------------%
+\renewcommand{\listofquadrosname}{Lista de Quadros}
 \pdfbookmark[0]{\listofquadrosname}{loq}
 \listofquadros*
 \cleardoublepage
@@ -22,17 +25,17 @@
 % -----------------------------------------------%
 % inserir lista de CÓDIGOS
 % -----------------------------------------------%
-\pdfbookmark[0]{\lstlistlistingname}{lol}
-\begin{KeepFromToc}
-\lstlistoflistings
-\end{KeepFromToc}
-\cleardoublepage
+% \pdfbookmark[0]{\lstlistlistingname}{lol}
+% \begin{KeepFromToc}
+% \lstlistoflistings
+% \end{KeepFromToc}
+% \cleardoublepage
 % -----------------------------------------------%
 
 % -----------------------------------------------%
 % inserir lista de abreviaturas e siglas
 % -----------------------------------------------%
-\pdfbookmark[0]{Lista de abreviaturas e siglas}{loa}
+\pdfbookmark[0]{Lista de Abreviaturas e Siglas}{loa}
 \cleardoublepage
 % --%%%%%%%%%%%%%% Como usar o pacote acronym
 % \ac{acronimo} -- Na primeira vez que for citado o acronimo, o nome completo irá aparecer
@@ -49,9 +52,9 @@
 % \aclp{acronimo}--
 
 
-\chapter*{Lista de abreviaturas e siglas}%
+\chapter*{Lista de Abreviaturas e Siglas}%
 % \addcontentsline{toc}{chapter}{Lista de abreviaturas e siglas}
-\markboth{Lista de abreviaturas e siglas}{}
+\markboth{Lista de Abreviaturas e Siglas}{}
 
 % Para diminuir o espaçamento entre linhas no ambiente de listas acronym
 % \let\oldbaselinestretch=\baselinestretch%
@@ -64,14 +67,15 @@
 	\let\oldbaselinestretch=\baselinestretch%
 	\renewcommand{\baselinestretch}{.2}%
 	\large\normalsize%
-	\acro{BNCC}{Base Nacional Comum Curricular}
+	\acro{SEI}{Sequência de Ensino Investigativa}
 	\acro{LDB}{Lei de Diretrizes de Bases da Educação Nacional}
+	\acro{PNE}{Plano Nacional de Educação}
+	\acro{BNCC}{Base Nacional Comum Curricular}
 	\acro{NEM}{Novo Ensino Médio}
 	\acro{PCSC}{Proposta Curricular de Santa Catarina}
-	\acro{PNE}{Plano Nacional de Educação}
 	\acro{CNE}{Conselho Nacional de Educação}
 	\acro{EEB}{Escola de Educação Básica}
-	\acro{GPF}{Giovani Pasqualini faraco}
+	\acro{GPF}{Giovani Pasqualini Faraco}
 	\acro{EF}{Ensino Fundamental}
 	\acro{PPP}{Projeto Político Pedagógico}
 	\acro{ATP}{Assistente Técnico Pedagógico}
@@ -83,28 +87,42 @@
 	\acro{TIC}{Tecnologia da Informação e Comunicação}
 	\acro{ENEM}{Exame Nacional do Ensino Médio}
 	\acro{I/DA}{Interativo/Dialógico de Autoridade}
+	\acro{CNT}{Ciências da Natureza e suas Tecnologias}
+	\acro{MEC}{Ministério da Educação}
+	\acro{TDIC}{Tecnologias Digitais de Informação e Comunicação}
+	\acro{ProBNCC}{Programa de Apoio à Implementação da Base Nacional Comum Curricular}
+	\acro{CBTCem}{Currículo Base do Ensino Médio do Território Catarinense}
+	\acro{ECS4003}{Estágio Curricular Supervisionado}
+	\acro{CCES}{Componentes Curriculares Eletivos}
+	\acro{PISA}{Programa Internacional de Avaliação de Alunos}
+	\acro{EM}{Ensino Médio}
+	\acro{UDESC}{Universidade do Estado de Santa Catarina}
+	\acro{BDTD}{Biblioteca Digital Brasileira de Teses e Dissertações}
+	\acro{PPGECMT}{Programa de Pós-Grad. em Ens. de Ciências, Mat. e Tecnologias}
+	\acro{CCT}{Centro de Ciências Tecnológicas}
+	\acro{TAI}{Tilha de Aprofundamento Integrada}
+	\acro{MFNSSI}{Modelagem de Fenômenos Naturais, Sociais e Seus Impactos}
+	\acro{SED}{Secretaria de Estado da Educação}
+	\acro{SENAI}{Serviço Nacional de Aprendizagem Industrial}
+	\acro{PhET}{\textit{Physics Education Technology}}
+	\acro{ZCIT}{Zona de Convergência Inter Tropical}
+	\acro{UE}{Unidade de Ensino}
 \end{acronym}
 
 % -----------------------------------------------%
 % inserir lista de símbolos
 % -----------------------------------------------%
-\begin{simbolos}  
-  \item[$\Delta$] Variações de Grandezas Físicas
-  \item[$X_i$] Medida Inicial da Grandeza $X$
-  \item[$L$] Grandeza Física Associada ao Comprimento
-  \item[$\alpha$] Coeficiente de Dilatação Linear
-  \item[$T$] Grandeza Física Associada a Temperatura
-  \item[$A$] Grandeza Física Associada a Área Superficial
-  \item[$\beta$] Coeficiente de Dilatação Superficial
-  \item[$V$] Grandeza Física Associada ao Volume
-  \item[$\gamma$] Coeficiente de Dilatação Volumétrica 
-  \item[$X_f$] Medida final da Grandeza $X$
-\end{simbolos}
+% \renewcommand{\listadesimbolosname}{Lista de Símbolos}
+% \cleardoublepage
+% \begin{simbolos}  
+%   \item[$\Delta$] Variações de Grandezas Físicas
+% \end{simbolos}
 % -----------------------------------------------%
 
 % -----------------------------------------------%
 % inserir o SUMÁRIO
 % -----------------------------------------------%
+\newpage
 \pdfbookmark[0]{\contentsname}{toc}
 \tableofcontents*
 \cleardoublepage

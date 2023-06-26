@@ -1,0 +1,119 @@
+%-----------------------------------------------%
+% abnTeX2: Modelo de Trabalho Academico em conformidade com 
+% ABNT NBR 14724:2011: Informacao e documentacao - Trabalhos academicos -
+% Apresentacao
+%
+% Adaptado por Rodrigo Nascimento (2022-08-12) modelo baseado no 
+% https://github.com/emersonmello/modelos-latex/tree/master/monografia
+% criado pelo professor Emerson Mello (IFSC)
+%-----------------------------------------------%
+
+\documentclass[
+	% -- opções da classe memoir --
+	12pt,				% tamanho da fonte0
+	openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
+	oneside,			% twoside para impressão em verso e anverso. Oposto a oneside
+	a4paper,			% tamanho do papel. 
+	% -- opções da classe abntex2 --
+	%chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
+	%section=TITLE,		% títulos de seções convertidos em letras maiúsculas
+	%subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
+	%subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
+	% -- opções do pacote babel --
+	english,			% idioma adicional para hifenização
+%	french,				% idioma adicional para hifenização
+%	spanish,			% idioma adicional para hifenização
+	brazil				% o último idioma é o principal do documento
+]{abntex2}
+
+%-----------------------------------------------%
+% Informações de dados para CAPA e FOLHA DE ROSTO
+%-----------------------------------------------%
+\input{00-dados.tex}
+%-----------------------------------------------%
+
+%	Todas as indicações de pacotes e configurações estão no arquivo de estilo
+%  chamado estilo-monografia-udesc.sty.
+\usepackage{texmodel-udesc-b}
+
+%-----------------------------------------------%
+% Estilo de cabeçalho que só contém o número da 
+% página e uma linha
+%-----------------------------------------------%
+\makepagestyle{cabecalholimpo}
+\makeevenhead{cabecalholimpo}{\thepage}{}{} % páginas pares
+\makeoddhead{cabecalholimpo}{}{}{\thepage} % páginas ímpares
+%\makeheadrule{cabecalholimpo}{\textwidth}{\normalrulethickness} % linha
+%-----------------------------------------------%
+
+%-----------------------------------------------%
+% Início do documento
+%-----------------------------------------------%
+\begin{document}
+
+% Seleciona o idioma do documento (conforme pacotes do babel)
+\selectlanguage{brazil}
+% Retira espaço extra obsoleto entre as frases.
+\frenchspacing
+%-----------------------------------------------%
+% ELEMENTOS PRÉ-TEXTUAIS
+%-----------------------------------------------%
+\pretextual
+\imprimircapa
+%-----------------------------------------------%
+% No arquivo abaixo tem detalhes sobre folha de
+% aprovação, ficha catalográfica, agradecimentos,
+% resumo, abstract, etc.
+% 
+% Se não for a versão final do PDF, talvez fosse
+% interessante comentar a linha abaixo.
+%-----------------------------------------------%
+\input{03-elementos/03.1_pre-textual/03.1.0-compila_pretextuais.tex}
+% ------------------------
+% ------------------------
+% inserir SUMARIO E LISTAS
+\input{03-elementos/03.1_pre-textual/03.1.8-listas.tex}
+% ------------------------
+
+%-----------------------------------------------%
+% ELEMENTOS TEXTUAIS
+%-----------------------------------------------%
+\textual
+% Se quiser que apareça o título dos capítulos
+% no cabeçalho, então comente a linha abaixo
+%\pagestyle{cabecalholimpo}
+%-----------------------------------------------%
+% Inclusão dos capítulos que estão em outros arquivos .tex
+%-----------------------------------------------%
+\include{03-elementos/03.2_textual/03.2.2_parte-i/01-introducao.tex}
+\include{03-elementos/03.2_textual/03.2.2_parte-i/02-apresentacao.tex}
+\include{03-elementos/03.2_textual/03.2.3_parte-ii/01-apoio.tex}
+\include{03-elementos/03.2_textual/03.2.3_parte-ii/02-prog_fisica.tex}
+\include{03-elementos/03.2_textual/03.2.3_parte-ii/03-acompanhamento.tex}
+\include{03-elementos/03.2_textual/03.2.4_parte-iii/01-docencia.tex}
+\include{03-elementos/03.2_textual/03.2.4_parte-iii/02-consideracoes.tex}
+%-----------------------------------------------%
+% ELEMENTOS PÓS-TEXTUAIS
+%-----------------------------------------------%
+\postextual
+%-----------------------------------------------%
+% Referências bibliográficas
+%-----------------------------------------------%
+\bibliography{03-elementos/03.3_pos-textual/referencias}
+%-----------------------------------------------%
+% Apêndices
+%-----------------------------------------------%
+\include{03-elementos/03.3_pos-textual/03.3.1-apendices.tex}
+%-----------------------------------------------%
+% Anexos
+%-----------------------------------------------%
+\include{03-elementos/03.3_pos-textual/03.3.2.anexos.tex}
+%-----------------------------------------------%
+% INDICE REMISSIVO
+%-----------------------------------------------%
+\phantompart
+\printindex
+%-----------------------------------------------%
+\end{document}
+
+

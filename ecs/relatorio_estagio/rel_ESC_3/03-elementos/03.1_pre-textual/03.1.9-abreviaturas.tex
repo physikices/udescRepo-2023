@@ -1,0 +1,56 @@
+%%%%%%%%%%%%%% Como usar o pacote acronym
+% \ac{acronimo} -- Na primeira vez que for citado o acronimo, o nome completo irá aparecer
+%                  seguido do acronimo entre parênteses. Na proxima vez somente o acronimo
+%                  irá aparecer. Se usou a opção footnote no pacote, entao o nome por extenso
+%                  irá aparecer aparecer no rodapé
+%
+% \acf{acronimo} -- Para aparecer com nome completo + acronimo
+% \acs{acronimo} -- Para aparecer somente o acronimo
+% \acl{acronimo} -- Nome por extenso somente, sem o acronimo
+% \acp{acronimo} -- igual o \ac mas deixando no plural com S (ingles)
+% \acfp{acronimo}--
+% \acsp{acronimo}--
+% \aclp{acronimo}--
+
+
+\chapter*{Lista de abreviaturas e siglas}%
+% \addcontentsline{toc}{chapter}{Lista de abreviaturas e siglas}
+\markboth{Lista de abreviaturas e siglas}{}
+
+% Para diminuir o espaçamento entre linhas no ambiente de listas acronym
+% \let\oldbaselinestretch=\baselinestretch%
+% \renewcommand{\baselinestretch}{.2}%
+% \large\normalsize%
+
+
+
+\begin{acronym}
+	\let\oldbaselinestretch=\baselinestretch%
+	\renewcommand{\baselinestretch}{.2}%
+	\large\normalsize%
+	\acro{BNCC}{Base Nacional Comum Curricular}
+	\acro{LDB}{Lei de Diretrizes de Bases da Educação Nacional}
+	\acro{NEM}{Novo Ensino Médio}
+	\acro{PCSC}{Proposta Curricular de Santa Catarina}
+	\acro{PNE}{Plano Nacional de Educação}
+	\acro{CNE}{Conselho Nacional de Educação}
+	\acro{EEB}{Escola de Educação Básica}
+	\acro{GPF}{Giovani Pasqualini faraco}
+	\acro{EF}{Ensino Fundamental}
+	\acro{PPP}{Projeto Político Pedagógico}
+	\acro{ATP}{Assistente Técnico Pedagógico}
+	\acro{DVD}{\textit{Digital Versatile Disc}}
+	\acro{EI}{Ensino por Investigação}
+	\acro{NI/D}{Não-Interativo/Dialógico}
+	\acro{I/D}{Interativo-Dialógico}
+	\acro{HC}{História da Ciência}
+	\acro{TIC}{Tecnologia da Informação e Comunicação}
+	\acro{ENEM}{Exame Nacional do Ensino Médio}
+	\acro{I/DA}{Interativo/Dialógico de Autoridade}
+        \acro{BBTD}{Biblioteca Brasileira de Teses e Dissertações}
+        \acro{MEC}{Ministério da Educação}
+        \acro{MNPEF}{Mestrado Nacional Profissional em Ensino de Física}
+        \acro{ICEX}{Instituto de Ciências Exatas}
+        \acro{UFF}{Universidade Federal Fluminense}
+        \acro{HFC}{História e Filosofia da Ciência}
+\end{acronym}

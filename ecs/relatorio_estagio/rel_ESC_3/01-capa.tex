@@ -1,0 +1,44 @@
+%-----------------------------------------------%
+% Personalização do modelo da abnTeX2 para se adequar com o modelo do IFSC
+% 2017-08-23 - Segue o modelo do IFSC publicado em setembro de 2016
+%-----------------------------------------------%
+% alterando a capa
+\renewcommand{\imprimircapa}{%
+  \begin{capa}%
+    \center
+    \begin{minipage}[!]{\linewidth}
+        \begin{minipage}[!]{.19\linewidth}
+            \includegraphics[width=\linewidth]{img/logo.png}           
+        \end{minipage}
+        \begin{minipage}[!]{.8\linewidth}
+            \center
+            \ABNTEXchapterfont\normalsize\MakeUppercase{\imprimirinstituicao}
+            \par
+            \vspace*{10pt}                     
+            \ABNTEXchapterfont\normalsize\MakeUppercase{\centro}
+            \par
+            \vspace*{10pt}           
+            \ABNTEXchapterfont\normalsize\MakeUppercase{\departamento}
+        \end{minipage}        
+    \end{minipage}
+    
+    
+    \vspace*{100pt}
+    
+    
+    {\ABNTEXchapterfont\normalsize\MakeUppercase{\imprimirautor}}
+    
+    \vspace*{100pt}
+    \begin{center}        
+        \ABNTEXchapterfont\bfseries\LARGE\imprimirtitulo\\\itshape{\Large\imprimirtipotrabalho}
+    \end{center}
+    
+    \vfill
+    
+    \normalsize\imprimirlocal
+
+    \normalsize\imprimirdata
+    
+    \vspace*{1cm}
+  \end{capa}
+}

@@ -1,0 +1,167 @@
+%-----------------------------------------------%
+% Modelo de Plano de Aula com três momentos pedagógicos
+%
+% Autor: Rodrigo Nascimento (2022-08-12)
+%-----------------------------------------------%
+
+\documentclass[
+% -- opções da classe memoir --
+12pt,				% tamanho da fonte
+openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
+oneside,			% twoside para impressão em verso e anverso. Oposto a oneside
+a4paper,			% tamanho do papel. 
+% -- opções da classe abntex2 --
+chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
+%section=TITLE,		% títulos de seções convertidos em letras maiúsculas
+%subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
+%subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
+% -- opções do pacote babel --
+english,			% idioma adicional para hifenização
+%	french,				% idioma adicional para hifenização
+%	spanish,			% idioma adicional para hifenização
+brazil				% o último idioma é o principal do documento
+]{abntex2}
+\selectlanguage{brazil}
+%-----------------------------------------------%
+% Informações do DOCUMENTO
+%-----------------------------------------------%
+\input{00-dados.tex}
+%-----------------------------------------------%
+
+%	Todas as indicações de pacotes e configurações estão no arquivo de estilo
+%  chamado texmodel-udesc.sty.
+\usepackage{texmodel-udesc}
+
+%-----------------------------------------------%
+% Estilo de cabeçalho que só contém o número da 
+% página e uma linha
+%-----------------------------------------------%
+\makepagestyle{cabecalholimpo}
+\makeevenhead{cabecalholimpo}{\thepage}{}{} % páginas pares
+\makeoddhead{cabecalholimpo}{}{}{\thepage} % páginas ímpares
+%\makeheadrule{cabecalholimpo}{\textwidth}{\normalrulethickness} % linha
+%-----------------------------------------------%
+
+%-----------------------------------------------%
+% HEADER
+%-----------------------------------------------%
+\begin{document}
+
+\thispagestyle{empty}
+\begin{center}
+	\begin{minipage}[!]{\linewidth}
+		\begin{minipage}[!]{.19\linewidth}
+			\includegraphics[width=\linewidth]{img/logo.png}           
+		\end{minipage}
+		\begin{minipage}[!]{.8\linewidth}
+			\center
+			\ABNTEXchapterfont\normalsize\MakeUppercase{\imprimirinstituicao}
+			\par
+			\vspace*{10pt}                     
+			\ABNTEXchapterfont\normalsize\MakeUppercase{\centro}
+			\par
+			\vspace*{10pt}           
+			\ABNTEXchapterfont\normalsize\MakeUppercase{\disciplina}
+		\end{minipage}        
+	\end{minipage}
+	\\ \vspace{0.5cm}
+	\rule{\textwidth}{.5pt}   
+\end{center}
+%-----------------------------------------------%
+% Ficha de Identificação
+%-----------------------------------------------%
+\textual
+\begin{center}
+	\textbf{Plano de Aula: Introdução aos Tópicos da Trilha}
+\end{center}
+\par\noindent\textbf{Estagiário(a):} \imprimirautor\hfill{}\textbf{Orientadora:} Prof(a). Ana Paula Grimes
+\par\noindent\textbf{U.E.:} EEB Giovani P. Faraco\hfill{}\textbf{Supervisor:} Prof. Mário Calegari
+\par\noindent\textbf{Série:} 2º Ano\hfill{}\textbf{Turma:} Nº(6)
+\par\noindent\textbf{Aula:} 001/002\hfill{}\textbf{Data:} 12/04/2023\hfill{}\textbf{Duração:} $2\times 40\min$
+\rule{\textwidth}{.5pt}
+%-----------------------------------------------%
+% Início do Plano de Aula
+%-----------------------------------------------%
+\bigskip{}  
+\noindent
+\begin{center}
+	\textbf{Furacões}
+\end{center}
+\par\noindent\textbf{Resumo da aula:} Esta aula é dedicada à introdução ao tema da trilha: \textit{"Modelagem de Fenômenos Naturais, Sociais e seus Impactos"}, cujo o foco principal é estudar a formação de fenômenos atmosféricos.
+\par\noindent\textbf{Habilidades BNCC:} EM13CNT202
+
+\section{Objetivo de Aprendizagem}
+\begin{itemize}
+	\item Conhecer e caracterizar fenômenos naturais de origem atmosférica;
+	\item Diferenciar os fenômenos atmosféricos conforme as suas variadas classes e definições;
+	\item Verificar a ocorrência destes fenômenos inclusive em território catarinense;
+\end{itemize}
+
+\medskip{}
+
+\noindent\textbf{Núcleo Conceitual:} \emph{Meteorologia; Fenômenos Naturais; Perturbações Atmosféricas.}
+\newpage
+
+\section{Procedimento Didático} 
+\noindent\emph{1º Momento:} Fenômenos Atmosféricos: Furacões.
+\par\noindent\rule{.3\textwidth}{.5pt}  
+\par\noindent\textbf{Tempo previsto:} 25 minutos
+
+\noindent\textbf{Dinâmica:} Apresentar-se aos alunos e questionar-lhes quais conteúdos relacionados à trilha estão trabalhando em outras disciplinas, explicar que nas próximas oito aulas, usarão boa parte do que aprenderam nas aulas de Física e em outras disciplinas para compreender e modelar um dos fenômenos naturais mais impressionantes e catastróficos do planeta.
+
+Abrir uma discussão com a turma sobre fenômenos atmosféricos, perguntar-lhes o que conhecem sobre o assunto e se já vivenciaram algo que gostariam de compartilhar. Ouvir atentamente o grupo e tentar relacionar com a temática da trilha, espera-se que palavras como: furacões, tornados, tufões, ciclones e etc apareçam espontâneamente, caso isso não ocorra, o professor pode questionar-lhes sobre qual evento atmosférico mais potente de que já viram/ouviram falar, pedir-lhes que comentem sobre este fenômeno.
+
+Fechar esta etapa quando sentir que a turma encontra-se satisfeita com a discussão, prepará-los para a sequência de vídeos em que é mostrado diversas imagens de ciclones e tornados, avisá-los que algumas imagens podem conter cenas severas de destruição de casas e construções, verificar se há consenso entre a turma sobre isso, caso não houver, pular as etapas do vídeo que aparecem tais cenas.
+
+\vspace{50pt}
+\noindent\emph{2º Momento:} Vídeo 01 (Furacões e seus Impactos)
+\par\noindent\rule{.3\textwidth}{.5pt}    
+\par\noindent\textbf{Tempo previsto:} 25 minutos
+
+
+\noindent\textbf{Dinâmica:} O primeiro vídeo contém 03 min de duração e encontra-se publicado na plataforma YouTube\footnote{https://www.youtube.com/watch?v=uPh4T-9gDJM\&t=3s}. Tem por objetivo, apresentar o fenômeno e chamar a atenção para a importância da pesquisa e desenvolvimento em meteorologia. É possível notar pelas imagens, a predominância de ocorrência do fenômeno no Hemisfério Norte do planeta, principalmente na região dos EUA, este fato revela que este país, além de geograficamente encontrar-se na rota dos ciclones, mantém um centro de pesquisa extremamente ativo para alertar a população e tomar providências o mais rápido o possível a fim de minimizar os danos provocados pelo fenômeno. O poder destrutivo destes sistemas é também explorado pelas imagens justificando a necessidade de pesquisas intensas nessa área de conhecimento.
+
+Após a passagem do vídeo, o professor deve iniciar uma segunda discussão buscando levantar entre os alunos hipóteses de como se formam tais sistemas, a ideia é  mapear entre o grupo as principais concepções a respeito das condições físicas, geográficas, climáticas, sociais e etc, que apresentam-se favoráveis a formação do fenômeno e o tornam tão perigoso. Nesta etapa o professor não deve ajudá-los. Deve tomar nota das hipóteses levantadas antes de passar para o próximo vídeo. As seguintes perguntas podem servir de orientação:
+
+\begin{enumerate}[label=\alph *)]
+		\item O que é e onde (continente/oceano/pólos...) se formam os Furacões?
+		\item A localização geográfica (Hemisfério Norte/Sul) é relevante na caracterização de furacões?
+		\item Para o quê, do ponto de vista da natureza, serve um Furacão?
+		\item Que condições são necessárias para a formação de Furacões?
+		\item Porquê não se tem registros de ocorrência de Furacões sobre a faixa de latitude $0\Celsius$ (Equador)
+		\item Há diferenças entre as terminologias: Furacão, Tufão, Ciclone e Tornado?
+		\item Pode ocorrer Furacões no Brasil?
+		\item Os efeitos do aquecimento global podem influenciar na ocorrência de Furacões? De que forma? 
+\end{enumerate}
+
+O professor deve recolher estas respostas para efeitos de comparação ao final da sequência, além de servir de material para basear as próximas atividades da turma. 
+
+Ceder 10 min da aula para que transcrevam o resultado destas discussões.
+
+
+\vspace{50pt}
+\noindent\emph{3º Momento:} Entrevista com o Professor Pedro Dias IAG/USP (Vídeo)
+\par\noindent\rule{.3\textwidth}{.5pt}
+\par\noindent\textbf{Tempo previsto:} 25 minutos
+\par\noindent\textbf{Dinâmica:} Logo após o recolhimento das respostas acima, passar o vídeo da entrevista com o professor Pedro Dias\footnote{https://www.youtube.com/watch?v=riXLskNJx20} (11 min), PhD em Ciências Atmosféricas e professor titular do Instituto Astronômico e Geofísico da USP. Nesta entrevista, o professor responde às principais questões acerca dos fenômenos meteorológicos que dão origem às pertubações atmosféricas de maneira suscinta, clara e objetiva, fornecendo um panorama geral sobre o funcionamento destes fenômenos, mas sem aprofunda-se muito na fenomemologia descritiva do problema.
+
+Seguindo a sequência, o professor deve discutir em conjunto com a sala os pontos da entrevista que eventualmente podem não ter ficado claro e em conjunto propor a seguinte desafio:
+
+\emph{Prever completamente o comportamento de fenômenos atmosféricos tal como Ciclones e Tornados, é uma tarefa extremamente difícil e complexa, além de figurar como um problema em aberto nas ciências meteorológicas, isso não significa que tudo está perdido, pelo contrário, é uma área que se presta muito bem ao propósito de alertar a população, propor soluções e evitar tragédias. Tal como qualquer outra área do conhecimento, a meteorologia está em contínuo desenvolvimento por meio da pesquisa, modelagens e avanços computacionais.}
+
+\emph{Disciplinas como Física, Matemática e Geografia são essenciais para a construção dos modelos meteorológicos, dito isso, será que com o que sabemos até o momento destas disciplinas, é possível a construção de um modelo básico que dê conta de explicar as principais afirmações dadas pelo professor Pedro Dias?}
+
+Usar o restante da aula para apresentar e discutir a proposta de trabalho com os alunos.
+%-----------------------------------------------%
+% Referências
+%-----------------------------------------------%
+% \bibliography{bibliografia.bib}
+%-----------------------------------------------%
+% Anexos
+%-----------------------------------------------%
+% \begin{anexosenv}		    
+% \end{anexosenv}
+%-----------------------------------------------%
+% Fim do Plano de Aula
+%-----------------------------------------------%
+\end{document}

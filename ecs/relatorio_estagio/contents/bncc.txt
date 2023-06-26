@@ -1,0 +1,85 @@
+texto base: Movimento-Revista de Educação Niterói
+BNCC-Histórico: Em 2015, foram iniciados novos estudos pelo MEC para a preparação de um documento sobre a BNCC. Cerca de 120 profissionais da educação, entre eles professores da Educação Básica e Ensino Superior de diferentes áreas do conhecimento foram convidados pelo MEC  para elaborar um documento que resultou na 1ª versão da BNCC, após isso foi colocada  em consulta pública, entre outubro de 2015 à marõ de 2016, segundo o MEC houve mais de 12 milhões de contribuições ao texto, pariciparam cerca de 300 mil pessoas e instituições. As contribuições foram sistematizadas por profissionais da UnB, PUC-RJ e subsidiaram o MEC na elaboração da segunda versão.
+
+Depois de elaborada primeira versão da BNCC, a segunda versão foi publicizada sob a coordenadação da Undime e do Consed, que organizaram seminários por todo o país. O documento foi apresentado por componentes curriculares. Após a formalização de um Grupo Gestor o MEC definiu quais contribuições seriam escolhidas, surgindo assim, a terceira versão, apresentada ao CNE para análise.
+
+Os autores questionam: Qual o marco de referência que serviu de parâmetro oara as escolhas do MEC na passagem da primeira para a segunda versão da BNCC e ainda, ao excluir o Ensino Médio da proposta não cumpri com as exigências legais da educação básica.
+
+BNCC-Texto (Sobre o Ensino Médio pp. 461):
+"O Ensino Médio é a etapa final da Educação Básica, direito público subjetivo de todo cidadão brasileiro. Todavia, a realideade educacional do País tem que esta etapa representa um gargalo na garantia do direito à educação. Para além da necesidade de universalizar o atendimento, tem se mostrado crucial garantir a permanência e as aprendizagens dos estudantes, respondendo às suas demandas e aspirações futuras."
+
+Desafio: Para responder a esta necessidade de recriação da escola, mostra-se imprescindível reconhecer que as rápidas transformações na dinâmica social contemporânea nacional e internacinal, em grande parte decorrente do desenvolvimento tecnológico atingem diretamente as populações jovens e, portanto, suas demandas de formação. Nesse cenário cada vez mais complexo, dinâmico e fluído, as incertezas relativas às mudanças no mundo do trabalho e nas relações sociais como um todo representam um grande desafio para a formulação de políticas e propostas de organização curriculares para a Educação Básica, em geral, e para o Ensino Médio, em particular.
+
+Orientação para o trato com as juventudes: "Considerar que há muitas juventudes implica organizar um escola que acolha as diversidades, promovendo, de modo intencional e permanente, o respeito à pessoa humana e aos seus direitos. E mais,  que garanta aos  estudantes ser protagonistas de seu próprio processo de escolarização, reconhecendo-os como interlocutores legítimos sobre o currículo, ensino e aprendizagem." (pp. 463)
+
+Educação Integral e Projeto de Vida: "Para atender às necessidades de formação geral, indispensáveis ao exercício da cidadania e à inserção no mundo do trbalho, e responder à diversidade de expectativas dos jovens quanto à formação,  escola que acolhe as juventudes tem de estar comprometida com a educação integral dos estudantes e com a construção de seu projeto de vida" (pp. 464)
+
+"Para atender a todas essas demandas de formação no Ensino Médio, mostra-se imperativo repensar a organização curricular vigente para essa etapa da Educação Básica, que apresentava excesso de componentes curriculares e abordagens pedagógicas distantes das culturas juvenis, do mundo do trabalho e das dinâmicas e questões sociais contemporâneas." (pp. 467-468)
+
+-- Na direção de substituir o modelo único de currículo do Ensino Médio por um modelo diversificado e flexível a reforma do Ensino Médio pela Lei 13.415/2017 alterou a LDB, estabelecendo que:
+"O currículo do ensino médio será composto pela Base Nacional Comum Curricular e por intinerários formativos, que deverão ser organizados por meio da oferta de diferentes arranjos curriculares, conforme a relevância para o contexto local e a possibilidade dos sistemas de ensino, a saber:
+I - Linguagens e suas tecnologias;
+II - Matemática e suas tecnologias;
+III -  Ciências da natureza e suas tecnologias;
+IV - Ciências humanas e suas tecnologias;
+V - Formação técnica e profissional" (LDB, Art. 36).
+
+BNCC-EM:
+* Língua portuguesa e Matemática são componentes curriculares obrigatórios durante os três anos do ensino médio.
+* Os outros compontentes curriculares não define como obrigatoriedade nas tres séries, traz a obrigatoriedade de estudos e práticas de alguns destes componentes.
+* Os currículos devem incluir obrigatoriamente estudos e práticas de Educação física, Arte, Sociologia e Filosofia.
+* Hé ênfase na construção do Projeto de Vida dos estudantes, na Formação Integral e uso de Tecnologias Digitais e Computação.
+*Preconiza uma educação que responda às expectativas, demandas e aspirações dos jovens.
+
+Organização Curricular da BNCC:
+As Quatro Áreas do Conhecimento e Suas Competências Específicas:
+I - Linguagens e suas Tecnologias;
+	a) Língua Portuguesa
+	b) Língua Inglesa
+	c) Arte
+	d) Educação Física
+II - Matemática e suas Tecnologias;
+	a) Matemática
+III -  Ciências da Natureza e suas Tecnologias;
+	a) Biologia
+	b) Física
+	c) Química
+IV - Ciências Humanas e Sociais Aplicadas;
+	a) Geografia
+	b) História
+	c) Sociologia
+	d) Filosofia
+Componentes Curriculares Obrigatórias nas Três Séries
+1) Língua Portuguesa
+2) Matemática
+
+Organização do NEM
+Formação Básica e Geral -> Elaborado de forma a contemplar a BNCC
+Intinerários Formativos -> Parte flexível (diversificada)
+
+-- Formação Básica e Geral devem contemplar, sem prejuízo da integração e articulação das diferentes áreas do conhecimento, estudos e práticas de:
+	- Língua Portuguesa;
+	- Matemática;
+	- Conhecimento do mundo físico e natural e da realidade social e política, especialmente do Brasil;
+	- Arte;
+	- História do Brasil e do Mundo;
+	- História e Cultura Afro-Brasileira e Indígena;
+	- Sociologia e Filosofia;
+	- Língua Inlgesa, podendo ser oferecidas outras línguas estrangeiras, em caráter optativo.
+
+	-- Intinerários Formativos (Parte Flexível)
+	Os Intinerários Formativos -  estratégicos para a flexibilização da organização curricular do EM, pois possibilitam opções de escolha aos estudantes - podem ser estruturados com foco em uma área do conhecimento, na formação técnica e profissional ou, também, na mobilização de competências e habilidades de diferentes áreas, compondo Intinerários Integrados, nos seguintes termos das DCNEM/2018:
+
+Da implementação do NEM:
+Das Disposições Finais e Transitórias
+Cap. V -Art. 12
+"As Instituições ou redes escolares pode, de imediato, alinhar seus currículos e propostas pedagógicas à BNCC-EM, nos termos desta Resolução e das  Diretrizes Curriculares Nacionais do Ensino Médio definidas pela CNE/CEB nº 3/2018.
+
+	Parágrafo Único. A adequação dos currículos à BNCC-EM deve estar concluída até o início do ano letivo de 2020, para a completa implantação no ano de 2022."
+	Em síntese:
+Até 2020 -> Adequação dos currículos à BNCC-EM;
+2022 -> Inicia o processo de implementação do Novo Ensino Médio com a 1ª Série
+2023 -> Implementação para a 2ª Série
+2024 -> Implementação para a 3ª Série
+
+
