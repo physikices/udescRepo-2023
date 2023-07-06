@@ -1,0 +1,35 @@
+\begin{feynhand}
+	\vertex (a) {$\mathrm{e}^{-}$};
+	\vertex [right=of a] (b);
+	\vertex [below right=of b] (c);
+	\vertex [above right=of b] (f1) {$\mathrm{e}^{-}$};
+	\vertex [right=of c] (d){$\xi p+q$};
+	
+
+	\propag [fer, mom={$k$}] (a) to (b);
+	\propag [fer, mom={$k^{\prime}$}] (b) to (f1);
+	\propag [pho] (b) to [edge label=$\gamma^{*}(\nu)$] (c);
+	\propag [fer] (c) to (d);
+
+	\vertex (g1) at (1.35,-1.7);
+	\vertex (g12) at (3.4,-1.7);
+
+	\vertex (g2) at (1.35,-1.9);
+	\vertex (g21) at (4.4,-1.9){$X(1-\xi p)$};
+
+	\vertex (g3) at (1.35,-2.1);
+	\vertex (g31) at (3.4,-2.1);
+
+	\propag [fer] (g1) to (g12);
+	\propag [fer] (g2) to (g21);
+	\propag [fer] (g3) to (g31);
+
+	% \propag [fer] (p) to (e);
+	\vertex [blob,fill=red!50!white, below=1.5cm of b] (p){};
+	\vertex [left=.8cm of p] (p1) {$p$};
+	% \vertex [right=1.6cm of p] (e);
+
+	\propag [fer] (p) to (c);
+	\propag [fer] (p1) to (p);
+
+\end{feynhand}

@@ -1,0 +1,7 @@
+\begin{feynhand}
+	\vertex (v1);		
+
+	\draw[postaction={decorate}] (-1,0) to [edge label=$q(y)$] (v1);
+	\draw[postaction={decorate}] (v1) to [edge label=$q(x)$] (1,1);
+	\propag[glu] (v1) to [edge label=$g(y-x)$] (1,-1);
+\end{feynhand}
