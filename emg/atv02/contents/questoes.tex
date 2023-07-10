@@ -1,0 +1,150 @@
+%--------------| Q01 |------------------------- %
+\addcontentsline{toc}{section}{1}
+\begin{prob}
+	Uma distribuição esférica de raio $R$ tem densidade de cargas $\rho(r)=\rho_{0}/R$ para $0\leq r \leq R$. Determine a autoenergia da distribuição de duas maneiras:
+	\begin{enumerate}[label=\alph *)]
+		\item por integração direta;
+		\item por integração sobre o campo.
+	\end{enumerate}
+
+	% --------------------------------------------- %		
+	\begin{sol}
+		Assumindo que a distribuição esférica é um dielétrico de constante dielétrica $\varepsilon$, sem perda de generalidade, podemos usar a Lei de Gauss para calcular o campo dentro e fora da região, em seguida determinar o vetor deslocamento elétrico. Estas duas quantidades serão úteis nos procedimentos para a solução deste problema, logo, para pontos no interior da esfera tem-se que
+
+		\begin{align}
+			\begin{split}
+				\oint \vec{E}_{1}\cdot\hat{n}\;da &=\frac{1}{\varepsilon}\int\limits_{v} \rho(r^{\prime})\,d{v}\condition{para $r\leq R$}\\
+				E_{1}(4 \pi r^{2}) &= \frac{1}{R\varepsilon}\rho_{0}\int\limits_{0}^{2 \pi}\,d{\phi}\int\limits_{0}^{\pi}\sen \theta\,d{\theta}\int\limits_{0}^{r}r^{\prime 3}\,d{r^{\prime}}\\
+				E_{1}(4 \pi r^{2}) &= \frac{\rho_{0}}{R\varepsilon}(2 \pi)(2)\frac{r^{4}}{4}\\
+				E_{1} &= \frac{\rho_0}{4 \varepsilon R}r^{2}
+			\end{split}
+		\end{align}
+		\begin{align}
+			\boxed{
+				\vec{E}_{1}=\frac{\rho_{0}}{4 \varepsilon R}r^{2} \; \hat{r}\condition{em $r\leq R$}
+			}
+		\end{align}
+		e para o vetor deslocamento $\vec{D}_1$
+		\begin{align}
+			\vec{D}_{1}	&= \varepsilon \vec{E}_{1}
+		\end{align}
+		\begin{align}
+			\boxed{
+				\vec{D}_{1}=\frac{\rho}{4R}r^{2}\;\hat{r}\condition{com $r\leq R$}
+			}	
+		\end{align}
+		Analogamente, para pontos externos
+		\begin{align}
+			\begin{split}
+				\oint{\vec{E}_{2}}\cdot \hat{n}\; da &= \frac{1}{\varepsilon_0}\frac{\rho_0}{R}\int\limits_{0}^{2 \pi}\,d{\phi}\int\limits_{0}^{\pi}\sen\theta\,d{\theta}\int\limits_{0}^{R}r^{\prime 3}\,d{r^{\prime}}\\
+				E_{2}(4 \pi r^{2}) &= \frac{\pi R^{3} \rho_0}{\varepsilon_0}\\
+				E_{2} &= \frac{R^{3} \rho_0}{4 \varepsilon_0}\frac{1}{r^{2}}
+			\end{split}
+		\end{align}
+		\begin{align}
+			\boxed{
+				\vec{E}_{2}=\frac{\rho_0 R^{3}}{4 \varepsilon_0}\frac{1}{r^{2}}\; \hat{r}\condition{se $r\geq R$}
+			}
+		\end{align}
+		e
+		\begin{align}
+			\boxed{
+				\vec{D}_1=\frac{\rho_0 R^{3}}{4}\frac{1}{r^{2}}\; \hat{r}\condition{desde que $r\geq R$}
+			}
+		\end{align}
+		\begin{enumerate}[label=\alph *)]
+			\item \textit{Calculando a autoenergia por integração direta:}	
+				\begin{align}
+					\label{eq:autoenergia-01}
+					U &= \frac{1}{2}\int\limits_{v} \rho(r) \varphi(r)\,d{v}	
+				\end{align}
+				No interior da esfera o campo é $\vec{E}_{1}$, no entanto, precisamos do potencial na superfície como referência, mas na superfície, o potencial tem que coincidir com o potêncial externo. Considerando $\varphi(\infty)=0$ e utilizando a expressão do campo para pontos em que $r\geq R$, então
+				\begin{align}
+					\begin{split}
+						\varphi(r) &= \varphi(\infty) - \int\limits_{\infty}^{r}\vec{E}_{2}\cdot\,d{\vec{r}}\\
+											 &= -\int\limits_{\infty}^{r}\frac{\rho_0 R^{3}}{4 \varepsilon_0}\frac{1}{r^{2}}\,d{r}\\
+											 &= -\left[\frac{\rho_0 R^{3}}{4 \varepsilon_0}\left(-\frac{1}{r}\right)\Bigg|_{\infty}^{r}\right]\\
+											 &= \frac{\rho_0 R^{3}}{4 \varepsilon_0}\frac{1}{r}
+					\end{split}
+				\end{align}
+				e na superfície
+				\begin{align}
+					\boxed{
+						\varphi(R)=\frac{\rho_0 R^{2}}{4 \varepsilon_0}\condition{para $r=R$}
+					}
+				\end{align}
+				agora, o potencial no interior da superfície tendo por referência o potencial sobre a superfície é dado por
+				\begin{align}
+					\begin{split}
+						\varphi(r) &= \varphi(R)-\int\limits_{R}^{r}\vec{E}_1\cdot\,d{\vec{r}}\\
+											 &= \frac{\rho_0 R^{2}}{4 \varepsilon_0}-\int\limits_{R}^{r}\frac{\rho_0}{4R \varepsilon}r^{2}\,d{r}\\
+											 &= \frac{\rho_0 R^{2}}{4 \varepsilon_0}-\frac{\rho_0}{4R \varepsilon}\left(\frac{r^{3}}{3}-\frac{R^{3}}{3}\right)
+					\end{split}
+				\end{align}
+				simplificando resulta em
+				\begin{align}
+					\boxed{
+						\varphi(r)=\frac{\rho_0 R^{2}}{12}\left(\frac{3 \varepsilon+ \varepsilon_0}{\varepsilon \varepsilon_0}\right)-\frac{\rho_0 r^{3}}{12 \varepsilon R}
+					}	
+				\end{align}
+				note que se $\varepsilon=\varepsilon_0$ e $r=R$ então
+				\begin{align}
+						\varphi(R)=\frac{\rho_0 R^{2}}{12}\left(\frac{4 \varepsilon_0}{\varepsilon^{2}_0}\right)-\frac{\rho_0 R^{2}}{12 \varepsilon_0}=\frac{\rho_0 R^{2}}{4 \varepsilon_0}
+				\end{align}
+				pois bem, tendo $\varphi(r)$ e $\rho(r)$, partimos para a solução da eq. \eqref{eq:autoenergia-01}
+				\begin{align}
+				 \begin{split}
+					 U &= \frac{1}{2}\int\limits_{0}^{2 \pi}\,d{\phi}\int\limits_{0}^{\pi}\sen \theta\,d{\theta}\int\limits_{0}^{R}\left(\frac{\rho_0}{R}\right)r \left[\frac{\rho_0 R^{2}}{12}\left(\frac{3 \varepsilon+\varepsilon_0}{\varepsilon \varepsilon_0}\right)-\frac{\rho_0}{12 \varepsilon R}r^{3}\right]r^{2}\,d{r}\\
+						 &= \frac{2 \pi\rho_0}{R}\left[\frac{\rho_0 R^{2}}{12}\left(\frac{3 \varepsilon+ \varepsilon_0}{\varepsilon \varepsilon_0}\right)\int\limits_{0}^{R}r^{3}\,d{r}-\frac{\rho_0}{12 \varepsilon R}\int\limits_{0}^{R}r^{6}\,d{r}\right]\\
+						 &= \frac{2 \pi \rho_0}{R}\left[\frac{\rho_0 R^{2}}{12}\left(\frac{3 \varepsilon+ \varepsilon_0}{\varepsilon \varepsilon_0}\right)\frac{R^{4}}{4}-\frac{\rho_0}{12 \varepsilon R}\frac{R^{7}}{7}\right]\\
+						 &= \frac{2 \pi \rho_0^{2} R^{5}}{12}\left[\frac{1}{4}\left(\frac{3 \varepsilon+ \varepsilon_0}{\varepsilon \varepsilon_0}\right)-\frac{1}{7 \varepsilon}\right]
+				 \end{split}
+				\end{align}
+				simplificando ficamos com
+				\begin{align}
+						\boxed{
+							U=\frac{\pi \rho_0^{2} R^{5}}{56}\left(\frac{\varepsilon_0+7 \varepsilon}{\varepsilon \varepsilon_0}\right)
+						}
+				\end{align}
+
+			\item \textit{Calculando a autoenergia por integração sobre o campo:}	
+				Pressupondo que este método refere-se ao cálculo sobre os campos $\vec{E}$ e $\vec{D}$ tem-se que
+				\begin{align}
+					U &= \frac{1}{2}\int\limits_{v}\vec{E}\cdot \vec{D}\,d{v}
+				\end{align}
+				segue que
+				\begin{align}
+					U_{T} &= U_1 + U_2
+				\end{align}
+				com $U_{1}$ a autoenergia interna à superfície esférica e $U_{2}$ a parcela da autoenergia externa à mesma, de modo que
+				\begin{align}
+						\begin{split}
+							U_{1} &= \frac{1}{2}\int\limits_{v}\vec{E}_{1}\cdot \vec{D}_{1}\,d{v}\\
+										&= \frac{1}{2}\int\limits_{0}^{2 \pi}\,d{\phi}\int\limits_{0}^{\pi}\sen \theta\,d{\theta}\int\limits_{0}^{R}\left(\frac{\rho_0}{4R \varepsilon}r^{\prime 2}\; \hat{r}\right)\cdot\left(\frac{\rho_0}{4R}r^{\prime 2}\; \hat{r}\right)r^{\prime 2}\,d{r^{\prime}}\\
+										&= \frac{\pi \rho_0^{2}}{8R^{2} \varepsilon}\frac{R^{7}}{7}\implies \boxed{U_1=\frac{\pi \rho_0^{2}R^{5}}{56 \varepsilon}}
+						\end{split}
+				\end{align}
+				e fora da esfera
+				\begin{align}
+						\begin{split}
+							U_{2} &= \frac{1}{2}\int\limits_{v}\vec{E}_{2}\cdot \vec{D}_{2}\,d{v}\\
+										&= \frac{1}{2}\int\limits_{0}^{2 \pi}\,d{\phi}\int\limits_{0}^{\pi}\sen \theta\,d{\theta}\int\limits_{R}^{\infty}\left(\frac{\rho_0 R^{3}}{4 \varepsilon_0}\frac{1}{r^{\prime 2}}\; \hat{r}\right)\cdot\left(\frac{\rho_0 R^{3}}{4}\frac{1}{r^{\prime 2}}\; \hat{r}\right)r^{\prime 2}\,d{r^{\prime}}\\
+										&= \frac{\pi\rho_0^{2} R^{6}}{8 \varepsilon_0}\left(-\frac{1}{r}\Bigg|_{R}^{\infty}\right)\implies \boxed{U_{2}=\frac{\pi \rho_0^{2}R^{5}}{8 \varepsilon_0}}
+						\end{split}
+				\end{align}
+				por fim
+				\begin{align*}
+						U_{T}=\frac{\pi \rho_0^{2}R^{5}}{56 \varepsilon}+\frac{\pi \rho_0^{2}R^{5}}{8 \varepsilon_0}
+				\end{align*}
+				\begin{align}
+						\boxed{
+							U_{T}=\frac{\pi \rho_0 R^{5}}{56}\left(\frac{\varepsilon_0+7 \varepsilon}{\varepsilon \varepsilon_0}\right)
+						}
+				\end{align}
+				como já obtido anteriormente.
+		\end{enumerate}
+
+
+
+	\end{sol}
+\end{prob}
