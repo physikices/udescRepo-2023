@@ -3,163 +3,806 @@
 % --------------------------------------------- %
  \addcontentsline{toc}{section}{Problema 01}
  \begin{prob}
-	Considere os vetores de estados
-	\begin{align} 
-		|\psi\rangle &=
-		\begin{pmatrix}
-			5i\\
-			2\\
-			-1
-		\end{pmatrix}\condition{e $
-			\displaystyle{
-				|\phi\rangle =
-				  \begin{pmatrix}
-						3\\
-						8i\\
-						-9i									 
-				\end{pmatrix}}
-		$} 
-	\end{align}
-	\begin{enumerate}[label=\alph *)]
-		\item Estes vetores estão normalizados? Se não, normalize-os.
-		\item Estes vetores são ortogonais?
-	\end{enumerate}
+	 Considere os vetores de estados
+	 \begin{align} 
+		 |\psi\rangle &=
+		 \begin{pmatrix}
+			 5i\\
+			 2\\
+			 -1
+		 \end{pmatrix}\condition{e $
+			 \displaystyle{
+				 |\phi\rangle =
+				 \begin{pmatrix}
+					 3\\
+					 8i\\
+					 -9i									 
+			 \end{pmatrix}}
+		 $} 
+	 \end{align}
+	 \begin{enumerate}[label=\alph *)]
+		 \item Estes vetores estão normalizados? Se não, normalize-os.
+		 \item Estes vetores são ortogonais?
+	 \end{enumerate}
 
-	\begin{sol}
+	 \begin{sol}
+		 \begin{enumerate}[label=\alph *)]
+			 \item Dado um ket $|{\alpha}\rangle$ não nulo em um espaço de Hilbert, se $\alpha$ é ortonomal, então a seguinte propriedade deve ser satisfeita:
+				 \begin{align}
+					 \langle \alpha|\alpha \rangle = 1
+				 \end{align}
+				 Dado que
+				 \begin{align}
+					 \langle \psi|\psi\rangle &= 
+					 \begin{pmatrix}
+						 -5i & 2 & -1
+					 \end{pmatrix}
+					 \begin{pmatrix}
+						 5i \\
+						 2 \\
+						 -1
+					 \end{pmatrix} = 30
+				 \end{align}
+				 e
+				 \begin{align}
+					 \langle{\phi}|{\phi}\rangle &=
+					 \begin{pmatrix}
+						 3 & -8i & 9i
+					 \end{pmatrix}
+					 \begin{pmatrix}
+						 3 \\
+						 8i \\
+						 -9i
+					 \end{pmatrix} = 154
+				 \end{align}
+				 $|{\psi}\rangle$ e $|{\phi}\rangle$ estão $\boxed{\text{não-normalizados}}$. Para normalizá-los, podemos definir $|{\bar{\psi}}\rangle$ e $|{\bar{\phi}}\rangle$ tal que:
+				 \begin{align}
+					 |{\bar{\psi}}\rangle &= \frac{|{\psi}\rangle}{\sqrt{\langle{\psi}|{\psi}\rangle}}=\frac{1}{\sqrt{30}}|{\psi}\rangle
+					 =\boxed{
+						 \frac{1}{\sqrt{30}}
+						 \begin{pmatrix}
+							 5i \\
+							 2 \\
+							 -1
+						 \end{pmatrix}
+					 }
+				 \end{align}
+				 da mesma forma, 
+				 \begin{align}
+					 |{\bar{\phi}}\rangle &= \frac{|{\phi}\rangle}{\sqrt{\langle{\phi}|{\phi}\rangle}}=\boxed{
+						 \frac{1}{\sqrt{154}}
+						 \begin{pmatrix}
+							 3 \\
+							 8i \\
+							 -9i
+						 \end{pmatrix}
+					 }
+					 \end{align}
+				 \item Para que $|{\psi}\rangle$ e $|{\phi}\rangle$ sejam ortogonais, deve-se ter que
+					 \begin{align}
+						 \langle{\psi}|{\phi}\rangle &= 0
+					 \end{align}
+					 mas,
+					 \begin{align}
+						 \langle{\psi}|{\phi}\rangle &= 
+						 \begin{pmatrix}
+							 -5i & 2 & -1
+						 \end{pmatrix}
+						 \begin{pmatrix}
+							 3 \\
+							 8i \\
+							 -9i
+						 \end{pmatrix} = 10i\implies \boxed{\text{portanto, não são ortogonais!}}
+					 \end{align}
+			 \end{enumerate}
+		 \end{sol}		
+	 \end{prob}
+	 % --------------------------------------------- %
 
-	\end{sol}		
- \end{prob}
-	% --------------------------------------------- %
+	 % --------------------------------------------- %
+	 % Q02
+	 % --------------------------------------------- %
+	 \addcontentsline{toc}{section}{Problema 02}
+	 \begin{prob}
+		 Mostre que os operadores $\hat{p}$ e $\hat{p}^{2}$ são hermitianos. Lembrando que:
+		 \begin{align}
+			 \hat{p}&=-i \hbar \frac{d}{dx}
+		 \end{align}
+		 \begin{sol}
+		 	Um operador $\hat{Q}$ é dito hermitiano, se para quaisquer duas funções $f$ e $g$, a condição:
+			\begin{align}
+				\langle{f}|\hat{Q}|{g}\rangle &= \langle{\hat{Q}f}|{g}\rangle
+			\end{align}
+			é satisfeita.
+		 \end{sol}
+		 \begin{proof}
+			 Considere duas funções $\psi(x)$ e $\phi(x)$ definidas $\forall$ $x\in{\mathbb{H}}$, em que $\mathbb{H}$ representa um espaço de Hilbert. Se o operador momento $\hat{p}$ for hermitiano, a identidade acima deve ser observada e $\hat{p}=\hat{p}^{\dag}$, segue que
+			 \begin{align}
+				 \begin{split}
+					 \langle{\psi}|\hat{p}|{\phi}\rangle &= \int\limits_{-\infty}^{\infty} \psi^{*}\left(-i \hbar{\frac{d}{dx}}\right) \phi\,d{x}\\
+																							 &= -i \hbar\int\limits_{-\infty}^{\infty} \psi^{*}\frac{d \phi}{dx}\,d{x}\\
+																							 &= -i \hbar \left[\int\limits_{-\infty}^{\infty}\frac{d}{dx}\left(\psi^{*}\phi\right)\,d{x}-\int\limits_{-\infty}^{\infty} \phi \frac{d \psi^{*}}{dx}\,d{x}\right]\\
+																							 &= -i \hbar{}\left[\psi^{*} \phi\Bigg|_{-\infty}^{\infty}-\int\limits_{-\infty}^{\infty} \phi \frac{d \psi^{*}}{dx}\,d{x}\right]
+				 \end{split}
+			 \end{align}
+			 uma vez que $\psi$ e $\phi$ pertencem ambas a um espaço de Hilbert, é necessário que o termo $\psi^{*} \phi=0$ quando $x\to \pm\infty$, ficamos com
+			 \begin{align}
+				 \begin{split}
+					 \langle{\psi}|\hat{p}|{\phi}\rangle &= i \hbar{\int\limits_{-\infty}^{\infty} \phi \frac{d \psi^{*}}{dx}\,d{x}}\\
+																							 &= \int\limits_{-\infty}^{\infty}\left(-i \hbar{}\frac{d}{dx} \psi\right)^{*} \phi\,d{x}\\
+																							 &= \langle{\hat{p} \psi}|{\phi}\rangle\implies \boxed{\hat{p}=\hat{p}^{\dag}}
+				 \end{split}
+			 \end{align}
+			 Análogamente para $\hat{p}^{2}$
+			 \begin{align}
+				 \begin{split}
+					 \langle{\psi}|\hat{p}^{2}|{\phi}\rangle &= \int\limits_{-\infty}^{\infty} \psi^{*}\left(-i \hbar{}\frac{d}{dx}\right)^{2} \phi\,d{x}\\
+																									 &= \left(-i \hbar{}\right)^{2}\int\limits_{-\infty}^{\infty} \psi^{*} \frac{d^{2} \phi}{dx^{2}}\,d{x}
+				 \end{split}
+			 \end{align}
+			 é preciso encontrar uma relação pra a derivada de segunda ordem. Pela regra do produto tem-se que
+			 \begin{align}
+				 \begin{split}
+					 \frac{d^{2}}{dx^{2}}\left(\psi^{*} \phi\right) &= \frac{d}{dx}\left(\frac{d \psi^{*}}{dx} \phi+\psi^{*} \frac{d \phi}{dx}\right)\\
+																													&= \phi \frac{d^{2} \psi^{*}}{dx^{2}}+\frac{d \psi^{*}}{dx} \frac{d \phi}{dx}+\frac{d \psi^{*}}{dx} \frac{d \phi}{dx}+\psi^{*}\frac{d^{2} \phi}{d \phi^{2}}\\
+				 \end{split}
+			 \end{align}
+			 ou seja
+			 \begin{align}
+				 \psi^{*} \frac{d^{2} \phi}{dx^{2}} &= \frac{d^{2}}{dx^{2}}\left(\psi^{*} \phi\right)-\phi \frac{d^{2} \psi^{*}}{d \psi^{2}}-2\frac{d \psi^{*}}{dx} \frac{d \phi}{dx}
+			 \end{align}
+			 substituindo na integral
+			 \begin{align}
+				 \begin{split}
+					 \label{eq:q2-hermitiano_01}
+					 \langle{\psi}|\hat{p}^{2}|{\phi}\rangle &= \left(-i \hbar{}\right)^{2}\int\limits_{-\infty}^{\infty}\left[\frac{d^{2}}{dx^{2}}\left(\psi^{*} \phi\right)-\phi \frac{d^{2} \psi^{*}}{d \psi^{2}}-2\frac{d \psi^{*}}{dx} \frac{d \phi}{dx}\right]\,d{x}\\
+																									 &= \left(-i \hbar{}\right)\left[\frac{d}{dx}\left(\psi^{*} \phi\right)\Bigg|_{-\infty}^{\infty}-\int\limits_{-\infty}^{\infty} \phi \frac{d^{2} \psi^{*}}{dx^{2}}\,d{x}-2\int\limits_{-\infty}^{\infty}\frac{d \psi^{*}}{dx} \frac{d \phi}{dx}\,d{x}\right]
+				 \end{split}
+			 \end{align}
+			 O termo que diverge na derivada em \eqref{eq:q2-hermitiano_01}, se anula pelo mesmo motivo ($\psi$ e $\phi$ $\in\mathbb{H}$), já o último termo, usando integração por partes obtemos
+			 \begin{align}
+				 \begin{split}
+					 \langle{\psi}|\hat{p}^{2}|{\phi}\rangle &= \left(-i \hbar{}\right)^{2}\left[(-1)\int\limits_{-\infty}^{\infty} \phi \frac{d^{2} \psi^{*}}{dx^{2}}\,d{x}-2\left(\cancelto{0}{\phi \frac{d \psi^{*}}{dx}\Bigg|^{-\infty}_{\infty}}-\int\limits_{-\infty}^{\infty} \phi \frac{d^{2} \psi^{*}}{dx^{2}}\,d{x}\right)\right]\\
+																									 &=  \left(-i \hbar{}\right)^{2}\int\limits_{-\infty}^{\infty} \phi \frac{d^{2} \psi^{*}}{dx^{2}}\,d{x}\\
+																									 &= \int\limits_{-\infty}^{\infty} \phi\left(-i \hbar{}\right)^{2}\left(\frac{d}{dx}\right)^{2} \psi^{*}\,d{x}\\
+																									 &= \int\limits_{-\infty}^{\infty}\left[\left(-i \hbar{}\frac{d}{dx}\right)^{2} \psi\right]^{*}\phi\,d{x}=\langle{\hat{p}^{2}} \psi|{\phi}\rangle\implies \boxed{\hat{p}^{2}=\hat{p}^{2\dag}}
+				 \end{split}
+			 \end{align}
 
-	% --------------------------------------------- %
-	% Q02
-	% --------------------------------------------- %
-	\addcontentsline{toc}{section}{Problema 02}
-	\begin{prob}
-		Mostre que os operadores $\hat{p}$ e $\hat{p}^{2}$ são hermitianos. Lembrando que:
-		\begin{align}
-			\hat{p}&=-i \hbar \frac{d}{dx}
-		\end{align}
-	\end{prob}
-	% --------------------------------------------- %
+		 \end{proof}
+	 \end{prob}
+	 % --------------------------------------------- %
 
-	% --------------------------------------------- %
-	% Q03
-	% --------------------------------------------- %
-	\addcontentsline{toc}{section}{Problema 03}
-	\begin{prob}
-		Os autoestados do poço infinito são autoestados do momento? Justifique.
-		\par\noindent\textbf{Sugestão:} Teste se a equação atuação do operador  momento  nos autoestados do poço infinito $\hat{p} \psi_{n}$ geram uma equação de autovalores. Se gerarem uma equação de autovalores, então $\psi_{n}$ (que são autoestados do Hamiltoniano) serão também  autoestados do momento.
-	\end{prob}
-	% --------------------------------------------- %
+	 % --------------------------------------------- %
+	 % Q03
+	 % --------------------------------------------- %
+	 \addcontentsline{toc}{section}{Problema 03}
+	 \begin{prob}
+		 Os autoestados do poço infinito são autoestados do momento? Justifique.
+		 \par\noindent\textbf{Sugestão:} Teste se a equação atuação do operador  momento  nos autoestados do poço infinito $\hat{p} \psi_{n}$ geram uma equação de autovalores. Se gerarem uma equação de autovalores, então $\psi_{n}$ (que são autoestados do Hamiltoniano) serão também  autoestados do momento.
+		 \begin{sol}
+		 	Seguindo como sugerido. O poço de potencial infinito de largura $a$, adimite como soluções da eq. de Schoröedinger independente do tempo o seguinte conjunto de autofunções
+			\begin{align}
+				\psi_{n} &= \sqrt{\frac{2}{a}}\sin \left(\frac{n \pi x}{a}\right)\condition{com $n=1,2,3...$}
+			\end{align}
+			de modo que
+			\begin{align}
+				\begin{split}
+					\hat{p} \psi_{n} &= -i \hbar{} \frac{d}{dx}\left[\sqrt{\frac{2}{a}}\sin \left(\frac{n \pi x}{a}\right)\right]\\
+													 &= -i \hbar{}\left[\sqrt{\frac{2}{a}}\left(\frac{n \pi}{a}\right)\cos \left(\frac{n \pi x}{a}\right)\right]\\
+													 &= -\frac{i \hbar n \pi}{a}\left[\sqrt{\frac{2}{a}}\cos \left(\frac{n \pi x}{a}\right)\right]\times \frac{\sin \left(\frac{n \pi x}{a}\right)}{\sin \left(\frac{n \pi x}{a}\right)}\\
+													 &= -\frac{in \hbar{ \pi}}{a}\left[\cot \left(\frac{n \pi x}{a}\right)\right]\sqrt{\frac{2}{a}}\sin \left(\frac{n \pi x}{a}\right)\\
+													 &= -\frac{in \hbar{} \pi}{a}\left[\cot \left(\frac{n \pi x}{a}\right)\right] \psi_{n}\neq \lambda \psi_{n}
+				\end{split}
+			\end{align}
+			como a atuação do operador momento nas auto funções $\psi_{n}$ não geram autovalores constantes da autofunção, então os autoestados do poço infinito não são autoestados do operador momento. 
+		 \end{sol}
+	 \end{prob}
+	 % --------------------------------------------- %
 
-	% --------------------------------------------- %
-	% Q04
-	% --------------------------------------------- %
-	\addcontentsline{toc}{section}{Problema 04}
-	\begin{prob}
-		\textbf{(Problema 3.11 do Griffiths)} Encontre a função de onda $\Phi(p,t)$, para uma partícula no estado fundamental  do hoscilador harmômico. Qual é a probabilidade (com 2 algarismos significativos) de que uma medida do momento $p$ de uma partícula  neste estado produza um valor fora do range clássico.
-		\par\noindent\textbf{Sugestão 01:} Procure numa tabela matemática por uma "Distribuição Normal" ou "Função Erro" ou calcule com algum programa (wxMaxima, Mathematica, etc...) ou ainda consulte as notas da aula 08 (em particular o exercício feito no final desta aula).
-		\par\noindent\textbf{Sugestão 02:} Estude primeiramente o exemplo 3.4 do Griffiths (página 108).
-	\end{prob}
-	% --------------------------------------------- %
+	 % --------------------------------------------- %
+	 % Q04
+	 % --------------------------------------------- %
+	 \addcontentsline{toc}{section}{Problema 04}
+	 \begin{prob}
+		 \textbf{(Problema 3.11 do Griffiths)} Encontre a função de onda $\Phi(p,t)$, para uma partícula no estado fundamental  do oscilador harmômico. Qual é a probabilidade (com 2 algarismos significativos) de que uma medida do momento $p$ de uma partícula  neste estado produza um valor fora do range clássico.
+		 \par\noindent\textbf{Sugestão 01:} Procure numa tabela matemática por uma "Distribuição Normal" ou "Função Erro" ou calcule com algum programa (wxMaxima, Mathematica, etc...) ou ainda consulte as notas da aula 08 (em particular o exercício feito no final desta aula).
+		 \par\noindent\textbf{Sugestão 02:} Estude primeiramente o exemplo 3.4 do Griffiths (página 108).
+		 \begin{sol}
+			 No espaço de posição, a solução da eq. de onda para o oscilador harmônico em seu estado fundamental é conhecida e é da forma
+			 \begin{align}
+				 \Psi_{0}(x,t) &= \left(\frac{m\omega}{\pi \hbar{}}\right)^{1/4}\mathrm{e}^{-m \omega x^{2}/2\hbar{}}\mathrm{e}^{-iE_{0} t/\hbar{}}\condition{com $\displaystyle{E_{0}=\frac{1}{2}\hbar{} \omega}$}
+			 \end{align}
+			  a representação no espaço dos momentos pode ser encontada via transformada de Fourier tal que
+				\begin{align}
+					\Phi(p,t) &= \frac{1}{\sqrt{2 \pi \hbar{}}}\int\limits_{-\infty}^{\infty}\mathrm{e}^{-ipx/h} \Psi(x,t)\,d{x}	
+				\end{align}
+				portanto
+				\begin{align}
+						\begin{split}
+							\Phi(p,t) &= \frac{1}{\sqrt{2 \pi \hbar}}\left(\frac{m \omega}{\pi \hbar}\right)^{1/4}\mathrm{e}^{-i \omega t/2}\int\limits_{-\infty}^{\infty}\mathrm{e}^{-ipx/\hbar}\mathrm{e}^{-m \omega x^{2}/2\hbar}\,d{x}\\
+												&= \frac{1}{\sqrt{2 \pi \hbar}} \left(\frac{m \omega}{\pi \hbar}\right)^{1/4} \mathrm{e}^{-i \omega t/2}\int\limits_{-\infty}^{\infty}\exp\left[-\left(\frac{ip}{\hbar}x+\frac{m \omega}{2\hbar}x^{2}\right)\right]\,d{x}\\
+												&= \frac{1}{\sqrt{2 \pi \hbar}}\left(\frac{m \omega}{\pi \hbar}\right)^{1/4}\mathrm{e}^{-i \omega t/2}\int\limits_{-\infty}^{\infty}\exp\left[-\left(\sqrt{\frac{m \omega}{2 \hbar}}x+i\sqrt{\frac{2 \hbar}{m \omega}}\frac{p}{2 \hbar}\right)^{2}+\frac{2p^{2}}{4\hbar m \omega}\right]\,d{x}\\
+												&= \frac{1}{\sqrt{2 \pi \hbar}}\left(\frac{m \omega}{\pi \hbar}\right)^{1/4}\mathrm{e}^{-i \omega t/2}\mathrm{e}^{-p^{2}/2\hbar m \omega}\int\limits_{-\infty}^{\infty}\exp \left[-\left(\sqrt{\frac{m \omega}{2 \hbar}}x+ip\sqrt{\frac{1}{2m \omega \hbar}}\right)^{2}\right]\,d{x}\\
+												&= \frac{1}{\sqrt{2 \pi \hbar}}\left(\frac{m \omega}{\pi \hbar}\right)^{1/4}\mathrm{e}^{-i \omega t/2}\mathrm{e}^{-p^{2}/2\hbar m \omega}\sqrt{\frac{2\hbar}{m \omega}}\underbrace{\int\limits_{-\infty}^{\infty}\exp\left[-\left(\sqrt{\frac{m \omega}{2\hbar}}x+ip\sqrt{\frac{1}{2\hbar m \omega}}\right)^{2}\right]}_{\displaystyle{\sqrt{\pi}}}\\
+												&= \frac{1}{\sqrt{2 \pi \hbar}}\left(\frac{m \omega}{\pi \hbar}\right)^{1/4}\mathrm{e}^{-i \omega t /2}\mathrm{e}^{-p^{2}/2\hbar m \omega}\sqrt{\frac{2\hbar \pi}{m \omega}}\\
+												&= \left(\frac{1}{\pi \hbar m \omega}\right)^{1/4}\mathrm{e}^{-i \omega t/2}\mathrm{e}^{-p^{2}/2\hbar m \omega}
+						\end{split}
+				\end{align}
+				A probabilidade de medir uma partícula com algum valor de momento $p$ é dada simplesmente por
+				\begin{align}
+					P&=\int\limits_{-\infty}^{\infty}\abs{\Phi(p,t)^{*} \Phi(p,t)}\,d{p}=\int\limits_{-\infty}^{\infty}\abs{\Phi(p)}^{2}\,d{p}
+				\end{align}
+				uma vez que os valores de momento associados à energia do estado fundamental $E_{0}$ para o oscilador harmônico é dada por
+				\begin{align}
+					\frac{p^{2}}{2m} &= E_{0}\\
+					p &= \pm\sqrt{2mE_{0}}\condition{com $\displaystyle{E_{0}=\frac{1}{2} \omega \hbar}$}
+				\end{align}
+				a probabilidade de medir uma partícula com valores de momento fora desta região, é representada pela região sombreada da figura \ref{fig:pltQ04-l2} 
+				\begin{figure}[ht!]
+					\centering
+					\input{assets/pltQ04-l2.tikz}
+					\caption{Regiões de probabilidade de encontrar uma partícula portando valores de momento nos intervalos $(-\infty,-\sqrt{m \omega \hbar}$] e $[+\sqrt{m \omega \hbar}, +\infty)$}
+					\label{fig:pltQ04-l2}
+				\end{figure}
 
-	% --------------------------------------------- %
-	% Q05
-	% --------------------------------------------- %
-	\addcontentsline{toc}{section}{Problema 05}
-	\begin{prob}
-		Na lista 1 foi mostrado que $\displaystyle{\left[\hat{p}, f(x)\right]=-i \hbar \frac{\partial f(x)}{\partial x }}$. Utilizando este resultado, obtenha a relação de incerteza entre o operador hamiltoniano do oscilador harmônico
-		\begin{align}
-			\hat{H}&=\frac{\hat{p}^{2}}{2m}+\frac{m \omega^{2}x^{2}}{2}
-		\end{align}
-		e o operador $(\sigma_{H} \sigma_{p})$. Comente se os operadores hamiltoniano e momento são compatíveis.
-	\end{prob}
-	% --------------------------------------------- %
+				Pelo gráfico tem-se que
+				\begin{align}
+					P(-\infty<p\leq -\sqrt{m \omega \hbar})+P(\sqrt{m \omega \hbar}\leq p<\infty) &= \int\limits_{-\infty}^{-\sqrt{m \omega \hbar}}\abs{\Phi}^{2}\,d{p}+\int\limits_{\sqrt{m \omega \hbar}}^{\infty}\abs{\Phi}^{2}\,d{p}
+				\end{align}
+				ou seja
+				\begin{align}
+					\begin{split}
+						\int\limits_{-\infty}^{-\sqrt{ m\omega \hbar}}\abs{\Phi}^{2}\,d{p}+\int\limits_{\sqrt{m \omega \hbar}}^{\infty}\abs{\Phi}^{2}\,d{p} &= \int\limits_{-\infty}^{\infty}\abs{\Phi}^{2}\,d{p} - \int\limits_{-\sqrt{m \omega \hbar}}^{0}\abs{\Phi}^{2}\,d{p}-\int\limits_{0}^{\sqrt{m \omega \hbar}}\abs{\Phi}^{2}\,d{p}\\
+																																																																								&= \int\limits_{-\infty}^{\infty}\abs{\Phi}^{2}\,d{p}-2\int\limits_{0}^{\sqrt{m \omega \hbar}}\abs{\Phi}^{2}\,d{p}\\
+																																																																								&= \int\limits_{-\infty}^{\infty}\left[\left(\frac{1}{\pi \hbar m \omega}\right)^{1/4}\mathrm{e}^{-p^{2}/2\hbar m \omega}\right]^{2}\,d{p}+\\
+																																																																								&\qquad -2\int\limits_{0}^{\sqrt{m \omega \hbar}}\left[\left(\frac{1}{\pi \hbar m \omega}\right)^{1/4}\mathrm{e}^{-p^{2}/2\hbar m \omega}\right]^{2}\,d{p}\\
+																																																																								&= \frac{1}{\sqrt{\pi \hbar m \omega}}\left[\underbrace{\int\limits_{-\infty}^{\infty}\mathrm{e}^{-p^{2}/\hbar m \omega}\,d{p}}_{\displaystyle\sqrt{\pi \hbar m \omega}}-2\int\limits_{0}^{\sqrt{m \omega \hbar}}\mathrm{e}^{-p^{2}/m \hbar \omega}\,d{p}\right]\\
+																																																																								&= 1-\frac{2}{\sqrt{\pi \hbar m \omega}}\int\limits_{0}^{\sqrt{m \omega \hbar}}\mathrm{e}^{-p^{2}/m \hbar \omega}\,d{p}
+					\end{split}
+				\end{align}
+				a integral acima não possui solução analítica. Mas é possível usar a relação a seguir para o cálculo desta integral
+				\begin{align}
+					\frac{1}{\sqrt{2 \pi}}\int\limits_{0}^{x}\mathrm{e}^{-t^{2}/2}\,d{t} &= \frac{1}{2}\erf \left(\frac{x}{\sqrt{2}}\right) \label{eq:normal-erfunction}
+				\end{align}
+				fazendo a mudança na variável de integração
+				\begin{align}
+					\begin{split}
+						\frac{t^{2}}{2} &= \frac{p^{2}}{m \hbar \omega}\\
+						t &= \sqrt{\frac{2}{m \hbar \omega}}p\\
+						dt &= \sqrt{\frac{2}{m \hbar \omega}} dp
+					\end{split}
+				\end{align}
+				se $p=0$ então $t=0$, e se $p=\sqrt{m \hbar \omega}$ então $t=\sqrt{2}$, substituindo na integral de interesse, manipulando e usando a relação \eqref{eq:normal-erfunction} obtemos
+				\begin{align}
+					\begin{split}
+						\int\limits_{-\infty}^{-\sqrt{m \omega \hbar}} \abs{\Phi}^{2}\,d{p}+\int\limits_{\sqrt{m \omega \hbar}}^{\infty}\abs{\Phi}^{2}\,d{p} &= 1 - \frac{2}{\sqrt{\pi \hbar m \omega}}\sqrt{\frac{m \hbar \omega}{2}}\int\limits_{0}^{\sqrt{2}}\mathrm{e}^{-t^{2}/2}\,d{t}\\
+																																																																														 &= 1- 2\frac{1}{\sqrt{2 \pi}}\int\limits_{0}^{\sqrt{2}}\mathrm{e}^{-t^{2}/2}\,d{t}\\
+																																																																														 &= 1-2\frac{1}{2}\erf \left(\frac{\sqrt{2}}{\sqrt{2}}\right)\\
+																																																																														 &= 1-\erf(1)\\
+																																																																														 &= 1-0,842700779\\
+																																																																														 &= \boxed{0,16}
+					\end{split}
+				\end{align}
+		 \end{sol}
+	 \end{prob}
+	 % --------------------------------------------- %
 
-	% --------------------------------------------- %
-	% Q06
-	% --------------------------------------------- %
-	\addcontentsline{toc}{section}{Problema 06}
-	\begin{prob}
-		Um hamiltoniano de um certo sistema de 2 níveis é dado por
-		\begin{align}
-			\hat{H}&=\varepsilon \left(|1\rangle\langle 1|-|2\rangle\langle  2|+|1\rangle\langle  2|+|2\rangle\langle  1|\right)
-		\end{align}
-		onde $|1\rangle$, $\langle  2|$ é uma base ortonormal e $\varepsilon$ é um número com dimensão de energia.
+	 % --------------------------------------------- %
+	 % Q05
+	 % --------------------------------------------- %
+	 \addcontentsline{toc}{section}{Problema 05}
+	 \begin{prob}
+		 Na lista 1 foi mostrado que $\displaystyle{\left[\hat{p}, f(x)\right]=-i \hbar \frac{\partial f(x)}{\partial x }}$. Utilizando este resultado, obtenha a relação de incerteza entre o operador hamiltoniano do oscilador harmônico
+		 \begin{align}
+			 \hat{H}&=\frac{\hat{p}^{2}}{2m}+\frac{m \omega^{2}x^{2}}{2}
+		 \end{align}
+		 e o operador $(\sigma_{H} \sigma_{p})$. Comente se os operadores hamiltoniano e momento são compatíveis.
+		 \begin{sol}
+		 		Partindo do princípio de incerteza generalizado, aplicado aos operadores Hamiltoniano e momento 
+				\begin{align}
+					\sigma_{H} \sigma_{p}\geq \abs{\frac{1}{2i}\langle [\hat{H},\hat{p}] \rangle}
+				\end{align}
+				é preciso calcular o comutador entre estes operadores
+				\begin{align}
+					\begin{split}
+						[\hat{H},\hat{p}] &= \frac{1}{2m}\cancelto{0}{\left[\hat{p}^{2},\hat{p}\right]}+[V,\hat{p}]\\
+															&= i \hbar \frac{\partial V(x)}{\partial x}\implies \boxed{[\hat{H},\hat{p}]=i \hbar m \omega^{2}\hat{x}}
+					\end{split}
+				\end{align}
+				logo, os operadores $\hat{H}$ e $\hat{p}$ não comutam, são grandezas incompatíveis
+				\begin{align}
+					\begin{split}
+						\sigma_{H} \sigma_{p} &\geq \abs{\frac{1}{2i} \langle i \hbar m \omega^{2} \hat{x} \rangle}\\
+																	&\geq \frac{1}{2}\hbar m \omega^{2}\langle \hat{x} \rangle
+					\end{split}
+				\end{align}
+		 \end{sol}
+	 \end{prob}
+	 % --------------------------------------------- %
 
-		\begin{enumerate}[label=\alph *)]
-				\item Encontre a matriz que representa este Hamiltoniano (sugestão: encontre os elementos de matriz fazendo os sanduíches do operador).
-				\item Calcule seus autovalores e autovetores normalizados.
-		\end{enumerate}
-	\end{prob}
-	% --------------------------------------------- %
+	 % --------------------------------------------- %
+	 % Q06
+	 % --------------------------------------------- %
+	 \addcontentsline{toc}{section}{Problema 06}
+	 \begin{prob}
+		 Um hamiltoniano de um certo sistema de 2 níveis é dado por
+		 \begin{align}
+			 \hat{H}&=\epsilon \left(|1\rangle\langle 1|-|2\rangle\langle  2|+|1\rangle\langle  2|+|2\rangle\langle  1|\right)
+		 \end{align}
+		 onde $|1\rangle$, $\langle  2|$ é uma base ortonormal e $\epsilon$ é um número com dimensão de energia.
 
-	% --------------------------------------------- %
-	% Q07
-	% --------------------------------------------- %
-	\addcontentsline{toc}{section}{Problema 07}
-	\begin{prob}
-		Um operador $\hat{A}$, representando um observável $A$, têm dois autoestados normalizados $\psi_{1}$ e $\psi_{2}$, com autovalores $a_{1}$ e $a_{2}$ respectivamente. O operador $\hat{B}$, representando o observável $B$, têm dois autoestados normalizados $\phi_{1}$ e $\phi_{2}$, com autovalores $b_{1}$ e $b_{2}$, respectivamente. Os autoestados se relacionam por:
-		\begin{align}
-			|\psi_{1}\rangle &= \frac{1}{5}\left(3|\psi_{1}\rangle+4|\psi_{2}\rangle\right)\condition{e $|\psi_{2}\rangle=\frac{1}{5}\left(4|\psi_{1}\rangle-3|\psi_{2}\rangle\right)$}  
-		\end{align}
-		\begin{enumerate}[label=\alph *)]
-				\item O observável $A$ é medido e o valor $a_{2}$ é obtido. Qual é o estado do sistema imediatamente após esta medida?
-				\item Se $B$ é medido em seguida, quais são os possíveis resultados e quais são suas possibilidades?
-				\item Logo após a medida de $B$, $A$ é medido novamente. Qual a  é a probabilidade de obter $a_{1}$ novamente? \textbf{Cuidado:} considerar o problema completo, onde (item a) medida $a_{2}$, logo após medimos um  dos estados de $B$ (item b), e por fim  medimos $a_{1}$.
-		\end{enumerate}
-	\end{prob}
+		 \begin{enumerate}[label=\alph *)]
+			 \item Encontre a matriz que representa este Hamiltoniano (sugestão: encontre os elementos de matriz fazendo os sanduíches do operador).
+			 \item Calcule seus autovalores e autovetores normalizados.
+		 \end{enumerate}
+		 \begin{sol}
+		 	\begin{enumerate}[label=\alph *)]
+		 			\item Uma vez que $|{1}\rangle$ e $|{2}\rangle$ formam uma base ortonormal, valem as seguintes relações
+						\begin{subequations}
+							\begin{align}
+								\langle{1}|{2}\rangle &= \langle{2}|{1}\rangle = 0\\
+								\langle{1}|{1}\rangle &= \langle{2}|{2}\rangle = 1
+							\end{align}
+					\end{subequations}
+					procedendo como recomendado
+					\begin{align}
+						\begin{split}
+							H_{11} = \langle{1}|\hat{H}|{1}\rangle &= \langle{1}|\epsilon \left(|1\rangle\langle 1|-|2\rangle\langle  2|+|1\rangle\langle  2|+|2\rangle\langle  1|\right)|{1}\rangle\\
+																										 &=\epsilon \left(\langle{1}|1\rangle\langle 1|{1}\rangle-\langle{1}|2\rangle\langle  2|{1}\rangle+\langle{1}|1\rangle\langle  2|{1}\rangle+\langle{1}|2\rangle\langle  1|{1}\rangle\right)=\epsilon\\
+							H_{12} = \langle{1}|\hat{H}|{2}\rangle &= \langle{1}|\epsilon \left(|1\rangle\langle 1|-|2\rangle\langle  2|+|1\rangle\langle  2|+|2\rangle\langle  1|\right)|{2}\rangle\\
+																										 &=\epsilon \left(\langle{1}|1\rangle\langle 1|{2}\rangle-\langle{1}|2\rangle\langle  2|{2}\rangle+\langle{1}|1\rangle\langle  2|{2}\rangle+\langle{1}|2\rangle\langle  1|{2}\rangle\right)=\epsilon\\
+							H_{21} = \langle{2}|\hat{H}|{1}\rangle &= \langle{2}|\epsilon \left(|1\rangle\langle 1|-|2\rangle\langle  2|+|1\rangle\langle  2|+|2\rangle\langle  1|\right)|{1}\rangle\\
+																										 &=\epsilon \left(\langle{2}|1\rangle\langle 1|{1}\rangle-\langle{2}|2\rangle\langle  2|{1}\rangle+\langle{2}|1\rangle\langle  2|{1}\rangle+\langle{2}|2\rangle\langle  1|{1}\rangle\right)=\epsilon\\
+							H_{22} = \langle{2}|\hat{H}|{2}\rangle &= \langle{2}|\epsilon \left(|1\rangle\langle 1|-|2\rangle\langle  2|+|1\rangle\langle  2|+|2\rangle\langle  1|\right)|{2}\rangle\\
+																										 &=\epsilon \left(\langle{2}|1\rangle\langle 1|{2}\rangle-\langle{2}|2\rangle\langle  2|{2}\rangle+\langle{2}|1\rangle\langle  2|{2}\rangle+\langle{2}|2\rangle\langle  1|{2}\rangle\right)=-\epsilon\\
+						\end{split}
+					\end{align}
+					na representação matricial fica
+					\begin{align}
+						\hat{H} &=
+						\begin{pmatrix}
+							H_{11} & H_{12}\\
+							H_{21} & H_{22}
+						\end{pmatrix}\implies
+						\boxed{\hat{H}=
+							\begin{pmatrix}
+								\epsilon & \epsilon \\
+								\epsilon & -\epsilon
+							\end{pmatrix}
+						}
+					\end{align}
+					\item  Para calcular os autovalores basta resolver
+						\begin{align}
+							\begin{split}
+								\det \left(\hat{H}-\lambda\mathbb{1}\right) &= 0\\
+																														&=
+																														\begin{vmatrix}
+																															\epsilon-\lambda & \epsilon \\
+																															\epsilon & -\epsilon-\lambda
+																														\end{vmatrix}=0\\
+																														&= \left(\epsilon-\lambda\right)(-\epsilon-\lambda)-\epsilon^{2}=0\\
+																														&=-2\epsilon^{2}+\lambda^{2}=0\implies \boxed{\lambda_{1,2}=\pm \epsilon\sqrt{2}}
+							\end{split}
+						\end{align}
+						por fim os autovetores são determinados resolvendo a equação secular
+						\begin{align}
+							\left(\hat{H}-\lambda\mathbb{1}\right)|{S}\rangle&=\mathbb{0}\\
+							\left[
+								\begin{pmatrix}
+									\epsilon & \epsilon \\
+									\epsilon & -\epsilon
+								\end{pmatrix}-
+								\lambda
+								\begin{pmatrix}
+									1 & 0 \\
+									0 & 1
+								\end{pmatrix}
+							\right]
+							\begin{pmatrix}
+								\alpha \\
+								\beta
+							\end{pmatrix}&=
+							\begin{pmatrix}
+								0 \\
+								0
+							\end{pmatrix}
+						\end{align}
+						onde $S$ são os autovetores $|{S}\rangle=\alpha |{1}\rangle+\beta |{2}\rangle$, resultantes do sistema de equações para cada autovalor de $\lambda$ encontrado anteriormente, segue o sistema
+						\begin{subequations}
+							\begin{align}
+								\left(\epsilon-\lambda\right) \alpha+\epsilon \beta &= 0 \label{eq:autovec}\\
+								\epsilon \alpha-\left(\epsilon+\lambda\right)\beta &= 0
+							\end{align}
+						\end{subequations}
+						para $\lambda_{1}=\epsilon \sqrt{2}$, usando \eqref{eq:autovec} tem-se
+						\begin{align}
+							\begin{split}
+								\left(\epsilon-\epsilon \sqrt{2}\right) \alpha+\epsilon \beta &= 0\\
+								\alpha &= -\frac{\beta}{1-\sqrt{2}}\condition{desde que $\epsilon\neq 0$}
+							\end{split}
+						\end{align}
+						ou, ainda
+						\begin{align}
+							\begin{split}
+								\alpha &= \frac{\beta}{\sqrt{2}-1}\frac{\sqrt{2}+1}{\sqrt{2}+1}\implies \alpha=\left(\sqrt{2}+1\right) \beta
+							\end{split}
+						\end{align}
+						a segunda relação entre $\alpha$ e $\beta$ decorre de
+						\begin{align}
+							|{S}\rangle &= \alpha |{1}\rangle + \beta |{2}\rangle =
+							\begin{pmatrix}
+								\alpha \\
+								\beta
+							\end{pmatrix}\condition{com $\displaystyle{\abs{\alpha}^{2}+\abs{\beta}^{2}=1}$}
+						\end{align}
+						ou seja
+						\begin{align}
+							\begin{split}
+								\left(\sqrt{2}+1\right)^{2} \beta^{2}+\beta^{2} &= 1\\
+								\beta^{2} &= \frac{1}{4+2\sqrt{2}}\implies \boxed{\beta=\frac{1}{\sqrt{4+2\sqrt{2}}}}
+							\end{split}
+						\end{align}
+						e
+						\begin{align}
+							\boxed{
+								\alpha = \frac{\sqrt{2}+1}{\sqrt{4+2\sqrt{2}}}
+							}
+						\end{align}
+						procedendo igualmente para $\lambda_{2}$ chegamos a conclusão que
+						\begin{align}
+							\begin{split}
+								\left(1+\sqrt{2}\right) \epsilon\alpha + \epsilon \beta &= 0\\
+								\alpha &= -\frac{\beta}{1+\sqrt{2}}\frac{1-\sqrt{2}}{1-\sqrt{2}}\\
+											 &= \beta \left(1-\sqrt{2}\right)
+							\end{split}
+						\end{align}
+						e
+						\begin{align}
+							\begin{split}
+								\left(1-\sqrt{2}\right)^{2} \beta^{2}+\beta^{2} &= 1\\
+								\left(3-\sqrt{2}\right) \beta^{2}+\beta^{2} &= 1\\
+								\beta^{2}\left(4-2\sqrt{2}\right) &= 1\implies \boxed{\beta=\frac{1}{\sqrt{4-2\sqrt{2}}}}\therefore
+							\end{split}
+						\end{align}
+						\begin{align}
+							\boxed{\alpha = \frac{1-\sqrt{2}}{\sqrt{4-2\sqrt{2}}}}
+						\end{align}
+						e por fim, os autovetores procurados são:
+						\begin{align}
+							\boxed{
+								|{S_{1}}\rangle = \frac{\sqrt{2}+1}{\sqrt{4+2\sqrt{2}}}|{1}\rangle+\frac{1}{\sqrt{4+2\sqrt{2}}}|{2}\rangle
+							}
+						\end{align}
+						\begin{align}
+								\boxed{
+									|{S_{2}}\rangle = \frac{1-\sqrt{2}}{\sqrt{4-2\sqrt{2}}}|{1}\rangle+\frac{1}{\sqrt{4-2\sqrt{2}}}|{2}\rangle
+								}
+						\end{align}
 
-	% --------------------------------------------- %
 
-	% --------------------------------------------- %
-	% Q08
-	% --------------------------------------------- %
-	\addcontentsline{toc}{section}{Problema 08}
-	\begin{prob}
-		Considere um sistema de dois níveis os kets $|\alpha_{1}\rangle$ e $|\alpha_{2}\rangle$ formam uma base ortonormal. Uma nova base $|\beta_{1}\rangle$ e $|\beta_{2}\rangle$ se relacionam com a antiga por:
-		\begin{align}
-			|\beta_{1}\rangle &= \frac{1}{\sqrt{2}}\left(|\alpha_{1}\rangle+|\alpha_{2}\rangle\right)\condition{e $\displaystyle\frac{1}{\sqrt{2}}\left(|\alpha_{1}\rangle-|\alpha_{2}\rangle\right)$}
-		\end{align}
-		Um operador $\hat{P}$ é representado na base $|\alpha_{1}\rangle$ e $|\alpha_{2}\rangle$ pela matriz
-		\begin{align}
-			P &= 
-			\begin{pmatrix}
-				1 & \epsilon \\
-				\epsilon & 1
-			\end{pmatrix}
-			=
-			\begin{pmatrix}
-			\langle \alpha_{1}|\hat{P}|\alpha_{1}\rangle & \langle \alpha_{1}|\hat{P}|\alpha_{2}\rangle \\
-			\langle \alpha_{2}|\hat{P}|\alpha_{1}\rangle & \langle \alpha_{2}|\hat{P}|\alpha_{2}\rangle
-			\end{pmatrix}
-		\end{align}
-		\begin{enumerate}[label=\alph *)]
-			\item Encontre os autovalores deste operador e escreva-o na forma diagonal.
-			\item Encontre a representação de $\hat{P}$ na base $|\beta_{1}\rangle$ e $|\beta_{2}\rangle$.
-		\end{enumerate}
+		 	\end{enumerate}	
+		 \end{sol}
+	 \end{prob}
+	 % --------------------------------------------- %
 
-		\textbf{Sugestão:}
+	 % --------------------------------------------- %
+	 % Q07
+	 % --------------------------------------------- %
+	 \addcontentsline{toc}{section}{Problema 07}
+	 \begin{prob}
+		 Um operador $\hat{A}$, representando um observável $A$, têm dois autoestados normalizados $\psi_{1}$ e $\psi_{2}$, com autovalores $a_{1}$ e $a_{2}$ respectivamente. O operador $\hat{B}$, representando o observável $B$, têm dois autoestados normalizados $\phi_{1}$ e $\phi_{2}$, com autovalores $b_{1}$ e $b_{2}$, respectivamente. Os autoestados se relacionam por:
+		 \begin{align}
+			 |\psi_{1}\rangle &= \frac{1}{5}\left(3|\phi_{1}\rangle+4|\phi_{2}\rangle\right)\condition{e $\displaystyle|\psi_{2}\rangle=\frac{1}{5}\left(4|\phi_{1}\rangle-3|\phi_{2}\rangle\right)$}  
+		 \end{align}
+		 \begin{enumerate}[label=\alph *)]
+			 \item O observável $A$ é medido e o valor $a_{2}$ é obtido. Qual é o estado do sistema imediatamente após esta medida?
+			 \item Se $B$ é medido em seguida, quais são os possíveis resultados e quais são suas possibilidades?
+			 \item Logo após a medida de $B$, $A$ é medido novamente. Qual a  é a probabilidade de obter $a_{1}$ novamente? \textbf{Cuidado:} considerar o problema completo, onde (item a) medida $a_{2}$, logo após medimos um  dos estados de $B$ (item b), e por fim  medimos $a_{1}$.
+		 \end{enumerate}
+		 \begin{sol}
+		 	\begin{enumerate}[label=\alph *)]
+				\item Se $A$ é medido e o valor $a_{2}$ é obtido, o sistema só pode estar no estado $\psi_{2}$, associado à
+					\begin{align}
+						|{\psi_{2}}\rangle &= \frac{1}{5}\left(4|{\phi_{1}}\rangle-3|{\phi_{2}}\rangle\right) 
+					\end{align}
+				\item Agora $B$ é medido, podendo ter como resultados $b_{1}$ e $b_{2}$. Considerando que o sistema está no estado $\psi_{2}$ então as probabilidades $P$ de encontrarmos os valores $b_{1}$ e $b_{2}$, dado que o estado $\psi_{2}$ ocorreu, são respectivamente
+					\begin{subequations}
+						\begin{align}
+							P(b_{1}) &= \abs{\langle{\phi_{1}}|{\psi_{2}}\rangle}^{2}=\abs{\frac{1}{5}\left(4\langle{\phi_{1}}|{\phi_{1}}\rangle-3\langle{\phi_{1}}|{\phi_{2}}\rangle\right)}^{2} = \frac{16}{25}\\
+							P(b_{2}) &= \abs{\langle{\phi_{2}}|{\psi_{2}}\rangle}^{2}=\abs{\frac{1}{5}\left(4\langle{\phi_{2}}|{\phi_{1}}\rangle-3\langle{\phi_{2}}|{\phi_{2}}\rangle\right)}^{2}=\frac{9}{25}
+						\end{align}
+					\end{subequations}
+				\item por fim, medindo-se $A$ novamente, deve se considerar todas as probabilidades condicionais possíveis, isto é, dada as ocorrências anteriores é possível obter $a_{1}$ tanto após obter $b_1$ quanto após obter $b_{2}$, assim 
+						\begin{align}
+							P(a_{1}) & = \abs{\langle{\psi_{1}}|{\phi_{1}}\rangle}^{2}P(b_{1})+\abs{\langle{\psi_{1}}|{\phi_{2}}\rangle}^{2}P(b_{2})\\
+						\end{align}
+						escrevendo $\phi_{1}$ e $\phi_{2}$ em termos $\psi_{1}$ e $\psi_{2}$
+						\begin{align}
+						  \phi_{2} &= \frac{5}{4}\psi_{1} - \frac{3}{4} \phi_{1}
+						\end{align}
+						substituindo em $\psi_{2}$
+						\begin{align}
+							\begin{split}
+								\psi_{2} &= \frac{4}{5} \phi_{1}-\frac{3}{4} \psi_{1}+\frac{9}{20} \phi_{1}\\
+								20 \psi_{2} &= 16 \phi_{1}-15 \psi_{1}+9 \phi_{1}\\
+								25 \phi_{1} &= 15 \psi_{1}+20 \psi_{2}\\
+								\phi_{1} &= \frac{3}{5} \psi_{1}+\frac{4}{5} \psi_{2}
+							\end{split}
+						\end{align}
+						e
+						\begin{align}
+							\begin{split}
+								\phi_{2}&=\frac{5}{4} \psi_{1}-\frac{3}{4}\left[\frac{3}{5} \psi_{1}+\frac{4}{5} \psi_{2}\right]\\
+								\phi_{2}&=\frac{4}{5} \psi_{1}-\frac{3}{5} \psi_{2}
+							\end{split}
+						\end{align}
+						é fácil de ver que
+						\begin{align}
+							P(a_{1}|b_{1}) &= \abs{\langle{\psi_{1}}|{\phi_{1}}\rangle}^{2}=\frac{9}{25}\\
+							P(a_{1}|b_{2}) &= \abs{\langle{\psi_{1}}|{\phi_{2}}\rangle}^{2}=\frac{16}{25}
+						\end{align}
+						logo
+						\begin{align}
+							P(a_{1}) &= \frac{9}{25}\frac{16}{25}+\frac{16}{25}\frac{9}{25} = 2\frac{144}{625}=0,4608
+						\end{align}
+		 	\end{enumerate}
+		 \end{sol}
+	 \end{prob}
 
-		Escreva $\hat{P}$ na forma matricial abaixo
-		\begin{align}
-			P &=
-			\begin{pmatrix}
-				\langle \beta_{1}|\hat{P}|\beta_{1}\rangle & \langle \beta_{1}|\hat{P}|\beta_{2}\rangle \\
-				\langle \beta_{2}|\hat{P}|\beta_{1}\rangle & \langle \beta_{2}|\hat{P}|\beta_{2}\rangle \\
-			\end{pmatrix}
-			=
-			\begin{pmatrix}
-				\langle \beta_{1}|\mathbb{\hat{1}}\hat{P}\mathbb{\hat{1}}|\beta_{1}\rangle & \langle \beta_{1}|\mathbb{\hat{1}}\hat{P}\mathbb{\hat{1}}|\beta_{2}\rangle \\
-				\langle \beta_{2}|\mathbb{\hat{1}}\hat{P}\mathbb{\hat{1}}|\beta_{\hat{1}}\rangle & \langle \beta_{2}|\mathbb{\hat{1}}\hat{P}\mathbb{\hat{1}}|\beta_{2}\rangle \\
-			\end{pmatrix}
-		\end{align}
+	 % --------------------------------------------- %
 
-		onde a identidade $\mathbb{\hat{1}}$ na base $\alpha_{1}$ e $\alpha_{2}$ é dada por
+	 % --------------------------------------------- %
+	 % Q08
+	 % --------------------------------------------- %
+	 \addcontentsline{toc}{section}{Problema 08}
+	 \begin{prob}
+		 Considere um sistema de dois níveis os kets $|\alpha_{1}\rangle$ e $|\alpha_{2}\rangle$ formam uma base ortonormal. Uma nova base $|\beta_{1}\rangle$ e $|\beta_{2}\rangle$ se relacionam com a antiga por:
+		 \begin{align}
+			 |\beta_{1}\rangle &= \frac{1}{\sqrt{2}}\left(|\alpha_{1}\rangle+|\alpha_{2}\rangle\right)\condition{e $\displaystyle{|\beta_{2}\rangle=\frac{1}{\sqrt{2}}\left(|\alpha_{1}\rangle-|\alpha_{2}\rangle\right)}$}
+		 \end{align}
+		 Um operador $\hat{P}$ é representado na base $|\alpha_{1}\rangle$ e $|\alpha_{2}\rangle$ pela matriz
+		 \begin{align}
+			 P &= 
+			 \begin{pmatrix}
+				 1 & \epsilon \\
+				 \epsilon & 1
+			 \end{pmatrix}
+			 =
+			 \begin{pmatrix}
+				 \langle \alpha_{1}|\hat{P}|\alpha_{1}\rangle & \langle \alpha_{1}|\hat{P}|\alpha_{2}\rangle \\
+				 \langle \alpha_{2}|\hat{P}|\alpha_{1}\rangle & \langle \alpha_{2}|\hat{P}|\alpha_{2}\rangle
+			 \end{pmatrix}
+		 \end{align}
+		 \begin{enumerate}[label=\alph *)]
+			 \item Encontre os autovalores deste operador e escreva-o na forma diagonal.
+			 \item Encontre a representação de $\hat{P}$ na base $|\beta_{1}\rangle$ e $|\beta_{2}\rangle$.
+		 \end{enumerate}
 
-		\begin{align}
-			\mathbb{\hat{1}} &= \sum_{i=1}^{2}|\alpha_{i}\rangle\langle \alpha_{i}|=|\alpha_{1}\rangle\langle \alpha_{1}|+|\alpha_{2}\rangle\langle \alpha_{2}|
-		\end{align}
-	\end{prob}
-	% --------------------------------------------- %
+		 \textbf{Sugestão:}
+
+		 Escreva $\hat{P}$ na forma matricial abaixo
+		 \begin{align}
+			 P &=
+			 \begin{pmatrix}
+				 \langle \beta_{1}|\hat{P}|\beta_{1}\rangle & \langle \beta_{1}|\hat{P}|\beta_{2}\rangle \\
+				 \langle \beta_{2}|\hat{P}|\beta_{1}\rangle & \langle \beta_{2}|\hat{P}|\beta_{2}\rangle \\
+			 \end{pmatrix}
+			 =
+			 \begin{pmatrix}
+				 \langle \beta_{1}|\mathbb{\hat{1}}\hat{P}\mathbb{\hat{1}}|\beta_{1}\rangle & \langle \beta_{1}|\mathbb{\hat{1}}\hat{P}\mathbb{\hat{1}}|\beta_{2}\rangle \\
+				 \langle \beta_{2}|\mathbb{\hat{1}}\hat{P}\mathbb{\hat{1}}|\beta_{\hat{1}}\rangle & \langle \beta_{2}|\mathbb{\hat{1}}\hat{P}\mathbb{\hat{1}}|\beta_{2}\rangle \\
+			 \end{pmatrix}
+		 \end{align}
+
+		 onde a identidade $\mathbb{\hat{1}}$ na base $\alpha_{1}$ e $\alpha_{2}$ é dada por
+
+		 \begin{align}
+			 \mathbb{\hat{1}} &= \sum_{i=1}^{2}|\alpha_{i}\rangle\langle \alpha_{i}|=|\alpha_{1}\rangle\langle \alpha_{1}|+|\alpha_{2}\rangle\langle \alpha_{2}|
+		 \end{align}
+		 \begin{sol}
+			 \begin{enumerate}[label=\alph *)]
+			 		\item Os autovalores de $\hat{P}$, são soluções da equação secular
+						\begin{align}
+							\det \left(\hat{P}-\lambda\mathbb{1}\right) &= 0
+						\end{align}
+						ou seja
+						\begin{align}
+								\begin{split}
+										\begin{pmatrix}
+											1-\lambda & \epsilon \\
+											\epsilon & 1-\lambda
+										\end{pmatrix} &= 0\\
+										\lambda_{1} &= 1+\epsilon\\
+										\lambda_{2} &= 1-\epsilon
+								\end{split}
+						\end{align}
+						Vamos construir uma base para os autovalores do operador $\hat{P}$. Denotando esta base por $\psi$, um autovetor $\psi_{1}$ associado ao autovalor $\lambda_{1}$, deve satisfazer
+						\begin{align}
+							\left(\hat{P}-\lambda_{1}\mathbb{1}\right)|{\psi_{1}}\rangle &=0 \condition{com $\displaystyle{|{\psi_{1}}\rangle}=
+								\begin{pmatrix}
+									c_{1} \\
+									c_{2}
+								\end{pmatrix}
+							$}
+						\end{align}
+						logo
+						\begin{align}
+							\begin{split}
+								\begin{pmatrix}
+									1-\lambda_{1} & \epsilon \\
+									\epsilon & 1-\lambda_{1}
+								\end{pmatrix}
+								\begin{pmatrix}
+									c_{1}\\
+									c_{2}
+								\end{pmatrix} &= 0\\
+								\left[1-\left(1+\epsilon\right)\right]c_{1}+\epsilon c_{2} &=0\\
+								\left(1-1-\epsilon\right)c_{1}+\epsilon c_{2} &= 0\\
+								c_{1} &= c_{2}
+							\end{split}
+						\end{align}
+						da condição de normalidade obtêm-se
+						\begin{align}
+								\begin{split}
+									\abs{c_{1}}^{2}+\abs{c_{2}}^{2} &= 1\\
+									c_{1}=c_{2} &= \frac{1}{\sqrt{2}}
+								\end{split}
+						\end{align}
+						assim o autovetor $\psi_{1}$ associado à $\lambda_{1}$ é
+						\begin{align}
+							|{\psi_{1}}\rangle &=\frac{1}{\sqrt{2}}
+							\begin{pmatrix}
+								1 \\
+								1
+							\end{pmatrix}
+						\end{align}
+						Um segundo autovetor $\psi_{2}$, associado agora ao autovalor $\lambda_{2}$ é obtido a seguir
+						\begin{align}
+							\left(1-\lambda_{2}\right)d_{1}+\epsilon d_{2} &= 0\\
+							\left(1-1+\epsilon\right)d_{1}+\epsilon d_{2} &= 0\\
+							d_{1} &= -d_{2}
+						\end{align}
+						e, utilizando a condição de normalidade novamente
+						\begin{align}
+							\abs{d_{1}}^{2}+\abs{d_{2}}^{2} &= 1\\
+							d_{1}=-d_{2} &= \frac{1}{\sqrt{2}}
+						\end{align}
+						portanto, o autovetor associado ao autovalor $\lambda_{2}$ é da forma
+						\begin{align}
+							|{\psi_{2}}\rangle &= \frac{1}{\sqrt{2}}
+							\begin{pmatrix}
+								1 \\
+								-1
+							\end{pmatrix}
+						\end{align}
+						uma vez que normalizamos $|{\psi_{1}}\rangle$ e $|{\psi_{2}}\rangle$, têm-se que o produto interno $\langle{\psi_1}|{\psi_{1}}\rangle$, $\langle{\psi_{2}}|{\psi_{2}}\rangle$ são todos iguais a $1$, além disso
+						\begin{align}
+							\begin{split}
+								\langle{\psi_{1}}|{\psi_{2}}\rangle &= \frac{1}{2}
+								\begin{pmatrix}
+									1 & 1
+								\end{pmatrix}
+								\begin{pmatrix}
+									1 \\
+									-1
+								\end{pmatrix} = 0\\
+								\langle{\psi_{2}}|{\psi_{1}}\rangle &= \frac{1}{2}
+								\begin{pmatrix}
+									1 & -1
+								\end{pmatrix}
+								\begin{pmatrix}
+									1 \\
+									1
+								\end{pmatrix} = 0
+							\end{split}
+						\end{align}
+						De modo que podemos diagonalizar $\hat{P}$ usando os autovetores $\psi_{1}$ e $\psi_{2}$ como segue
+						\begin{align}
+							\begin{split}
+								\hat{P}_{\psi} &=
+								\begin{pmatrix}
+									\langle{\psi_{1}}|\hat{P}|{\psi_{1}}\rangle &	\langle{\psi_{1}}|\hat{P}|{\psi_{2}}\rangle \\
+									\langle{\psi_{2}}|\hat{P}|{\psi_{1}}\rangle &	\langle{\psi_{2}}|\hat{P}|{\psi_{2}}\rangle
+								\end{pmatrix}\\
+												&=
+								\begin{pmatrix}
+									\langle{\psi_{1}}|(1+\epsilon)|{\psi_{1}}\rangle &	\langle{\psi_{1}}|(1-\epsilon)|{\psi_{2}}\rangle \\
+									\langle{\psi_{2}}|(1+\epsilon)|{\psi_{1}}\rangle &	\langle{\psi_{2}}|(1-\epsilon)|{\psi_{2}}\rangle
+								\end{pmatrix}\\
+												&=
+								\begin{pmatrix}
+									(1+\epsilon)\langle{\psi_{1}}|{\psi_{1}}\rangle &	(1-\epsilon)\langle{\psi_{1}}|{\psi_{2}}\rangle \\
+									(1+\epsilon)\langle{\psi_{2}}|{\psi_{1}}\rangle &	(1-\epsilon)\langle{\psi_{2}}|{\psi_{2}}\rangle
+								\end{pmatrix}\\
+												&=
+								\begin{pmatrix}
+									1+\epsilon & 0 \\
+									0 & 1-\epsilon
+								\end{pmatrix}
+							\end{split}
+						\end{align}
+					\item Ora, $|{\psi_{1}}\rangle$ e $|{\psi_{2}}\rangle$ formam uma base para os autovalores do operador $\hat{P}$ e dada a forma encontrada dos autovetores de $\psi$, suspeita-se que a representação do operador $\hat{P}$ na base $\beta$, $\hat{P}_{\beta}$ é a mesma obtida na base $\psi$, isto é:
+
+						\begin{propos}{$|{\beta}\rangle$ é um autovetor de $\hat{P}$ (?).}
+							\label{prop:1}
+
+							Se $|{\beta}\rangle$ for um autovetor de $\hat{P}$, os vetores da base $|{\beta_{1}}\rangle$ e $|{\beta_{2}}\rangle$ serão também autovetores de $\hat{P}$ tal como $|{\psi_{1}}\rangle$ e $|{\psi_{2}}\rangle$, logo
+						\begin{align}
+							\hat{P}_{\beta} &=
+							\begin{pmatrix}
+								1+\epsilon & 0 \\
+								0 & 1-\epsilon
+							\end{pmatrix}
+						\end{align}
+						e por consequência:
+						\begin{align}
+							\hat{P}_{\beta} &= \hat{P}_{\psi}
+						\end{align}
+						\end{propos}
+						\textit{Verificando a Proposição \ref{prop:1}}:
+						Iniciaremos construindo a matriz de transformação $U:\mathop{P_{\alpha}}\to\mathop{P_{\beta}}$ cuja propriedade obedece:
+						\begin{align}
+							\label{eq:propriedade-u}
+							\hat{P}_{\beta} &= U\hat{P}_{\alpha}U^{\dag}
+						\end{align}
+						uma vez que
+						\begin{align}
+							\mathop{U} &= \sum_{i}^{2}|{\beta_{i}}\rangle \langle{\alpha_{i}}|
+						\end{align}					
+						tem-se imediatamente que
+						\begin{align}
+							\begin{split}
+								\mathop{U} &= |{\beta_{1}}\rangle \langle{\alpha_{1}}|+|{\beta_{2}}\rangle \langle{\alpha_{2}}|\\
+													 &= \left[\frac{1}{\sqrt{2}}\left(|{\alpha_{1}}\rangle+|{\alpha_{2}}\rangle\right)\right]\langle{\alpha_{1}}|+\left[\frac{1}{\sqrt{2}}\left(|{\alpha_{1}}\rangle-|{\alpha_{2}}\rangle\right)\right]\langle{\alpha_{2}}|\\
+													 &= \frac{1}{\sqrt{2}}\left(|{\alpha_{1}}\rangle \langle{\alpha_{1}}|+|{\alpha_{2}}\rangle \langle{\alpha_{1}}|+|{\alpha_{1}}\rangle \langle{\alpha_{2}}|-|{\alpha_{2}}\rangle \langle{\alpha_{2}}|\right)
+							\end{split}
+						\end{align}
+						ou, na forma matricial
+						\begin{align}
+							\mathop{U} &=\frac{1}{\sqrt{2}}
+							\begin{pmatrix}
+								1 & 1 \\
+								1 & -1
+							\end{pmatrix}
+						\end{align}
+						nota-se que, neste caso $\mathop{U}=\mathop{U}^{\dag}$. Agora, usando a propriedade \ref{eq:propriedade-u}
+						\begin{align}
+							\begin{split}
+								\hat{P}_{\beta} &= \frac{1}{\sqrt{2}}
+								\begin{pmatrix}
+									1 & 1 \\
+									1 & -1
+								\end{pmatrix}
+								\begin{pmatrix}
+									1 & \epsilon \\
+									\epsilon & 1
+								\end{pmatrix}\frac{1}{\sqrt{2}}
+								\begin{pmatrix}
+									1 & 1 \\
+									1 & -1
+								\end{pmatrix}\\
+																&= \frac{1}{2}
+								\begin{pmatrix}
+									1 & 1 \\
+									1 & -1
+								\end{pmatrix}
+								\begin{pmatrix}
+									1+\epsilon & 1-\epsilon \\
+									1+\epsilon & \epsilon-1
+								\end{pmatrix}
+							\end{split}\\&=\frac{1}{2}
+							\begin{pmatrix}
+								2(1+\epsilon) & 0 \\
+								0 & 2(1-\epsilon)
+							\end{pmatrix}\\&=
+							\begin{pmatrix}
+								1+\epsilon & 0\\
+								0 & 1-\epsilon
+							\end{pmatrix}\condition{QED}
+						\end{align}
+			 \end{enumerate}
+			 Conclusão, para este caso $|{\beta}\rangle$ é uma base de autovetores de $\hat{P}$ idêntica à $|{\psi}\rangle$
+		 \end{sol}
+	 \end{prob}
+	 % --------------------------------------------- %

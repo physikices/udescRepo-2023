@@ -1,0 +1,85 @@
+% define gaussian pdf and cdf
+\pgfmathdeclarefunction{gauss}{3}{%
+  \pgfmathparse{1/(#3*sqrt(2*pi))*exp(-((#1-#2)^2)/(2*#3^2))}%
+}
+% \pgfmathdeclarefunction{cdf}{3}{%
+%   \pgfmathparse{1/(1+exp(-0.07056*((#1-#2)/#3)^3 - 1.5976*(#1-#2)/#3))}%
+% }
+% \pgfmathdeclarefunction{fq}{3}{%
+%   \pgfmathparse{1/(sqrt(2*pi*#1))*exp(-(sqrt(#1)-#2/#3)^2/2)}%
+% }
+% % \pgfmathdeclarefunction{fq0}{1}{%
+% %   \pgfmathparse{1/(sqrt(2*pi*#1))*exp(-#1/2))}%
+% }
+
+\colorlet{mydarkblue}{blue!30!black}
+
+% to fill an area under function
+\usepgfplotslibrary{fillbetween}
+\usetikzlibrary{patterns}
+\pgfplotsset{compat=1.12} % TikZ coordinates <-> axes coordinates
+% https://tex.stackexchange.com/questions/240642/add-vertical-line-of-equation-x-2-and-shade-a-region-in-graph-by-pgfplots
+
+% plot aspect ratio
+%\def\axisdefaultwidth{8cm}
+%\def\axisdefaultheight{6cm}
+
+% number of sample points
+\def\N{50}
+
+% GAUSSIANs: basic properties
+\begin{tikzpicture}
+  \message{Cumulative probability^^J}
+  
+  \def\B{11};
+  \def\Bs{3.0};
+  \def\xmax{\B+3.2*\Bs};
+  \def\ymin{{-0.1*gauss(\B,\B,\Bs)}};
+  \def\h{0.07*gauss(\B,\B,\Bs)};
+  \def\a{\B-2*\Bs};
+  \def\b{\B+2*\Bs};
+  \def\c{\B+0*\Bs};
+  
+  \begin{axis}[every axis plot post/.append style={
+               mark=none,domain={-0.05*(\xmax)}:{1.08*\xmax},samples=\N,smooth},
+               xmin={-0.1*(\xmax)}, xmax=\xmax,
+               ymin=\ymin, ymax={1.1*gauss(\B,\B,\Bs)},
+							 axis lines=center,
+               axis line style=thick,
+               enlargelimits=upper, % extend the axes a bit to the right and top
+               ticks=none,
+               xlabel=$p$,
+               every axis x label/.style={at={(current axis.right of origin)},anchor=north},
+               width=0.7*\textwidth, height=0.55*\textwidth,
+               y=700pt,
+               clip=false
+              ]
+    
+    % PLOTS
+    \addplot[magenta,thick,name path=B] {gauss(x,\B,\Bs)};
+    
+    % FILL
+    \path[name path=xaxis]
+      (0,0) -- (\pgfkeysvalueof{/pgfplots/xmax},0);
+    \addplot[magenta!25] fill between[of=xaxis and B, soft clip={domain=-1:{\a}}];
+		\addplot[magenta!25] fill between[of=xaxis and B, soft clip={domain={\b}:\xmax}];
+    
+    % LINES
+    \addplot[magenta,dashed,thick]
+      coordinates {({\a},{1.2*gauss(\a,\B,\Bs)}) ({\a},{-\h})}
+      node[mydarkblue,below=-2pt] {$-\sqrt{m \omega \hbar}$};
+			\node[magenta,above right] at ({\B+\Bs},{1.2*gauss(\B+\Bs,\B,\Bs)}) {$\displaystyle{P(p)=\int\limits_{-\infty}^{\infty}\abs{\Phi}^{2}\,d{p}}$};
+    \node[magenta!75,above] at ({0.85*(\a)},{1.0*gauss(1.6*(\a),\B,\Bs)}) {$P(p\leq -\sqrt{m \omega \hbar})$};
+
+    \addplot[magenta,dashed,thick]
+      coordinates {({\b},{1.2*gauss(\b,\B,\Bs)}) ({\b},{-\h})}
+      node[mydarkblue,below=-2pt] {$\sqrt{m \omega \hbar}$};
+    \node[magenta!75,above] at ({1.1*(\b)},{2.3*gauss(1*(\b),\B,\Bs)}) {$P(p\geq \sqrt{m \omega \hbar})$};
+
+    \addplot[mydarkblue,dashed,thick]
+      coordinates {({\c},{1.2*gauss(\c,\B,\Bs)}) ({\c},{-\h})}
+      node[mydarkblue,below=-2pt] {$0$};
+    
+  \end{axis}
+\end{tikzpicture}
+
