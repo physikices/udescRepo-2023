@@ -1141,8 +1141,3 @@ c     xcl(16),cc(nx,my,4,4),iwt(16,16)
       return
       end
 
-
-
-	
-	
-	

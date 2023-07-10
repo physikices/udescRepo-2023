@@ -6,7 +6,7 @@
 	common/constantes/ alpha, pi, Q2bar, mu2, Mv
 	
 
-	open(11, file='resultado.dat')
+	open(11, file='aresultado.dat')
 
 
 
